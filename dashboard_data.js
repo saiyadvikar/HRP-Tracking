@@ -1,6 +1,6 @@
 const dashboardData = {
-  "evaluation_date": "2026-10-08",
-  "generated_date": "08-10-2026",
+  "evaluation_date": "2026-10-09",
+  "generated_date": "09-10-2026",
   "stats": {
     "total_enrolled": 224,
     "total_follow_ups": 91,

@@ -931,8 +931,13 @@ print(f"Successfully generated analysis data! Saved to {js_output_path} and {jso
 # Generate self-contained shareable HTML dashboards
 dashboards_to_update = [
     {
-        "name": "UHRP Tracking Dashboard.html",
-        "local_path": os.path.join(BASE_DIR, "UHRP Tracking Dashboard.html"),
+        "name": "index.html",
+        "local_path": os.path.join(BASE_DIR, "index.html"),
+        "artifact_path": "c:/Users/User/.gemini/antigravity/brain/a880b367-e099-452a-abcc-3d5ab1953c67/index.html"
+    },
+    {
+        "name": "artifact UHRP Tracking Dashboard.html",
+        "local_path": os.path.join(BASE_DIR, "index.html"),
         "artifact_path": "c:/Users/User/.gemini/antigravity/brain/a880b367-e099-452a-abcc-3d5ab1953c67/UHRP Tracking Dashboard.html"
     }
 ]
@@ -970,3 +975,78 @@ for db in dashboards_to_update:
         print(f"Successfully generated shareable single-file dashboard! Saved to {db['local_path']}")
     except Exception as e:
         print(f"Error generating dashboard {db['name']}: {e}")
+
+# -------------------------------------------------------------
+# Automatic Git Stage, Commit & Push to GitHub
+# -------------------------------------------------------------
+import subprocess
+
+def auto_push_to_github():
+    print("\n---------------------------------------------------")
+    print("  Syncing updated project files with GitHub...")
+    print("---------------------------------------------------")
+    try:
+        # Stage all changes in project directory
+        add_res = subprocess.run(
+            ["git", "add", "-A"],
+            cwd=BASE_DIR,
+            capture_output=True,
+            text=True
+        )
+        if add_res.returncode != 0 and add_res.stderr:
+            print(f"Git add note: {add_res.stderr.strip()}")
+            
+        # Check if there are staged changes
+        staged_check = subprocess.run(
+            ["git", "status", "--porcelain"],
+            cwd=BASE_DIR,
+            capture_output=True,
+            text=True
+        )
+        
+        if not staged_check.stdout.strip():
+            print("Git working tree is already up-to-date; no new changes to commit.")
+            return
+
+        timestamp_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        commit_msg = f"Auto-update UHRP dashboard data [{timestamp_str}]"
+        
+        commit_res = subprocess.run(
+            ["git", "commit", "-m", commit_msg],
+            cwd=BASE_DIR,
+            capture_output=True,
+            text=True
+        )
+        if commit_res.returncode == 0:
+            print(f"Committed changes: \"{commit_msg}\"")
+        else:
+            print(f"Git commit output: {commit_res.stdout.strip() or commit_res.stderr.strip()}")
+
+        # Push to remote repository (origin main)
+        print("Pushing commits to GitHub (origin main)...")
+        push_res = subprocess.run(
+            ["git", "push", "origin", "main"],
+            cwd=BASE_DIR,
+            capture_output=True,
+            text=True
+        )
+        if push_res.returncode == 0:
+            print("SUCCESS: Successfully pushed updated project files to GitHub!")
+        else:
+            # Fallback plain git push if origin main had a tracking variation
+            push_fallback = subprocess.run(
+                ["git", "push"],
+                cwd=BASE_DIR,
+                capture_output=True,
+                text=True
+            )
+            if push_fallback.returncode == 0:
+                print("SUCCESS: Successfully pushed updated project files to GitHub!")
+            else:
+                err_msg = push_res.stderr.strip() or push_fallback.stderr.strip()
+                print(f"Git push notice: {err_msg}")
+
+    except Exception as e:
+        print(f"Notice: Automatic GitHub sync encountered an issue: {e}")
+
+auto_push_to_github()

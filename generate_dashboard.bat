@@ -15,7 +15,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ===================================================
     echo.
     echo Opening UHRP Tracking Dashboard in your browser...
-    start "" "%~dp0UHRP Tracking Dashboard.html"
+    start "" "%~dp0index.html"
 ) else (
     echo.
     echo ===================================================

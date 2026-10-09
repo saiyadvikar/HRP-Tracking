@@ -15,7 +15,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ===================================================
     echo.
     echo Opening dashboard in your default browser...
-    start "" "%~dp0UHRP Tracking Dashboard.html"
+    start "" "%~dp0index.html"
 ) else (
     echo.
     echo ===================================================
