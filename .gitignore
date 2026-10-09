@@ -1,0 +1,30 @@
+# =====================================================================
+# UHRP Tracking - Git Ignore Configuration
+# Protect confidential health data & exclude unnecessary raw files
+# =====================================================================
+
+# Raw Survey & Government Linelist Excel Files (Confidential Beneficiary Data)
+*.xlsx
+ANC linelist/
+Forms/
+
+# PDF Documents and Form Templates
+*.pdf
+
+# Legacy unused scripts & styles (index.html is self-contained with dashboard_data.js)
+dashboard.js
+styles.css
+
+# Redundant raw JSON export (dashboard web page uses dashboard_data.js)
+dashboard_data.json
+
+# Python compilation cache & temporary runtime files
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Editor & Scratch directories
+scratch/
+.vscode/
+.idea/

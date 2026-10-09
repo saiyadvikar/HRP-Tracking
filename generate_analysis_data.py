@@ -928,53 +928,15 @@ with open(json_output_path, 'w', encoding='utf-8') as f:
 
 print(f"Successfully generated analysis data! Saved to {js_output_path} and {json_output_path}")
 
-# Generate self-contained shareable HTML dashboards
-dashboards_to_update = [
-    {
-        "name": "index.html",
-        "local_path": os.path.join(BASE_DIR, "index.html"),
-        "artifact_path": "c:/Users/User/.gemini/antigravity/brain/a880b367-e099-452a-abcc-3d5ab1953c67/index.html"
-    },
-    {
-        "name": "artifact UHRP Tracking Dashboard.html",
-        "local_path": os.path.join(BASE_DIR, "index.html"),
-        "artifact_path": "c:/Users/User/.gemini/antigravity/brain/a880b367-e099-452a-abcc-3d5ab1953c67/UHRP Tracking Dashboard.html"
-    }
-]
-
-js_data = "const dashboardData = " + json.dumps(output_data, indent=2, ensure_ascii=False) + ";"
-inlined_script = f"<script>\n{js_data}\n</script>"
-
-for db in dashboards_to_update:
+# Sync updated files to artifact directory if available
+artifact_dir = "c:/Users/User/.gemini/antigravity/brain/a880b367-e099-452a-abcc-3d5ab1953c67"
+if os.path.exists(artifact_dir):
     try:
-        if not os.path.exists(db["local_path"]):
-            print(f"Warning: Dashboard file {db['local_path']} not found!")
-            continue
-            
-        with open(db["local_path"], 'r', encoding='utf-8') as f:
-            html_content = f.read()
-        
-        # Replace either external script reference or existing inlined script block
-        if '<script src="dashboard_data.js"></script>' in html_content:
-            shareable_html = html_content.replace('<script src="dashboard_data.js"></script>', inlined_script)
-        else:
-            shareable_html = re.sub(
-                r'<script>\s*const dashboardData\s*=\s*.*?</script>',
-                lambda m: inlined_script,
-                html_content,
-                flags=re.DOTALL
-            )
-        
-        with open(db["local_path"], 'w', encoding='utf-8') as f:
-            f.write(shareable_html)
-            
-        if os.path.exists(os.path.dirname(db["artifact_path"])):
-            with open(db["artifact_path"], 'w', encoding='utf-8') as f:
-                f.write(shareable_html)
-                
-        print(f"Successfully generated shareable single-file dashboard! Saved to {db['local_path']}")
+        import shutil
+        shutil.copy2(os.path.join(BASE_DIR, "index.html"), os.path.join(artifact_dir, "index.html"))
+        shutil.copy2(os.path.join(BASE_DIR, "dashboard_data.js"), os.path.join(artifact_dir, "dashboard_data.js"))
     except Exception as e:
-        print(f"Error generating dashboard {db['name']}: {e}")
+        print(f"Artifact copy note: {e}")
 
 # -------------------------------------------------------------
 # Automatic Git Stage, Commit & Push to GitHub
