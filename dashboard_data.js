@@ -2405,11 +2405,11 @@ const dashboardData = {
         "completed_by": "Manoj bhatnagar"
       },
       "matched_via": null,
-      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (District hospital khandwa) - Planned Adherent",
-        "Planned FRU Delivery (District hospital khandwa) (favourable outcome)",
-        "Emergency LSCS (unfavourable outcome)"
+        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)",
+        "Planned FRU Delivery (District hospital khandwa) (favourable outcome)"
       ]
     },
     {
@@ -3222,10 +3222,10 @@ const dashboardData = {
         "completed_by": "Manoj bhatnagar"
       },
       "matched_via": null,
-      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Gurjar hospital sanawad) - Planned Adherent",
-        "Emergency LSCS (unfavourable outcome)"
+        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
       ]
     },
     {
@@ -4223,10 +4223,10 @@ const dashboardData = {
         "completed_by": "Ajay Dudwe"
       },
       "matched_via": null,
-      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (DH-KHARGONE) - Planned Adherent",
-        "Emergency LSCS (unfavourable outcome)"
+        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
       ]
     },
     {
@@ -9276,11 +9276,11 @@ const dashboardData = {
         "completed_by": "Lalita khede"
       },
       "matched_via": null,
-      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "GDM Controlled: Blood sugar 85.0 mg/dL at delivery (from 160.0 mg/dL)",
         "GDM Status: NA – GDM was not identified for this woman",
-        "Emergency LSCS (unfavourable outcome)"
+        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
       ]
     },
     {
@@ -9694,10 +9694,10 @@ const dashboardData = {
         "completed_by": "Ajay Dudwe"
       },
       "matched_via": null,
-      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Rakshya Hospital Khargone) - Planned Adherent",
-        "Emergency LSCS (unfavourable outcome)"
+        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
       ]
     },
     {
@@ -10387,10 +10387,10 @@ const dashboardData = {
         "completed_by": "Preeti bala"
       },
       "matched_via": null,
-      "improvement_status": "Partially Improved",
+      "improvement_status": "Worsened / Uncontrolled",
       "improvement_details": [
         "Safe Institutional Delivery (Dh) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Severe Complication: Stillbirth / Neonatal Death (unfavourable outcome)"
       ]
     },
     {
@@ -13222,10 +13222,11 @@ const dashboardData = {
         "completed_by": "Manoj bhatnagar"
       },
       "matched_via": null,
-      "improvement_status": "Controlled / Resolved",
+      "improvement_status": "Worsened / Uncontrolled",
       "improvement_details": [
         "Safe Institutional Delivery (Dh khandwa) - Planned Adherent",
-        "Planned FRU Delivery (Dh khandwa) (favourable outcome)"
+        "Planned FRU Delivery (Dh khandwa) (favourable outcome)",
+        "Severe Complication: Stillbirth / Neonatal Death (unfavourable outcome)"
       ]
     },
     {

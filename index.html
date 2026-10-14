@@ -1024,16 +1024,12 @@ canvas{max-height:260px}
           <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Clinical rationale based on intrapartum risk exposure:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Favourable (Elective LSCS)</span>
-              <span><strong>Favourable:</strong> Planned repeat cesarean avoids unmonitored scar dehiscence.</span>
+              <span class="pill p-g" style="padding:2px 6px;">Favourable (Safe Delivery / LSCS)</span>
+              <span><strong>Favourable:</strong> Elective LSCS, Emergency LSCS, or monitored VBAC completed safely without rupture or mortality.</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Unfavourable (Emergency LSCS)</span>
-              <span><strong>Unfavourable:</strong> Emergency presentation, failed labour trial, or acute fetal distress.</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Favourable (Successful VBAC)</span>
-              <span><strong>Favourable:</strong> Monitored vaginal delivery completed without complications.</span>
+              <span class="pill p-r" style="padding:2px 6px;">Unfavourable (Severe Complication)</span>
+              <span><strong>Unfavourable:</strong> Complications including uterine rupture / dehiscence, stillbirth / neonatal death, or maternal death.</span>
             </div>
           </div>
         </div>
@@ -2764,25 +2760,52 @@ function renderDashboard() {
         }
       }
 
-      // 5. Previous LSCS: Elective LSCS = Favourable, Emergency LSCS = Unfavourable
+      // Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth)
+      const babyAliveStr = String(d.baby_alive || '').toLowerCase();
+      const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
+      const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
+                         ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
+      const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
+      const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
+      const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
+
+      // 5. Previous LSCS: Safe delivery (Elective / Emergency LSCS / VBAC) is favourable unless complicated
       if (hasLscs) {
         const typeStr = (d.type || '').toLowerCase();
-        if (typeStr.includes('emergency')) {
-          badges.push(`<span class="pill p-r" title="Previous LSCS: Emergency LSCS is an unfavourable outcome">Unfavourable (Emergency LSCS)</span>`);
+        if (hasSevereComp) {
+          const compLabels = [];
+          if (isUterineRupture) compLabels.push('Uterine Rupture');
+          if (isMaternalDeath) compLabels.push('Maternal Death');
+          if (isDeadBaby) compLabels.push('Stillbirth/Neonatal Death');
+          badges.push(`<span class="pill p-r" title="Previous LSCS with severe complication: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
+        } else if (typeStr.includes('emergency')) {
+          badges.push(`<span class="pill p-g" title="Previous LSCS: Emergency LSCS completed safely without rupture/mortality">Favourable (Emergency LSCS)</span>`);
         } else if (typeStr.includes('elective') || typeStr.includes('planned')) {
-          badges.push(`<span class="pill p-g" title="Previous LSCS: Elective LSCS is a favourable outcome">Favourable (Elective LSCS)</span>`);
+          badges.push(`<span class="pill p-g" title="Previous LSCS: Elective LSCS completed safely">Favourable (Elective LSCS)</span>`);
         } else if (typeStr.includes('normal') || typeStr.includes('vaginal')) {
           badges.push(`<span class="pill p-g" title="Previous LSCS: Successful vaginal birth after cesarean">Favourable (Successful VBAC)</span>`);
         } else {
-          badges.push(`<span class="pill p-a">${cleanCategoricalLabel(d.type || 'LSCS')}</span>`);
+          badges.push(`<span class="pill p-g" title="Previous LSCS: Safe Delivery">Favourable (${cleanCategoricalLabel(d.type || 'Safe Delivery')})</span>`);
         }
+      } else if (hasSevereComp && !hasBoh) {
+        const compLabels = [];
+        if (isUterineRupture) compLabels.push('Uterine Rupture');
+        if (isMaternalDeath) compLabels.push('Maternal Death');
+        if (isDeadBaby) compLabels.push('Stillbirth/Neonatal Death');
+        badges.push(`<span class="pill p-r" title="Severe complication: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
       }
 
       // 6. Teenage pregnancy & Previous Stillbirth / Neonatal Death (BOH) & other high risks:
       // Planned facility in Form B at FRU is Favourable, other facility is Unfavourable
       const isBohOrTeenOrOther = hasBoh || hasTeen || (!hasAnemia && !hasScd && !hasPih && !hasGdm && !hasLscs);
       if (isBohOrTeenOrOther) {
-        if (isHome) {
+        if (hasSevereComp) {
+          const compLabels = [];
+          if (isUterineRupture) compLabels.push('Uterine Rupture');
+          if (isMaternalDeath) compLabels.push('Maternal Death');
+          if (isDeadBaby) compLabels.push('Stillbirth / Perinatal Death');
+          badges.push(`<span class="pill p-r" title="Unfavourable: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
+        } else if (isHome) {
           badges.push(`<span class="pill p-r" title="Unfavourable: Unsafe home delivery">Unfavourable (Home Delivery)</span>`);
         } else if (isFru && wasPlanned) {
           badges.push(`<span class="pill p-g" title="Favourable: Planned First Referral Unit (FRU) delivery">Favourable (Planned FRU: ${delFac})</span>`);
@@ -2940,11 +2963,17 @@ function renderDashboard() {
       }
     }
 
-    // 5. Previous LSCS: Elective = Favourable, Emergency = Unfavourable
-    if (hasLscs) {
-      if (typeStr.includes('emergency')) {
-        caseIsUnfavorable = true;
-      }
+    // Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth)
+    const babyAliveStr = String(d.baby_alive || '').toLowerCase();
+    const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
+    const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
+                       ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
+    const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
+    const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
+    const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
+
+    if (hasSevereComp) {
+      caseIsUnfavorable = true;
     }
 
     // 6. BOH & Teenage Pregnancy: Planned FRU = Favourable, Non-FRU/Home = Unfavourable
@@ -4522,7 +4551,7 @@ function renderUnmatchedDeliveries() {
     let modeBadge = '';
     const typeStr = (d.type || '').toLowerCase();
     if (typeStr.includes('emergency')) {
-      modeBadge = `<span class="pill p-r">Emergency LSCS</span>`;
+      modeBadge = `<span class="pill p-a">Emergency LSCS</span>`;
     } else if (typeStr.includes('lscs') || typeStr.includes('elective')) {
       modeBadge = `<span class="pill p-b">Elective LSCS</span>`;
     } else {

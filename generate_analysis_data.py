@@ -744,15 +744,37 @@ for case in cases:
             is_worsened = True
             worsened_reasons.append("Overall condition worsened/uncontrolled")
 
-        # Previous LSCS criteria: Emergency LSCS is unfavourable, Elective LSCS is favourable
+        # Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth)
+        baby_alive_str = str(del_data.get('baby_alive') or '').lower()
+        gaps_str = str(del_data.get('gaps_concerns') or '').lower()
+        rem_str = str(del_data.get('remarks') or '').lower()
+        transfer_str = str(del_data.get('baby_transfer_reason') or '').lower()
+        comp_text = f"{gaps_str} {rem_str} {transfer_str}"
+        
+        is_stillbirth_or_death = ('no' in baby_alive_str and 'yes' not in baby_alive_str) or any(k in comp_text for k in ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'])
+        is_uterine_rupture = any(k in comp_text for k in ['rupture', 'dehiscence'])
+        is_maternal_death = any(k in comp_text for k in ['maternal death', 'mother died', 'mother expired'])
+        
+        if is_uterine_rupture or is_maternal_death or is_stillbirth_or_death:
+            is_worsened = True
+            comp_reasons = []
+            if is_uterine_rupture: comp_reasons.append("Uterine Rupture / Scar Dehiscence")
+            if is_maternal_death: comp_reasons.append("Maternal Death")
+            if is_stillbirth_or_death: comp_reasons.append("Stillbirth / Neonatal Death")
+            worsened_reasons.append(f"Severe Complication: {', '.join(comp_reasons)} (unfavourable outcome)")
+
+        # Previous LSCS criteria: Safe Delivery (Elective LSCS, Emergency LSCS, or VBAC without rupture/death) is favourable
         has_lscs = any("lscs" in cat.lower() or "cesarean" in cat.lower() for cat in case['hrp_categories'])
         del_type_str = (del_data.get('type') or '').lower()
-        if has_lscs:
+        if has_lscs and not (is_uterine_rupture or is_maternal_death or is_stillbirth_or_death):
             if 'emergency' in del_type_str:
-                is_worsened = True
-                worsened_reasons.append("Emergency LSCS (unfavourable outcome)")
-            elif 'elective' in del_type_str or 'planned' in del_type_str or 'normal' in del_type_str:
+                improvement_details.append("Emergency LSCS completed safely without rupture/mortality (favourable outcome)")
+            elif 'elective' in del_type_str or 'planned' in del_type_str:
                 improvement_details.append("Elective LSCS / Safe Delivery (favourable outcome)")
+            elif 'normal' in del_type_str or 'vaginal' in del_type_str:
+                improvement_details.append("Successful VBAC / Safe Delivery (favourable outcome)")
+            else:
+                improvement_details.append("Safe Delivery (favourable outcome)")
 
         # Teenage & Previous Stillbirth / Neonatal Death criteria: Planned FRU is favourable, other is unfavourable
         has_boh_or_teen = any("stillbirth" in cat.lower() or "neonatal" in cat.lower() or "death" in cat.lower() or "boh" in cat.lower() or "teen" in cat.lower() for cat in case['hrp_categories']) or (case.get('age') and case['age'] < 20)
