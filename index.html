@@ -905,150 +905,200 @@ canvas{max-height:260px}
 </div>
 
 <!-- CLINICAL DEFINITIONS & FAVOURABILITY CRITERIA MODAL -->
+<!-- CLINICAL DEFINITIONS & FAVOURABILITY CRITERIA MODAL -->
 <div id="outcome-definitions-modal" class="modal">
-  <div class="modal-content" style="max-width:820px;">
-    <div class="modal-header" style="background:linear-gradient(135deg, #1E3A8A 0%, #0D9488 100%); color:#fff; display:flex; justify-content:space-between; align-items:center;">
+  <div class="modal-content" style="max-width:840px;">
+    <div class="modal-header" style="background:linear-gradient(135deg, #1E3A8A 0%, #0D9488 100%); color:#fff; display:flex; justify-content:space-between; align-items:center; padding:14px 20px;">
       <div style="display:flex; align-items:center; gap:10px;">
-        <span style="font-size:22px;">🔬</span>
+        <span style="font-size:22px;">📊</span>
         <div>
           <div class="modal-title" style="color:#fff; font-size:15px; font-weight:700;">Clinical Delivery Outcome Definitions &amp; Favourability Criteria</div>
-          <div style="font-size:11px; color:#E0F2FE; opacity:0.9;">Scientific intrapartum classification framework for UHRP risk conditions</div>
+          <div style="font-size:11px; color:#E0F2FE; opacity:0.9;">Standardized intrapartum clinical classification &amp; facility readiness framework</div>
         </div>
       </div>
       <button class="modal-close" onclick="closeOutcomeDefinitionsModal()" style="color:#fff; opacity:0.9; font-size:24px; cursor:pointer; background:none; border:none; line-height:1;">×</button>
     </div>
-    <div class="modal-body" style="padding:18px 24px; overflow-y:auto; font-size:12px; color:var(--text-h); line-height:1.5;">
+    
+    <div class="modal-body" style="padding:16px 22px; overflow-y:auto; font-size:12px; color:var(--text-h); line-height:1.5; max-height:80vh;">
       
-      <!-- Scientific overview banner -->
-      <div style="padding:10px 14px; background:#F0FDF4; border-left:4px solid #16A34A; border-radius:6px; margin-bottom:16px;">
-        <div style="font-weight:700; color:#15803D; font-size:12.5px; margin-bottom:2px;">Objective Clinical Outcome Classification</div>
-        <div style="color:#166534; font-size:11.5px;">Intrapartum delivery outcomes in the UHRP cohort are evaluated using standardized objective biomarkers (Status at Delivery from Form C) for core clinical risks and protocol-based facility appropriateness for obstetric/demographic risks.</div>
+      <!-- Top 3 Key Decision Rules Card -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px; margin-bottom:16px;">
+        <div style="background:#FEF2F2; border-left:4px solid #DC2626; border-radius:6px; padding:10px 12px;">
+          <div style="font-weight:700; color:#991B1B; font-size:11.5px; display:flex; align-items:center; gap:5px;">
+            <span>🚨</span> Universal Severe Complications
+          </div>
+          <div style="color:#7F1D1D; font-size:11px; margin-top:2px;">
+            Maternal death, neonatal death, stillbirth, or uterine rupture are <strong>strictly unfavourable across all risk factors</strong>.
+          </div>
+        </div>
+
+        <div style="background:#F0FDF4; border-left:4px solid #16A34A; border-radius:6px; padding:10px 12px;">
+          <div style="font-weight:700; color:#15803D; font-size:11.5px; display:flex; align-items:center; gap:5px;">
+            <span>🔬</span> 4 Core Clinical Biomarkers
+          </div>
+          <div style="color:#166534; font-size:11px; margin-top:2px;">
+            Evaluated by objective Form C status at delivery (Hb cutoff 7 g/dL for Severe Anemia, BP &lt; 140/90 for PIH).
+          </div>
+        </div>
+
+        <div style="background:#EFF6FF; border-left:4px solid #2563EB; border-radius:6px; padding:10px 12px;">
+          <div style="font-weight:700; color:#1E40AF; font-size:11.5px; display:flex; align-items:center; gap:5px;">
+            <span>🏥</span> Facility Surgical Readiness (FRU)
+          </div>
+          <div style="color:#1E3A8A; font-size:11px; margin-top:2px;">
+            Previous LSCS &amp; BOH require <strong>FRU tier (DH / SDH / Medical College / Private Hospital)</strong>. Non-FRU is unfavourable.
+          </div>
+        </div>
       </div>
 
-      <!-- Core 4 Clinical Conditions Grid -->
-      <div style="font-weight:800; color:var(--teal-dk); font-size:13px; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">1. Core Clinical Biomarker Conditions (From Form C Status at Delivery)</div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:12px; margin-bottom:20px;">
+      <!-- Section 1: Universal Severe Adverse Complications -->
+      <div style="font-weight:800; color:var(--teal-dk); font-size:12.5px; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; gap:6px;">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#DC2626;"></span>
+        1. Universal Severe Adverse Outcomes (Applies to ALL Conditions)
+      </div>
+      <div style="background:var(--surface); border:1px solid #FECACA; border-radius:8px; padding:12px; margin-bottom:18px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <strong style="color:#B91C1C; font-size:12px;">⚠️ Critical Intrapartum &amp; Perinatal Events</strong>
+          <span class="pill p-r" style="font-size:10px; font-weight:700;">Zero-Tolerance Safety Benchmark</span>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:10px; font-size:11.5px;">
+          <div style="background:#F0FDF4; border:1px solid #BBF7D0; border-radius:6px; padding:8px 10px;">
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+              <span class="pill p-g" style="padding:1px 6px; font-size:10px;">🟢 Favourable</span>
+              <strong style="color:#15803D;">Safe Maternal &amp; Neonatal Delivery</strong>
+            </div>
+            <div style="color:#166534; font-size:11px;">Maternal survival, live baby, and intact uterus without rupture or critical intrapartum catastrophe.</div>
+          </div>
+          <div style="background:#FEF2F2; border:1px solid #FECACA; border-radius:6px; padding:8px 10px;">
+            <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+              <span class="pill p-r" style="padding:1px 6px; font-size:10px;">🔴 Unfavourable</span>
+              <strong style="color:#B91C1C;">Severe Complication Occurred</strong>
+            </div>
+            <div style="color:#991B1B; font-size:11px;">Neonatal death, antepartum/intrapartum stillbirth, maternal death, or uterine rupture/scar dehiscence. <em>(Classifies case as unfavourable regardless of other factors).</em></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Core 4 Clinical Conditions Grid -->
+      <div style="font-weight:800; color:var(--teal-dk); font-size:12.5px; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; gap:6px;">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--teal);"></span>
+        2. 4 Core Clinical Biomarkers (Status at Delivery from Form C)
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:10px; margin-bottom:18px;">
         
         <!-- Severe Anemia Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#DC2626; font-size:12.5px;">🩸 Severe Anemia (Hb &lt; 7.0 g/dL)</strong>
-            <span class="pill p-r" style="font-size:10px;">Hb Cutoff: 7.0 g/dL</span>
+            <strong style="color:#DC2626; font-size:12px;">🩸 Severe Anemia (Baseline Hb &lt; 7.0 g/dL)</strong>
+            <span class="pill p-r" style="font-size:10px;">Cutoff: 7.0 g/dL</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Delivery outcome criteria:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Resolved (Hb &gt; 7)</span>
-              <span><strong>Resolved:</strong> Severe anemia resolved (Hb &gt; 7.0 g/dL at delivery).</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">Resolved (Hb &gt; 7)</span>
+              <span><strong>Favourable:</strong> Hemoglobin &gt; 7.0 g/dL at delivery (clinical resolution).</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Unresolved (Hb &lt; 7)</span>
-              <span><strong>Unresolved:</strong> Persistent severe anemia (Hb &lt; 7.0 g/dL at delivery).</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Unresolved (Hb &lt; 7)</span>
+              <span><strong>Unfavourable:</strong> Persistent severe anemia (Hb ≤ 7.0 g/dL at delivery).</span>
             </div>
           </div>
         </div>
 
         <!-- PIH Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#0284C7; font-size:12.5px;">🩺 Pregnancy-Induced Hypertension (PIH)</strong>
-            <span class="pill p-t" style="font-size:10px;">BP Target: &lt; 140/90 mmHg</span>
+            <strong style="color:#0284C7; font-size:12px;">🩺 Pregnancy-Induced Hypertension (PIH)</strong>
+            <span class="pill p-t" style="font-size:10px;">Target: &lt; 140/90</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Short-form statuses recorded at delivery:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Controlled (BP &lt; 140/90)</span>
-              <span><strong>Favourable:</strong> Normotensive at delivery without eclampsia.</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">Controlled BP</span>
+              <span><strong>Favourable:</strong> Normotensive at delivery (BP &lt; 140/90 mmHg) without eclampsia.</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Uncontrolled (BP ≥ 140/90)</span>
-              <span><strong>Unfavourable:</strong> Persistent hypertension or severe-range BP.</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Uncontrolled BP</span>
+              <span><strong>Unfavourable:</strong> Persistent hypertension (BP ≥ 140/90 mmHg) or severe range.</span>
             </div>
           </div>
         </div>
 
         <!-- Sickle Cell Disease Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#7C3AED; font-size:12.5px;">🧬 Sickle Cell Disease (SCD)</strong>
-            <span class="pill p-gy" style="font-size:10px;">Target: Hb ≥ 7 &amp; No Crisis</span>
+            <strong style="color:#7C3AED; font-size:12px;">🧬 Sickle Cell Disease (SCD)</strong>
+            <span class="pill p-gy" style="font-size:10px;">Hb ≥ 7 &amp; No Crisis</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Short-form statuses recorded at delivery:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Stable (Hb ≥ 7, No Crisis)</span>
-              <span><strong>Favourable:</strong> Hemodynamically stable, no vaso-occlusive crisis.</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">Stable Delivery</span>
+              <span><strong>Favourable:</strong> Hemodynamically stable, Hb ≥ 7.0 g/dL, no painful/chest crisis.</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Anaemic (Hb &lt; 7)</span>
-              <span><strong>Unfavourable:</strong> Severe anemia (Hb &lt; 7.0 g/dL) present at delivery.</span>
-            </div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Crisis at Delivery</span>
-              <span><strong>Unfavourable:</strong> Acute painful, hemolytic, or chest crisis.</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Crisis / Anaemic</span>
+              <span><strong>Unfavourable:</strong> Acute sickle crisis or severe anemia (Hb &lt; 7.0 g/dL) at delivery.</span>
             </div>
           </div>
         </div>
 
         <!-- GDM Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#D97706; font-size:12.5px;">🍬 Gestational Diabetes Mellitus (GDM)</strong>
-            <span class="pill p-a" style="font-size:10px;">Target: FBS &lt; 95, RBS &lt; 140</span>
+            <strong style="color:#D97706; font-size:12px;">🍬 Gestational Diabetes Mellitus (GDM)</strong>
+            <span class="pill p-a" style="font-size:10px;">FBS &lt; 95, RBS &lt; 140</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Short-form statuses recorded at delivery:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Controlled (Normal Glucose)</span>
-              <span><strong>Favourable:</strong> Euglycemia maintained (FBS &lt; 95 &amp; RBS &lt; 140).</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">Controlled Sugar</span>
+              <span><strong>Favourable:</strong> Blood glucose maintained in normal range at delivery.</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Uncontrolled (Hyperglycemia)</span>
-              <span><strong>Unfavourable:</strong> Blood glucose above targets at delivery.</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Hyperglycemia</span>
+              <span><strong>Unfavourable:</strong> Uncontrolled blood glucose levels at delivery.</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Obstetric and Surgical Risk Conditions -->
-      <div style="font-weight:800; color:var(--teal-dk); font-size:13px; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px;">2. Surgical, Obstetric History &amp; Vulnerability Criteria</div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:12px; margin-bottom:14px;">
+      <!-- Section 3: Obstetric Surgical & Facility Preparedness -->
+      <div style="font-weight:800; color:var(--teal-dk); font-size:12.5px; margin-bottom:8px; text-transform:uppercase; letter-spacing:0.5px; display:flex; align-items:center; gap:6px;">
+        <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#2563EB;"></span>
+        3. Obstetric Surgical &amp; Facility Tier Preparedness Protocols
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:10px; margin-bottom:14px;">
 
         <!-- Previous LSCS Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#4F46E5; font-size:12.5px;">✂️ Previous LSCS (Uterine Scar Risk)</strong>
-            <span class="pill p-gy" style="font-size:10px;">Mode Classification</span>
+            <strong style="color:#4F46E5; font-size:12px;">✂️ Previous LSCS (Uterine Scar Risk)</strong>
+            <span class="pill p-gy" style="font-size:10px;">Emergency Surgical Tier</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Clinical rationale based on intrapartum risk exposure:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Favourable (Safe Delivery / LSCS)</span>
-              <span><strong>Favourable:</strong> Elective LSCS, Emergency LSCS, or monitored VBAC completed safely without rupture or mortality.</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">FRU Delivery</span>
+              <span><strong>Favourable:</strong> Delivered at an <strong>FRU</strong> (DH / SDH / Medical College / Private Hospital) via Elective LSCS, Emergency LSCS, or monitored VBAC without complications.</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Unfavourable (Severe Complication)</span>
-              <span><strong>Unfavourable:</strong> Complications including uterine rupture / dehiscence, stillbirth / neonatal death, or maternal death.</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Non-FRU / Home</span>
+              <span><strong>Unfavourable:</strong> Delivered at a <strong>non-FRU facility (PHC / Subcenter / non-FRU CHC)</strong> or home without 24x7 surgical OT; or severe complication occurred.</span>
             </div>
           </div>
         </div>
 
         <!-- BOH & Teenage Pregnancy Card -->
-        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:12px; box-shadow:0 1px 2px rgba(0,0,0,0.03);">
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:11px; box-shadow:0 1px 2px rgba(0,0,0,0.02);">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-            <strong style="color:#059669; font-size:12.5px;">🏥 Previous Stillbirth / Neonatal Death &amp; Teenage Pregnancy</strong>
+            <strong style="color:#059669; font-size:12px;">🏥 Previous Stillbirth / Neonatal Death &amp; Teenage</strong>
             <span class="pill p-g" style="font-size:10px;">FRU Planning Protocol</span>
           </div>
-          <div style="font-size:11.5px; color:var(--text-m); margin-bottom:6px;">Clinical protocol: CEmONC &amp; 24x7 blood bank facility tier:</div>
           <div style="display:flex; flex-direction:column; gap:4px; font-size:11px;">
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-g" style="padding:2px 6px;">Favourable (Planned FRU)</span>
-              <span><strong>Favourable:</strong> Planned &amp; delivered at First Referral Unit (DH / SDH / Tertiary / Private Hospital).</span>
+              <span class="pill p-g" style="padding:1px 6px; min-width:85px; text-align:center;">Planned FRU</span>
+              <span><strong>Favourable:</strong> Planned and delivered at an <strong>FRU</strong> (CEmONC tier with 24x7 surgical OT, Blood Bank, and SNCU).</span>
             </div>
             <div style="display:flex; align-items:center; gap:6px;">
-              <span class="pill p-r" style="padding:2px 6px;">Unfavourable (Peripheral / Home)</span>
-              <span><strong>Unfavourable:</strong> Delivered at peripheral facility (CHC / PHC) or home without 24x7 C-section/SNCU.</span>
+              <span class="pill p-r" style="padding:1px 6px; min-width:85px; text-align:center;">Peripheral / Home</span>
+              <span><strong>Unfavourable:</strong> Delivered at a peripheral facility (CHC / PHC) or home without 24x7 emergency surgical/neonatal backup.</span>
             </div>
           </div>
         </div>
@@ -1056,12 +1106,13 @@ canvas{max-height:260px}
       </div>
 
       <!-- Cohort Summary Note -->
-      <div style="padding:10px 14px; background:#F8FAFC; border:1px dashed var(--border); border-radius:6px; font-size:11px; color:var(--text-m);">
-        <strong>Scientific Reporting Summary:</strong> When viewing the Case-by-Case table, each woman's specific risk factors are evaluated individually. Multi-risk patients display condition outcome badges for each registered risk category. Overall cohort favourability is synthesized in the KPI cards and Maternal Clinical Risk Resolution Segregated Bar.
+      <div style="padding:8px 12px; background:#F8FAFC; border:1px dashed var(--border); border-radius:6px; font-size:11px; color:var(--text-m); display:flex; align-items:center; gap:8px;">
+        <span style="font-size:14px;">ℹ️</span>
+        <div><strong>Cohort Evaluation Note:</strong> Each woman's registered risk conditions are evaluated individually in the linelist table. Multi-risk patients display outcome badges for all relevant conditions. Overall favourability is summarized in the Outcome KPI cards and Trajectory Bar.</div>
       </div>
 
     </div>
-    <div class="modal-footer" style="padding:12px 20px; border-top:1px solid var(--border); background:#F8FAFC; display:flex; justify-content:flex-end;">
+    <div class="modal-footer" style="padding:10px 20px; border-top:1px solid var(--border); background:#F8FAFC; display:flex; justify-content:flex-end;">
       <button onclick="closeOutcomeDefinitionsModal()" style="padding:6px 18px; background:var(--teal); color:#fff; border:none; border-radius:6px; font-weight:600; cursor:pointer; font-size:12px;">Close</button>
     </div>
   </div>
@@ -2681,10 +2732,27 @@ function renderDashboard() {
       const delPlace = (d.place || '').toLowerCase();
       const delFac = cleanCategoricalLabel(d.facility_name || d.place || 'Facility');
       const isHome = delPlace.includes('home') || delFac.toLowerCase().includes('home');
-      const isFru = ['dh', 'sdh', 'district', 'medical', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'].some(k => delPlace.includes(k) || delFac.toLowerCase().includes(k));
+      const isFru = ['dh', 'sdh', 'district', 'medical', 'mth', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'].some(k => delPlace.includes(k) || delFac.toLowerCase().includes(k));
       const wasPlanned = (d.was_planned || '').toLowerCase().includes('yes');
 
       const badges = [];
+
+      // Universal Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth) - UNFAVOURABLE TO ALL RISK FACTORS
+      const babyAliveStr = String(d.baby_alive || '').toLowerCase();
+      const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
+      const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
+                         ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
+      const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
+      const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
+      const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
+
+      if (hasSevereComp) {
+        const compLabels = [];
+        if (isUterineRupture) compLabels.push('Uterine Rupture');
+        if (isMaternalDeath) compLabels.push('Maternal Death');
+        if (isDeadBaby) compLabels.push('Stillbirth/Neonatal Death');
+        badges.push(`<span class="pill p-r" style="font-weight:700;" title="Severe complication (Unfavourable across all risk factors): ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
+      }
 
       // 1. Severe Anemia: Form C status at delivery in English short form
       if (hasAnemia) {
@@ -2760,52 +2828,29 @@ function renderDashboard() {
         }
       }
 
-      // Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth)
-      const babyAliveStr = String(d.baby_alive || '').toLowerCase();
-      const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
-      const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
-                         ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
-      const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
-      const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
-      const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
-
-      // 5. Previous LSCS: Safe delivery (Elective / Emergency LSCS / VBAC) is favourable unless complicated
+      // 5. Previous LSCS: Safe delivery at FRU is Favourable; Delivery at non-FRU or home is Unfavourable
       if (hasLscs) {
         const typeStr = (d.type || '').toLowerCase();
-        if (hasSevereComp) {
-          const compLabels = [];
-          if (isUterineRupture) compLabels.push('Uterine Rupture');
-          if (isMaternalDeath) compLabels.push('Maternal Death');
-          if (isDeadBaby) compLabels.push('Stillbirth/Neonatal Death');
-          badges.push(`<span class="pill p-r" title="Previous LSCS with severe complication: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
-        } else if (typeStr.includes('emergency')) {
-          badges.push(`<span class="pill p-g" title="Previous LSCS: Emergency LSCS completed safely without rupture/mortality">Favourable (Emergency LSCS)</span>`);
-        } else if (typeStr.includes('elective') || typeStr.includes('planned')) {
-          badges.push(`<span class="pill p-g" title="Previous LSCS: Elective LSCS completed safely">Favourable (Elective LSCS)</span>`);
-        } else if (typeStr.includes('normal') || typeStr.includes('vaginal')) {
-          badges.push(`<span class="pill p-g" title="Previous LSCS: Successful vaginal birth after cesarean">Favourable (Successful VBAC)</span>`);
-        } else {
-          badges.push(`<span class="pill p-g" title="Previous LSCS: Safe Delivery">Favourable (${cleanCategoricalLabel(d.type || 'Safe Delivery')})</span>`);
+        if (isHome || !isFru) {
+          badges.push(`<span class="pill p-r" title="Previous LSCS: Delivery at non-FRU facility or home is unfavourable">Unfavourable (Non-FRU Delivery: ${delFac})</span>`);
+        } else if (!hasSevereComp) {
+          if (typeStr.includes('emergency')) {
+            badges.push(`<span class="pill p-g" title="Previous LSCS: Emergency LSCS completed safely at FRU">Favourable (Emergency LSCS at FRU)</span>`);
+          } else if (typeStr.includes('elective') || typeStr.includes('planned')) {
+            badges.push(`<span class="pill p-g" title="Previous LSCS: Elective LSCS completed safely at FRU">Favourable (Elective LSCS at FRU)</span>`);
+          } else if (typeStr.includes('normal') || typeStr.includes('vaginal')) {
+            badges.push(`<span class="pill p-g" title="Previous LSCS: Successful VBAC at FRU">Favourable (Successful VBAC at FRU)</span>`);
+          } else {
+            badges.push(`<span class="pill p-g" title="Previous LSCS: Safe Delivery at FRU">Favourable (${cleanCategoricalLabel(d.type || 'Safe Delivery')} at FRU)</span>`);
+          }
         }
-      } else if (hasSevereComp && !hasBoh) {
-        const compLabels = [];
-        if (isUterineRupture) compLabels.push('Uterine Rupture');
-        if (isMaternalDeath) compLabels.push('Maternal Death');
-        if (isDeadBaby) compLabels.push('Stillbirth/Neonatal Death');
-        badges.push(`<span class="pill p-r" title="Severe complication: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
       }
 
       // 6. Teenage pregnancy & Previous Stillbirth / Neonatal Death (BOH) & other high risks:
       // Planned facility in Form B at FRU is Favourable, other facility is Unfavourable
       const isBohOrTeenOrOther = hasBoh || hasTeen || (!hasAnemia && !hasScd && !hasPih && !hasGdm && !hasLscs);
-      if (isBohOrTeenOrOther) {
-        if (hasSevereComp) {
-          const compLabels = [];
-          if (isUterineRupture) compLabels.push('Uterine Rupture');
-          if (isMaternalDeath) compLabels.push('Maternal Death');
-          if (isDeadBaby) compLabels.push('Stillbirth / Perinatal Death');
-          badges.push(`<span class="pill p-r" title="Unfavourable: ${compLabels.join(', ')}">Unfavourable (${compLabels.join(', ')})</span>`);
-        } else if (isHome) {
+      if (isBohOrTeenOrOther && !hasSevereComp) {
+        if (isHome) {
           badges.push(`<span class="pill p-r" title="Unfavourable: Unsafe home delivery">Unfavourable (Home Delivery)</span>`);
         } else if (isFru && wasPlanned) {
           badges.push(`<span class="pill p-g" title="Favourable: Planned First Referral Unit (FRU) delivery">Favourable (Planned FRU: ${delFac})</span>`);
@@ -2868,7 +2913,7 @@ function renderDashboard() {
     const delPlace = (d.place || '').toLowerCase();
     const delFac = (d.facility_name || d.place || '').toLowerCase();
     const isHome = delPlace.includes('home') || delFac.includes('home');
-    const isFru = ['dh', 'sdh', 'district', 'medical', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'].some(k => delPlace.includes(k) || delFac.includes(k));
+    const isFru = ['dh', 'sdh', 'district', 'medical', 'mth', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'].some(k => delPlace.includes(k) || delFac.includes(k));
     const wasPlanned = (d.was_planned || '').toLowerCase().includes('yes');
 
     if (isHome) delAllHome++;
@@ -2887,10 +2932,24 @@ function renderDashboard() {
     const hasBoh = risksLower.some(r => r.includes('stillbirth') || r.includes('neonatal') || r.includes('death') || r.includes('boh'));
     const hasTeen = risksLower.some(r => r.includes('teen') || r.includes('young') || (c.age && c.age < 20));
 
+    // Universal Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth) - UNFAVOURABLE TO ALL RISK FACTORS
+    const babyAliveStr = String(d.baby_alive || '').toLowerCase();
+    const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
+    const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
+                       ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
+    const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
+    const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
+    const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
+
     let caseIsUnfavorable = false;
     let caseClinUnfavorable = false;
 
-    // 1. Severe Anemia: Resolved if Hb > 7, Unresolved if Hb < 7
+    if (hasSevereComp) {
+      caseIsUnfavorable = true;
+      caseClinUnfavorable = true;
+    }
+
+    // 1. Severe Anemia: Resolved if Hb > 7, Unresolved if Hb <= 7
     if (hasAnemia) {
       delAnemiaTotal++;
       const anemiaSt = (d.anemia_status || '').toLowerCase();
@@ -2963,17 +3022,11 @@ function renderDashboard() {
       }
     }
 
-    // Severe Complications (uterine rupture, maternal death, neonatal death, stillbirth)
-    const babyAliveStr = String(d.baby_alive || '').toLowerCase();
-    const compText = `${d.gaps_concerns || ''} ${d.remarks || ''} ${d.baby_transfer_reason || ''}`.toLowerCase();
-    const isDeadBaby = (babyAliveStr.includes('no') && !babyAliveStr.includes('yes')) ||
-                       ['stillbirth', 'still birth', 'neonatal death', 'died', 'expired', 'intrauterine death', 'fetal death'].some(k => compText.includes(k));
-    const isUterineRupture = ['rupture', 'dehiscence'].some(k => compText.includes(k));
-    const isMaternalDeath = ['maternal death', 'mother died', 'mother expired'].some(k => compText.includes(k));
-    const hasSevereComp = isDeadBaby || isUterineRupture || isMaternalDeath;
-
-    if (hasSevereComp) {
-      caseIsUnfavorable = true;
+    // 5. Previous LSCS: Safe Delivery at FRU is Favourable; Delivery at non-FRU or home is Unfavourable
+    if (hasLscs) {
+      if (!isFru || isHome) {
+        caseIsUnfavorable = true;
+      }
     }
 
     // 6. BOH & Teenage Pregnancy: Planned FRU = Favourable, Non-FRU/Home = Unfavourable

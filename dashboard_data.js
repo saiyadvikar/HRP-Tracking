@@ -2009,7 +2009,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "GDM Status: NA – GDM was not identified for this woman",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -2220,7 +2220,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Anemia Status: NA – Severe Anemia was not enrolled for this woman",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -2408,7 +2408,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (District hospital khandwa) - Planned Adherent",
-        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)",
+        "Emergency LSCS completed safely at FRU (favourable outcome)",
         "Planned FRU Delivery (District hospital khandwa) (favourable outcome)"
       ]
     },
@@ -3225,7 +3225,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Gurjar hospital sanawad) - Planned Adherent",
-        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
+        "Emergency LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -4013,7 +4013,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Dh khandwa) - Facility Delivery",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -4226,7 +4226,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (DH-KHARGONE) - Planned Adherent",
-        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
+        "Emergency LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -4425,7 +4425,7 @@ const dashboardData = {
         "Anemia improved: Hb increased by 4.0 g/dL (from 6.7 to 10.7)",
         "Anemia Status: Controlled: Hb ≥ 7 g/dL at delivery",
         "Severe Anemia Resolved (Hb 10.7 > 7.0 g/dL)",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -6517,7 +6517,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Dh khandwa) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)",
+        "Elective LSCS completed safely at FRU (favourable outcome)",
         "Planned FRU Delivery (Dh khandwa) (favourable outcome)"
       ]
     },
@@ -7964,7 +7964,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (sai  samarthan Hospital khargone) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -8664,7 +8664,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Dh khargone) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -8930,7 +8930,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Private priti hospital dhamnod) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)"
+        "Elective LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -9280,7 +9280,7 @@ const dashboardData = {
       "improvement_details": [
         "GDM Controlled: Blood sugar 85.0 mg/dL at delivery (from 160.0 mg/dL)",
         "GDM Status: NA – GDM was not identified for this woman",
-        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
+        "Emergency LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -9697,7 +9697,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Rakshya Hospital Khargone) - Planned Adherent",
-        "Emergency LSCS completed safely without rupture/mortality (favourable outcome)"
+        "Emergency LSCS completed safely at FRU (favourable outcome)"
       ]
     },
     {
@@ -16375,7 +16375,7 @@ const dashboardData = {
       "improvement_status": "Controlled / Resolved",
       "improvement_details": [
         "Safe Institutional Delivery (Ch Sanawad) - Planned Adherent",
-        "Elective LSCS / Safe Delivery (favourable outcome)",
+        "Elective LSCS completed safely at FRU (favourable outcome)",
         "Planned FRU Delivery (Ch Sanawad) (favourable outcome)"
       ]
     },

@@ -763,25 +763,33 @@ for case in cases:
             if is_stillbirth_or_death: comp_reasons.append("Stillbirth / Neonatal Death")
             worsened_reasons.append(f"Severe Complication: {', '.join(comp_reasons)} (unfavourable outcome)")
 
-        # Previous LSCS criteria: Safe Delivery (Elective LSCS, Emergency LSCS, or VBAC without rupture/death) is favourable
+        # Previous LSCS criteria: Safe Delivery at FRU (Elective LSCS, Emergency LSCS, or VBAC without rupture/death) is favourable; Delivery at non-FRU/home is unfavourable
         has_lscs = any("lscs" in cat.lower() or "cesarean" in cat.lower() for cat in case['hrp_categories'])
         del_type_str = (del_data.get('type') or '').lower()
-        if has_lscs and not (is_uterine_rupture or is_maternal_death or is_stillbirth_or_death):
-            if 'emergency' in del_type_str:
-                improvement_details.append("Emergency LSCS completed safely without rupture/mortality (favourable outcome)")
-            elif 'elective' in del_type_str or 'planned' in del_type_str:
-                improvement_details.append("Elective LSCS / Safe Delivery (favourable outcome)")
-            elif 'normal' in del_type_str or 'vaginal' in del_type_str:
-                improvement_details.append("Successful VBAC / Safe Delivery (favourable outcome)")
-            else:
-                improvement_details.append("Safe Delivery (favourable outcome)")
+        if has_lscs:
+            del_p = (del_data.get('place') or '').lower()
+            del_f = (del_data.get('facility_name') or '').lower()
+            is_fru_fac = any(k in (del_p + ' ' + del_f) for k in ['dh', 'sdh', 'district', 'medical', 'mth', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'])
+            is_home_del = 'home' in del_p or 'home' in del_f
+            if is_home_del or not is_fru_fac:
+                is_worsened = True
+                worsened_reasons.append(f"High-risk Previous LSCS delivered at non-FRU facility ({del_data.get('facility_name') or del_data.get('place')}) (unfavourable outcome)")
+            elif not (is_uterine_rupture or is_maternal_death or is_stillbirth_or_death):
+                if 'emergency' in del_type_str:
+                    improvement_details.append("Emergency LSCS completed safely at FRU (favourable outcome)")
+                elif 'elective' in del_type_str or 'planned' in del_type_str:
+                    improvement_details.append("Elective LSCS completed safely at FRU (favourable outcome)")
+                elif 'normal' in del_type_str or 'vaginal' in del_type_str:
+                    improvement_details.append("Successful VBAC completed safely at FRU (favourable outcome)")
+                else:
+                    improvement_details.append(f"Safe FRU Delivery ({del_data.get('facility_name') or del_data.get('place')}) (favourable outcome)")
 
         # Teenage & Previous Stillbirth / Neonatal Death criteria: Planned FRU is favourable, other is unfavourable
         has_boh_or_teen = any("stillbirth" in cat.lower() or "neonatal" in cat.lower() or "death" in cat.lower() or "boh" in cat.lower() or "teen" in cat.lower() for cat in case['hrp_categories']) or (case.get('age') and case['age'] < 20)
         if has_boh_or_teen:
             del_p = (del_data.get('place') or '').lower()
             del_f = (del_data.get('facility_name') or '').lower()
-            is_fru_fac = any(k in (del_p + ' ' + del_f) for k in ['dh', 'sdh', 'district', 'medical', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'])
+            is_fru_fac = any(k in (del_p + ' ' + del_f) for k in ['dh', 'sdh', 'district', 'medical', 'mth', 'private', 'hospital', 'gurjar', 'indore', 'khandwa'])
             was_pl = 'yes' in (del_data.get('was_planned') or '').lower()
             if is_fru_fac and was_pl:
                 improvement_details.append(f"Planned FRU Delivery ({del_data.get('facility_name') or del_data.get('place')}) (favourable outcome)")
