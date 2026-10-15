@@ -1,11 +1,11 @@
 const dashboardData = {
-  "evaluation_date": "2026-10-14",
-  "generated_date": "14-10-2026",
+  "evaluation_date": "2026-10-15",
+  "generated_date": "15-10-2026",
   "stats": {
     "total_enrolled": 234,
-    "total_follow_ups": 103,
+    "total_follow_ups": 105,
     "total_deliveries": 71,
-    "matched_follow_ups": 87,
+    "matched_follow_ups": 89,
     "matched_deliveries": 65,
     "block_distribution": {
       "Jhirniya": 48,
@@ -13023,7 +13023,45 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 103,
+          "date": "2026-10-14",
+          "timestamp": "2026-10-14 11:27:52",
+          "visit_number": 26153849833,
+          "gestational_age": 35,
+          "place": "Other",
+          "conducted_by": "Rinu Prajapat",
+          "bp_measured": "Yes",
+          "weight": 45.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 10.0,
+          "hb_trend": "",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "scd_hb": 10.5,
+          "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis since last visit- (स्थिर: Hb ≥ 7 g/dL और पिछली मुलाकात के बाद से कोई संकट नहीं।)",
+          "prev_lscs_status": "",
+          "prev_stillbirth_status": "",
+          "teenage_status": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-10-14",
+          "med_adherence_general": "> 20 days (good)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
@@ -13761,7 +13799,45 @@ const dashboardData = {
       "blood_group": "A+",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 104,
+          "date": "2026-10-14",
+          "timestamp": "2026-10-14 11:42:29",
+          "visit_number": 2,
+          "gestational_age": 35,
+          "place": "Other",
+          "conducted_by": "Rinu prajapat",
+          "bp_measured": "Yes",
+          "weight": null,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 10.0,
+          "hb_trend": "Improved (higher than last visit) - (पिछली बार की तुलना में बेहतर स्थिति है।)",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "prev_lscs_status": "",
+          "prev_stillbirth_status": "",
+          "teenage_status": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-10-22",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
@@ -18417,10 +18493,10 @@ const dashboardData = {
     },
     "linkage_improvements": {
       "enr_to_fup": {
-        "improved": 13,
-        "stable": 10,
+        "improved": 14,
+        "stable": 11,
         "worsened": 2,
-        "total": 25,
+        "total": 27,
         "details": [
           {
             "name": "Sima",
@@ -18577,11 +18653,25 @@ const dashboardData = {
             "status": "Improved"
           },
           {
+            "name": "Samita",
+            "base_hb": 10.2,
+            "fup_hb": 10.0,
+            "diff": -0.2,
+            "status": "Stable"
+          },
+          {
             "name": "PINKY",
             "base_hb": 5.5,
             "fup_hb": 5.5,
             "diff": 0.0,
             "status": "Stable"
+          },
+          {
+            "name": "Shital",
+            "base_hb": 6.7,
+            "fup_hb": 10.0,
+            "diff": 3.3,
+            "status": "Improved"
           },
           {
             "name": "Sanju",
