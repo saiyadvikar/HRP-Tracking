@@ -89,6 +89,25 @@ def normalize_mp_id(val):
     except Exception:
         return str(val).strip()
 
+def is_valid_mp(mp):
+    if not mp or pd.isna(mp):
+        return False
+    v = str(mp).strip().replace('.0', '').lower()
+    if v in ['', '0', 'nan', 'none', 'no', 'null']:
+        return False
+    if v.replace('0', '') == '':
+        return False  # all zeroes like 00000000000
+    if len(v) < 6:
+        return False
+    return True
+
+from difflib import SequenceMatcher
+
+def similarity(a, b):
+    if not a or not b:
+        return 0.0
+    return SequenceMatcher(None, str(a).lower().strip(), str(b).lower().strip()).ratio()
+
 def clean_mobile(val):
     if pd.isna(val):
         return ""
@@ -250,31 +269,56 @@ for idx, row_b in df_b.iterrows():
     
     match_case = None
     
-    # Try ID match
-    if mp_id_b:
+    # Try ID match (valid MP ID only)
+    if is_valid_mp(mp_id_b):
         for case in cases:
-            if case['mp_id'] == mp_id_b:
+            if is_valid_mp(case['mp_id']) and case['mp_id'] == mp_id_b:
                 match_case = case
                 break
                 
     # Try Name + Husband match
     if not match_case and name_b:
         for case in cases:
-            if case['name'].lower().strip() == name_b:
-                if not husband_b or not case['husband_name'] or case['husband_name'].lower().strip() == husband_b:
+            a_anc = clean_name(case['name'])
+            a_husb = clean_name(case['husband_name'])
+            if a_anc == name_b:
+                if not husband_b or not a_husb or a_husb == husband_b or similarity(husband_b, a_husb) >= 0.65:
                     match_case = case
                     break
                     
     # Try fuzzy Name match
     if not match_case and name_b:
-        if name_b == "nindra" and husband_b == "jaypal":
+        best_score = 0
+        best_case = None
+        for case in cases:
+            a_anc = clean_name(case['name'])
+            a_husb = clean_name(case['husband_name'])
+            ns = similarity(name_b, a_anc)
+            hs = similarity(husband_b, a_husb) if (husband_b and a_husb) else 0.5
+            is_sub = (name_b in a_anc or a_anc in name_b) and len(name_b) >= 4
+            husb_sub = (husband_b in a_husb or a_husb in husband_b) and len(husband_b) >= 3 if (husband_b and a_husb) else False
+            if (ns >= 0.75 or is_sub) and (hs >= 0.65 or husb_sub):
+                if ns + hs > best_score:
+                    best_score = ns + hs
+                    best_case = case
+        if best_case and best_score >= 1.4:
+            match_case = best_case
+
+    # Specific known spelling variations
+    if not match_case and name_b:
+        if name_b in ["nindra", "nandra"] and husband_b == "jaypal":
             for case in cases:
-                if case['name'].lower().strip() == "nandra" and case['husband_name'].lower().strip() == "jaypal":
+                if case['name'].lower().strip() in ["nandra", "nindra"] and case['husband_name'].lower().strip() == "jaypal":
                     match_case = case
                     break
-        elif name_b == "fareen":
+        elif name_b in ["fareen", "farin"]:
             for case in cases:
-                if case['name'].lower().strip() == "farin":
+                if case['name'].lower().strip() in ["fareen", "farin"]:
+                    match_case = case
+                    break
+        elif "anjali" in name_b and "ganesh" in husband_b:
+            for case in cases:
+                if "anjali" in case['name'].lower() and "ganesh" in case['husband_name'].lower():
                     match_case = case
                     break
 
@@ -295,19 +339,26 @@ for idx, row_b in df_b.iterrows():
             "agreed_designated_facility": clean_str(row_b['Women agreed to deliver in a designated facility? (क्या महिला तय की गई जगह पर डिलीवरी करवाने के लिए सहमत हुईं?)']),
             "hb": clean_numeric(row_b['Current Hb (g/dL)']),
             "hb_trend": clean_str(row_b['(पिछली मुलाकात की तुलना में हीमोग्लोबिन का रुझान)']),
-            "anemia_status": clean_str(row_b['(इस जांच के दौरान स्थिति — गंभीर एनीमिया)']),
+            "anemia_status": clean_str(row_b.iloc[26]) if len(row_b) > 26 else "",
+            "anemia_action": clean_str(row_b.iloc[27]) if len(row_b) > 27 else "",
             "bp_systolic": clean_numeric(row_b['(आकलन: इस जांच के दौरान सिस्टोलिक रक्तचाप (mmHg में)']),
             "bp_diastolic": clean_numeric(row_b['(मूल्यांकन: इस जांच के दौरान डायस्टोलिक रक्तचाप (mmHg))']),
             "bp_trend": clean_str(row_b['(आकलन: पिछली जांच की तुलना में रक्तचाप का रुझान)']),
-            "pih_status": clean_str(row_b['(इस दौरे के दौरान स्थिति — पीआईएच)']),
+            "pih_status": clean_str(row_b.iloc[40]) if len(row_b) > 40 else "",
+            "pih_action": clean_str(row_b.iloc[41]) if len(row_b) > 41 else "",
             "gdm_fbs": clean_numeric(row_b['(मूल्यांकन: इस मुलाकात के दौरान उपवास रक्त शर्करा का स्तर (मिलीग्राम/डेसीलीटर))']),
             "gdm_rbs": clean_numeric(row_b['(आकलन: यादृच्छिक / भोजन के बाद रक्त शर्करा का स्तर (मिलीग्राम/डेसीलीटर))']),
-            "gdm_status": clean_str(row_b['(इस दौरे के दौरान स्थिति — जीडीएम)']),
+            "gdm_status": clean_str(row_b.iloc[51]) if len(row_b) > 51 else "",
+            "gdm_action": clean_str(row_b.iloc[52]) if len(row_b) > 52 else "",
             "scd_hb": clean_numeric(row_b['(आकलन: वर्तमान हीमोग्लोबिन (ग्राम/डेसीलीटर))']),
-            "scd_status": clean_str(row_b['(इस दौरे के समय स्थिति — एससीडी)']),
-            "prev_lscs_status": clean_str(row_b['STATUS at this visit — Previous LSCS']),
-            "prev_stillbirth_status": clean_str(row_b['(इस मुलाकात के समय की स्थिति — पिछला मृत जन्म / नवजात शिशु मृत्यु)']),
-            "teenage_status": clean_str(row_b['(इस मुलाकात के समय की स्थिति — किशोर गर्भावस्था)']),
+            "scd_status": clean_str(row_b.iloc[61]) if len(row_b) > 61 else "",
+            "scd_action": clean_str(row_b.iloc[62]) if len(row_b) > 62 else "",
+            "prev_lscs_status": clean_str(row_b.iloc[71]) if len(row_b) > 71 else "",
+            "prev_lscs_remarks": clean_str(row_b.iloc[72]) if len(row_b) > 72 else "",
+            "prev_stillbirth_status": clean_str(row_b.iloc[81]) if len(row_b) > 81 else "",
+            "prev_stillbirth_remarks": clean_str(row_b.iloc[82]) if len(row_b) > 82 else "",
+            "teenage_status": clean_str(row_b.iloc[93]) if len(row_b) > 93 else "",
+            "teenage_remarks": clean_str(row_b.iloc[94]) if len(row_b) > 94 else "",
             "overall_hrp_status": clean_str(row_b['(इस जांच के दौरान समग्र एचआरपी स्थिति (सभी सक्रिय स्थितियों में)']),
             "referral": clean_str(row_b['(क्या इस मुलाकात के दौरान किसी को रेफर किया गया था?)']),
             "next_visit_date": str(row_b['(अगली नियोजित संपर्क तिथि)'])[:10] if pd.notna(row_b['(अगली नियोजित संपर्क तिथि)']) else "",
@@ -340,16 +391,18 @@ for idx, row_c in df_c.iterrows():
     
     match_case = None
     
-    # Stage 1: Clean MP ID match
-    if mp_id_c and mp_id_c not in ['0', 'no', 'none']:
+    # Stage 1: Valid MP ID match (reject dummy zeroes and only match cases without a delivery already)
+    if is_valid_mp(mp_id_c):
         for case in cases:
-            if case['mp_id'] == mp_id_c:
+            if is_valid_mp(case['mp_id']) and case['mp_id'] == mp_id_c and case['delivery'] is None:
                 match_case = case
                 break
                 
     # Stage 2: Exact Name & Husband Name match
     if not match_case and name_c:
         for case in cases:
+            if case['delivery'] is not None:
+                continue
             a_anc = clean_name(case['name'])
             a_husb = clean_name(case['husband_name'])
             if a_anc == name_c:
@@ -362,19 +415,21 @@ for idx, row_c in df_c.iterrows():
         best_score = 0
         best_case = None
         for case in cases:
+            if case['delivery'] is not None:
+                continue
             a_anc = clean_name(case['name'])
             a_husb = clean_name(case['husband_name'])
             name_sim = similarity(name_c, a_anc)
-            husb_sim = similarity(husb_c, a_husb) if (husb_c and a_husb) else 0.8
-            is_sub = (name_c in a_anc or a_anc in name_c) and len(name_c) >= 3
+            husb_sim = similarity(husb_c, a_husb) if (husb_c and a_husb) else (0.8 if name_sim >= 0.9 else 0.0)
+            is_sub = (name_c in a_anc or a_anc in name_c) and len(name_c) >= 4
             husb_sub = (husb_c in a_husb or a_husb in husb_c) and len(husb_c) >= 3 if (husb_c and a_husb) else False
             
-            if (name_sim >= 0.75 or is_sub) and (husb_sim >= 0.60 or husb_sub):
+            if (name_sim >= 0.80 or is_sub) and (husb_sim >= 0.60 or husb_sub):
                 comb_score = name_sim + husb_sim
                 if comb_score > best_score:
                     best_score = comb_score
                     best_case = case
-        if best_case:
+        if best_case and best_score >= 1.4:
             match_case = best_case
 
     # Helper for robust Form C column lookup
@@ -498,14 +553,65 @@ for idx, row_c in df_c.iterrows():
         match_case['delivery'] = delivery_data
         matched_c_count += 1
     else:
-        unlinked_delivery = {
+        # Create unlinked delivery case in cases array so all 77 deliveries are included in cases
+        inferred_cats = []
+        if anemia_status or (eff_hb is not None and eff_hb < 7.0):
+            inferred_cats.append("Severe Anemia")
+        if pih_status or mgso4_given == 'Yes' or (eff_bp and any(x in str(eff_bp) for x in ['140', '150', '160', '170'])):
+            inferred_cats.append("PIH / Gestational Hypertension")
+        if gdm_status:
+            inferred_cats.append("GDM")
+        if scd_status or scd_hb is not None:
+            inferred_cats.append("Sickle Cell Disease")
+        if del_type and 'cesarean' in str(del_type).lower():
+            inferred_cats.append("Previous LSCS")
+        if not inferred_cats:
+            inferred_cats.append("High Risk Pregnancy (Delivery)")
+            
+        unlinked_case = {
+            "id_a": 1000 + int(idx),
+            "mp_id": mp_id_c if is_valid_mp(mp_id_c) else f"C-{idx+1:02d}",
+            "name": clean_str(row_c.get('ANC Name (गर्भवती महिला का नाम)')) or f"Delivery Record #{idx+1}",
+            "husband_name": clean_str(row_c.get('Husband Name (पति का नाम)')) or "-",
+            "age": clean_int(get_c_val(['age'])),
+            "block": clean_str(row_c.get('Block')) or clean_str(get_c_val(['block'])) or "Unknown",
+            "village": clean_str(row_c.get('Village / Gram Panchayat')) or clean_str(get_c_val(['village'])) or "Unknown",
+            "mobile": clean_mobile(row_c.get('Mobile number')) if 'Mobile number' in row_c else "",
+            "asha": clean_str(row_c.get('ASHA name')) or "",
+            "anm": clean_str(row_c.get('ANM name')) or "",
+            "sub_centre": clean_str(row_c.get('Sub-centre')) or "",
+            "lmp": "",
+            "edd": "",
+            "enrollment_date": del_date,
+            "timestamp": timestamp_c,
+            "gestational_age_enrollment": gest_age,
+            "gravida_para": "",
+            "prev_complications": "",
+            "planned_facility": fac_name,
+            "distance": "",
+            "hrp_categories": inferred_cats,
+            "enrollment_hb": hb_adm,
+            "enrollment_bp_sys": None,
+            "enrollment_bp_dia": None,
+            "enrollment_fbs": rbs_adm,
+            "enrollment_urine_albumin": "",
+            "scd_genotype": "",
+            "blood_group": "",
+            "other_history": "",
+            "anc_linelist_visits": [],
+            "visits": [],
+            "delivery": delivery_data,
+            "matched_via": "Unlinked / Direct Delivery Record",
+            "is_unlinked_delivery": True
+        }
+        cases.append(unlinked_case)
+        unlinked_deliveries.append({
             "id_c": int(idx),
             "mp_id": mp_id_c,
-            "name": clean_str(row_c['ANC Name (गर्भवती महिला का नाम)']) if 'ANC Name (गर्भवती महिला का नाम)' in df_c.columns else "",
-            "husband_name": clean_str(row_c['Husband Name (पति का नाम)']) if 'Husband Name (पति का नाम)' in df_c.columns else "",
+            "name": clean_str(row_c.get('ANC Name (गर्भवती महिला का नाम)')) or f"Delivery Record #{idx+1}",
+            "husband_name": clean_str(row_c.get('Husband Name (पति का नाम)')) or "-",
             "data": delivery_data
-        }
-        unlinked_deliveries.append(unlinked_delivery)
+        })
 
 # 2. Detailed Trajectory Analysis (Enrollment -> Follow-up -> Delivery)
 # We want to know:
