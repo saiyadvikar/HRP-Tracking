@@ -168,20 +168,64 @@ canvas{max-height:260px}
       </div>
     </div>
     
-    <div style="margin-top: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-      <label for="global-block-filter" style="font-weight: 600; font-size: 12.5px; color: rgba(255,255,255,0.9)">🌍 Filter by Block:</label>
-      <select id="global-block-filter" style="padding: 6px 14px; border: 1px solid rgba(255,255,255,0.25); border-radius: 4px; font-size: 12px; background: rgba(13,27,42,0.85); color: white; font-family: inherit; cursor: pointer; outline: none;">
-        <option value="ALL">All Blocks (Entire District)</option>
-        <option value="Barwah">Barwah</option>
-        <option value="Bhagwanpura">Bhagwanpura</option>
-        <option value="Bhikangaon">Bhikangaon</option>
-        <option value="Gogawa">Gogawa</option>
-        <option value="Jhirniya">Jhirniya</option>
-        <option value="Kasrawad">Kasrawad</option>
-        <option value="Maheshwar">Maheshwar</option>
-        <option value="Oon">Oon</option>
-        <option value="Segaon">Segaon</option>
-      </select>
+    <!-- Global Cross-Filter & Intelligence Ribbon -->
+    <div style="margin-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: rgba(255, 255, 255, 0.08); padding: 10px 16px; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.18);">
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <!-- 1. Block Filter -->
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label for="global-block-filter" style="font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.95);">🌍 Block:</label>
+          <select id="global-block-filter" onchange="onGlobalFilterChange()" style="padding: 5px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; font-size: 11.5px; background: rgba(13,27,42,0.9); color: white; font-family: inherit; cursor: pointer; outline: none;">
+            <option value="ALL">All Blocks (Entire District)</option>
+            <option value="Barwah">Barwah</option>
+            <option value="Bhagwanpura">Bhagwanpura</option>
+            <option value="Bhikangaon">Bhikangaon</option>
+            <option value="Gogawa">Gogawa</option>
+            <option value="Jhirniya">Jhirniya</option>
+            <option value="Kasrawad">Kasrawad</option>
+            <option value="Maheshwar">Maheshwar</option>
+            <option value="Oon">Oon</option>
+            <option value="Segaon">Segaon</option>
+          </select>
+        </div>
+
+        <!-- 2. Risk Factor Filter -->
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label for="global-risk-filter" style="font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.95);">⚠️ High Risk:</label>
+          <select id="global-risk-filter" onchange="onGlobalFilterChange()" style="padding: 5px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; font-size: 11.5px; background: rgba(13,27,42,0.9); color: white; font-family: inherit; cursor: pointer; outline: none;">
+            <option value="ALL">All High-Risk Conditions</option>
+            <option value="MULTIRISK">⚡ Multi-Risk (2+ Conditions)</option>
+            <option value="ANEMIA">Severe Anemia (Hb &lt; 7)</option>
+            <option value="PIH">PIH / Hypertension</option>
+            <option value="SCD">Sickle Cell Disease (SCD)</option>
+            <option value="LSCS">Previous LSCS</option>
+            <option value="BOH">Prev Stillbirth / NND</option>
+            <option value="TEEN">Teenage Pregnancy</option>
+            <option value="GDM">GDM (Diabetes)</option>
+          </select>
+        </div>
+
+        <!-- 3. Status Filter -->
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label for="global-status-filter" style="font-weight: 600; font-size: 12px; color: rgba(255,255,255,0.95);">📊 Status:</label>
+          <select id="global-status-filter" onchange="onGlobalFilterChange()" style="padding: 5px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; font-size: 11.5px; background: rgba(13,27,42,0.9); color: white; font-family: inherit; cursor: pointer; outline: none;">
+            <option value="ALL">All Stages</option>
+            <option value="DELIVERED">Delivered (Form C)</option>
+            <option value="FOLLOWUP_DONE">Follow-up Done (Form B)</option>
+            <option value="FOLLOWUP_DUE">Follow-up Due (32-34w)</option>
+          </select>
+        </div>
+
+        <!-- Reset Button -->
+        <button onclick="resetGlobalFilters()" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; padding: 4px 10px; border-radius: 4px; font-size: 11px; cursor: pointer; font-family: inherit;">↺ Reset</button>
+      </div>
+
+      <!-- Action: Export Filtered Line List -->
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span id="global-filtered-count-badge" style="background: #00B4D8; color: #002B49; font-weight: 700; font-size: 11px; padding: 3px 8px; border-radius: 12px;">249 cases active</span>
+        <button onclick="exportFilteredLineListCSV()" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; border: none; padding: 6px 14px; border-radius: 6px; font-size: 11.5px; font-weight: 700; cursor: pointer; font-family: inherit; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+          <span>📥</span> Export Line List (.csv)
+        </button>
+      </div>
     </div>
 
     <div class="hdr-chips" style="margin-top: 12px">
@@ -591,6 +635,37 @@ canvas{max-height:260px}
       </div>
     </div>
   </div>
+
+  <!-- Dual Advanced Clinical Analytics: Treatment Response & Multi-Risk Matrix -->
+  <div class="g2" style="margin-top:20px; margin-bottom:18px; display:grid; grid-template-columns:1fr 1fr; gap:16px">
+    <!-- Longitudinal Anemia Treatment Trajectory Chart -->
+    <div class="card">
+      <div class="ch">
+        <span>📈</span>
+        <span class="ct">Severe Anemia: Therapeutic Response &amp; Hb Gains</span>
+      </div>
+      <div class="cb" style="position:relative; height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <canvas id="ca-clinical-delta-chart" style="max-height:250px; width:100%"></canvas>
+        <div style="font-size:11px; color:var(--text-m); margin-top:8px; text-align:center; background:#F8FAFC; padding:6px 10px; border-radius:6px; width:100%">
+          <strong>Efficacy:</strong> Oral IFA compliance yielded mean gain of <strong>+1.9 g/dL</strong> (81% resolved to Hb &ge; 7). IV Iron &amp; BT mobilized for severe refractory cases.
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Morbidity & Risk Co-occurrence Matrix Chart -->
+    <div class="card">
+      <div class="ch">
+        <span>⚡</span>
+        <span class="ct">Multi-Risk Morbidity Intersections (Top Co-occurrences)</span>
+      </div>
+      <div class="cb" style="position:relative; height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <canvas id="ca-multirisk-chart" style="max-height:250px; width:100%"></canvas>
+        <div style="font-size:11px; color:var(--text-m); margin-top:8px; text-align:center; background:#F8FAFC; padding:6px 10px; border-radius:6px; width:100%">
+          <strong>Compounding Burden:</strong> 44 mothers have 2+ concurrent conditions. SCD + Severe Anemia (13 cases) is the highest-volume compounding risk in Khargone.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ═══════════════════ INTRAPARTUM & DELIVERY ═══════════════════ -->
@@ -702,6 +777,43 @@ canvas{max-height:260px}
           <div style="display:flex; align-items:center; gap:6px; margin-left:auto">
             <span style="color:var(--text-m); font-size:11px;">Criteria: Hb&gt;7, BP&lt;140/90, SCD Stable, GDM Normal, Elective LSCS, Planned FRU (BOH/Teen)</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dual WHO Quality of Care & Facility Leakage Visualizations -->
+  <div class="g2" style="margin-bottom:18px; display:grid; grid-template-columns:1.2fr 1fr; gap:16px">
+    <!-- WHO Quality of Care Composite Scorecard -->
+    <div class="card">
+      <div class="ch" style="justify-content:space-between; flex-wrap:wrap; gap:8px">
+        <div style="display:flex; align-items:center; gap:8px">
+          <span>🌟</span>
+          <span class="ct">WHO Quality of Care (QoC) Facility Scorecard</span>
+        </div>
+        <select id="qoc-tier-selector" onchange="renderQocChart()" style="padding:4px 8px; font-size:11px; border:1px solid #CBD5E1; border-radius:4px; font-family:inherit; background:#fff; outline:none; cursor:pointer;">
+          <option value="OVERALL">District Overall (All Sites)</option>
+          <option value="DH">District Hospital (DH Khargone)</option>
+          <option value="CHC">Community Health Centres (CHCs)</option>
+          <option value="SDH">Sub-District Hospitals (SDHs)</option>
+          <option value="PHC">Primary Health Centres (PHCs)</option>
+        </select>
+      </div>
+      <div class="cb" style="position:relative; height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <canvas id="ip-qoc-chart" style="max-height:280px; width:100%"></canvas>
+      </div>
+    </div>
+
+    <!-- Facility Referral Adherence & Leakage Breakdown -->
+    <div class="card">
+      <div class="ch">
+        <span>🗺️</span>
+        <span class="ct">Delivery Facility Referral Adherence &amp; Leakage</span>
+      </div>
+      <div class="cb" style="position:relative; height:320px; display:flex; flex-direction:column; align-items:center; justify-content:center">
+        <canvas id="ip-leakage-chart" style="max-height:240px; width:100%"></canvas>
+        <div style="font-size:11px; color:var(--text-m); margin-top:8px; text-align:center; background:#F8FAFC; padding:6px 10px; border-radius:6px; width:100%">
+          <strong>Leakage Insights:</strong> 3 Home deliveries (remote tribal access) · 9 Out-of-District (Indore tertiary / Mayke) · 5 Unplanned facilities (sudden precipitate labour).
         </div>
       </div>
     </div>
@@ -1437,8 +1549,14 @@ function show(name, el) {
   if (name === 'linelist' && typeof renderLineList === 'function') {
     renderLineList();
   }
-  if (name === 'cond-actions' && typeof renderConditionActionsSection === 'function') {
-    renderConditionActionsSection();
+  if (name === 'cond-actions') {
+    if (typeof renderConditionActionsSection === 'function') renderConditionActionsSection();
+    if (typeof renderClinicalDeltaChart === 'function') renderClinicalDeltaChart();
+    if (typeof renderMultiRiskChart === 'function') renderMultiRiskChart();
+  }
+  if (name === 'intrapartum') {
+    if (typeof renderQocChart === 'function') renderQocChart();
+    if (typeof renderLeakageChart === 'function') renderLeakageChart();
   }
 }
 
@@ -2058,7 +2176,7 @@ function renderDashboard() {
 
 
   const rawCases = dashboardData.cases;
-  const cases = rawCases.filter(c => window.globalBlock === 'ALL' || c.block === window.globalBlock);
+  const cases = typeof getGloballyFilteredCases === 'function' ? getGloballyFilteredCases() : rawCases.filter(c => window.globalBlock === 'ALL' || c.block === window.globalBlock);
   
   const totalEnrolled = cases.filter(c => c.id_a !== 9999).length;
   
@@ -3333,6 +3451,19 @@ function renderDashboard() {
   if (typeof renderConditionActionsSection === 'function') {
     renderConditionActionsSection();
   }
+  
+  // Update badge in global filter ribbon
+  const badgeEl = document.getElementById('global-filtered-count-badge');
+  if (badgeEl) {
+    const actCases = getGloballyFilteredCases();
+    badgeEl.textContent = `${actCases.length} / ${dashboardData.cases.length} cases active`;
+  }
+  
+  // Render advanced analytics charts
+  if (typeof renderQocChart === 'function') renderQocChart();
+  if (typeof renderLeakageChart === 'function') renderLeakageChart();
+  if (typeof renderClinicalDeltaChart === 'function') renderClinicalDeltaChart();
+  if (typeof renderMultiRiskChart === 'function') renderMultiRiskChart();
 
   // ── Month-wise Enrollment A, B and C Status (Block & FC Analysis Section) ──
   const monthlyCounts = {}; // { 'YYYY-MM': { a: 0, b: 0, c: 0 } }
@@ -4407,7 +4538,7 @@ function renderFollowupDue() {
 
   // Global block filter
   const blockFilter = window.globalBlock || 'ALL';
-  const cohortCases = rawCases.filter(c => c.id_a !== 9999 && (blockFilter === 'ALL' || c.block === blockFilter));
+  const cohortCases = typeof getGloballyFilteredCases === 'function' ? getGloballyFilteredCases().filter(c => c.id_a !== 9999) : rawCases.filter(c => c.id_a !== 9999 && (blockFilter === 'ALL' || c.block === blockFilter));
 
   let totalDoneCount = 0;
   let done32_34Count = 0;
@@ -4906,7 +5037,8 @@ function collectVerifiedRiskRecords(filterCondKey) {
   
   if (!dashboardData || !dashboardData.cases) return { records: [], motherCount: 0 };
   
-  dashboardData.cases.forEach(c => {
+  const casesToAnalyze = typeof getGloballyFilteredCases === 'function' ? getGloballyFilteredCases() : dashboardData.cases;
+  casesToAnalyze.forEach(c => {
     if (!c.visits || c.visits.length === 0) return;
     const hrp = (c.hrp_categories || []).join(' ').toLowerCase();
     
@@ -5334,6 +5466,438 @@ function renderConditionActionsLinelist() {
       <td>${actBadge}<br><small style="color:var(--text-m); font-size:9.5px; display:block; max-width:200px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap" title="${r.actionRaw}">${r.actionRaw}</small></td>
     `;
     tbody.appendChild(tr);
+  });
+}
+
+
+// ═══════════════════════════════════════════════════════════════════
+// GLOBAL CROSS-FILTER & CSV EXPORT ENGINE
+// ═══════════════════════════════════════════════════════════════════
+window.globalBlock = 'ALL';
+window.globalRisk = 'ALL';
+window.globalStatus = 'ALL';
+
+function onGlobalFilterChange() {
+  const bSel = document.getElementById('global-block-filter');
+  const rSel = document.getElementById('global-risk-filter');
+  const sSel = document.getElementById('global-status-filter');
+  
+  if (bSel) window.globalBlock = bSel.value;
+  if (rSel) window.globalRisk = rSel.value;
+  if (sSel) window.globalStatus = sSel.value;
+  
+  renderDashboard();
+}
+
+function resetGlobalFilters() {
+  window.globalBlock = 'ALL';
+  window.globalRisk = 'ALL';
+  window.globalStatus = 'ALL';
+  
+  const bSel = document.getElementById('global-block-filter');
+  const rSel = document.getElementById('global-risk-filter');
+  const sSel = document.getElementById('global-status-filter');
+  
+  if (bSel) bSel.value = 'ALL';
+  if (rSel) rSel.value = 'ALL';
+  if (sSel) sSel.value = 'ALL';
+  
+  renderDashboard();
+}
+
+function calculateCurrentGA(c) {
+  if (!c) return 0;
+  const ref = (typeof dashboardData !== 'undefined' && dashboardData.evaluation_date) ? dashboardData.evaluation_date : new Date().toISOString().substring(0, 10);
+  if (typeof getGestWeeks === 'function') {
+    const w = getGestWeeks(c, ref);
+    return (w !== null && !isNaN(w)) ? Math.round(w) : 0;
+  }
+  return 0;
+}
+
+function getGloballyFilteredCases() {
+  if (!dashboardData || !dashboardData.cases) return [];
+  return dashboardData.cases.filter(c => {
+    // 1. Block Filter
+    if (window.globalBlock !== 'ALL' && c.block !== window.globalBlock) return false;
+    
+    // 2. Risk Factor Filter
+    if (window.globalRisk !== 'ALL') {
+      const hrp = (c.hrp_categories || []).join(' ').toLowerCase();
+      if (window.globalRisk === 'MULTIRISK') {
+        let count = 0;
+        if (hrp.includes('anemia') || hrp.includes('anaemia')) count++;
+        if (hrp.includes('pih') || hrp.includes('hypertension')) count++;
+        if (hrp.includes('scd') || hrp.includes('sickle')) count++;
+        if (hrp.includes('lscs')) count++;
+        if (hrp.includes('stillbirth') || hrp.includes('neonatal') || hrp.includes('death') || hrp.includes('boh')) count++;
+        if (hrp.includes('teen')) count++;
+        if (hrp.includes('gdm') || hrp.includes('diabetes')) count++;
+        if (count < 2) return false;
+      } else if (window.globalRisk === 'ANEMIA' && !(hrp.includes('anemia') || hrp.includes('anaemia'))) {
+        return false;
+      } else if (window.globalRisk === 'PIH' && !(hrp.includes('pih') || hrp.includes('hypertension'))) {
+        return false;
+      } else if (window.globalRisk === 'SCD' && !(hrp.includes('scd') || hrp.includes('sickle'))) {
+        return false;
+      } else if (window.globalRisk === 'LSCS' && !hrp.includes('lscs')) {
+        return false;
+      } else if (window.globalRisk === 'BOH' && !(hrp.includes('stillbirth') || hrp.includes('neonatal') || hrp.includes('death') || hrp.includes('boh'))) {
+        return false;
+      } else if (window.globalRisk === 'TEEN' && !hrp.includes('teen')) {
+        return false;
+      } else if (window.globalRisk === 'GDM' && !(hrp.includes('gdm') || hrp.includes('diabetes'))) {
+        return false;
+      }
+    }
+    
+    // 3. Status Filter
+    if (window.globalStatus !== 'ALL') {
+      if (window.globalStatus === 'DELIVERED' && !c.delivery) return false;
+      if (window.globalStatus === 'FOLLOWUP_DONE' && (!c.visits || c.visits.length === 0)) return false;
+      if (window.globalStatus === 'FOLLOWUP_DUE') {
+        if (c.delivery) return false;
+        const ga = calculateCurrentGA(c);
+        if (ga < 32 || (c.visits && c.visits.length > 0)) return false;
+      }
+    }
+    
+    return true;
+  });
+}
+
+function exportFilteredLineListCSV() {
+  const filtered = getGloballyFilteredCases();
+  if (!filtered || filtered.length === 0) {
+    alert("No cases match the currently active filters to export.");
+    return;
+  }
+  
+  const headers = [
+    "Sr No", "Case ID", "MP ID", "ANC Name", "Husband Name", "Age",
+    "Block", "Village", "Sub-centre", "Mobile", "LMP", "EDD", "Current GA (w)",
+    "HRP Categories", "Baseline Hb (g/dL)", "Baseline SBP", "Baseline DBP",
+    "Fasting Blood Sugar", "Form B Visits Conducted", "Latest Visit Date",
+    "Latest Contact GA", "Delivery Status", "Delivery Date", "Delivery Place",
+    "Delivery Mode", "Delivery Facility", "Planned Facility Adherence",
+    "Baby Alive", "Birth Weight (g)", "Birth Weight Category", "SNCU Admission"
+  ];
+  
+  const csvRows = [headers.join(",")];
+  
+  filtered.forEach((c, idx) => {
+    const visits = c.visits || [];
+    const latestV = visits.length > 0 ? visits[visits.length - 1] : null;
+    const d = c.delivery || null;
+    const ga = calculateCurrentGA(c);
+    
+    const row = [
+      idx + 1,
+      `"${c.id_a || ''}"`,
+      `"${c.mp_id || ''}"`,
+      `"${(c.name || '').replace(/"/g, '""')}"`,
+      `"${(c.husband_name || '').replace(/"/g, '""')}"`,
+      c.age || '',
+      `"${c.block || ''}"`,
+      `"${(c.village || '').replace(/"/g, '""')}"`,
+      `"${(c.sub_centre || '').replace(/"/g, '""')}"`,
+      `"${c.mobile || ''}"`,
+      c.lmp || '',
+      c.edd || '',
+      ga > 0 ? ga : '',
+      `"${(c.hrp_categories || []).join('; ')}"`,
+      c.enrollment_hb || '',
+      c.enrollment_bp_sys || '',
+      c.enrollment_bp_dia || '',
+      c.enrollment_fbs || '',
+      visits.length,
+      latestV ? latestV.date : '',
+      latestV ? latestV.gestational_age : '',
+      d ? "Delivered" : "Antenatal",
+      d ? d.delivery_date : '',
+      d ? `"${d.place || ''}"` : '',
+      d ? `"${d.type || ''}"` : '',
+      d ? `"${(d.facility_name || '').replace(/"/g, '""')}"` : '',
+      d ? `"${d.was_planned || ''}"` : '',
+      d ? `"${d.baby_alive || ''}"` : '',
+      d ? (d.birth_weight || '') : '',
+      d ? `"${d.birth_weight_category || ''}"` : '',
+      d ? `"${d.baby_transferred || ''}"` : ''
+    ];
+    csvRows.push(row.join(","));
+  });
+  
+  const csvContent = "\uFEFF" + csvRows.join("\n");
+  const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const dateStr = new Date().toISOString().split("T")[0];
+  a.href = url;
+  a.download = `UHRP_Khargone_LineList_${dateStr}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// NEW ADVANCED VISUALIZATIONS ENGINE (QoC, Leakage, Delta, Multi-Risk)
+// ═══════════════════════════════════════════════════════════════════
+window.qocChartInstance = null;
+window.leakageChartInstance = null;
+window.clinicalDeltaChartInstance = null;
+window.multiriskChartInstance = null;
+
+function renderQocChart() {
+  const sel = document.getElementById('qoc-tier-selector');
+  const tier = sel ? sel.value : 'OVERALL';
+  const astats = (dashboardData && dashboardData.analysis_stats) ? dashboardData.analysis_stats : {};
+  const qocData = (astats.who_qoc_metrics && astats.who_qoc_metrics[tier]) ? astats.who_qoc_metrics[tier] : (astats.who_qoc_metrics ? astats.who_qoc_metrics['OVERALL'] : null);
+  
+  const canvas = document.getElementById('ip-qoc-chart');
+  if (!canvas || !qocData) return;
+  
+  if (window.qocChartInstance) {
+    try { window.qocChartInstance.destroy(); } catch(e) {}
+  }
+  
+  const labels = [
+    'AMTSL Oxytocin (1 min)', 'Partograph Plotted', 'Birth Companion Allowed',
+    'Respectful Care (No Abuse)', 'Immediate Skin-to-Skin (<1h)',
+    'Early Breastfeeding (<1h)', 'Vitamin K Injection Given', 'Composite Quality Index'
+  ];
+  const values = [
+    qocData.oxytocin_pct || 0,
+    qocData.partograph_pct || 0,
+    qocData.companion_pct || 0,
+    qocData.respectful_pct || 0,
+    qocData.sts_pct || 0,
+    qocData.bf_pct || 0,
+    qocData.vit_k_pct || 0,
+    qocData.composite_score || 0
+  ];
+  
+  const bgColors = values.map((v, i) => i === 7 ? '#10B981' : (v >= 75 ? '#00838F' : (v >= 60 ? '#1565C0' : '#D97706')));
+  
+  const ctx = canvas.getContext('2d');
+  window.qocChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: `Quality of Care Compliance (% at ${tier})`,
+        data: values,
+        backgroundColor: bgColors,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => ` Compliance: ${ctx.raw}%`
+          }
+        }
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: 100,
+          ticks: { callback: (v) => v + '%', font: { size: 10 } },
+          grid: { color: '#F1F5F9' }
+        },
+        y: {
+          ticks: { font: { size: 10, weight: '600' } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+function renderLeakageChart() {
+  const astats = (dashboardData && dashboardData.analysis_stats) ? dashboardData.analysis_stats : {};
+  const leakage = (astats.facility_leakage && astats.facility_leakage.adherence_summary) ? astats.facility_leakage.adherence_summary : null;
+  const canvas = document.getElementById('ip-leakage-chart');
+  if (!canvas || !leakage) return;
+  
+  if (window.leakageChartInstance) {
+    try { window.leakageChartInstance.destroy(); } catch(e) {}
+  }
+  
+  const labels = Object.keys(leakage);
+  const values = Object.values(leakage);
+  const colors = ['#2E7D32', '#E65100', '#1565C0', '#C62828'];
+  
+  const ctx = canvas.getContext('2d');
+  window.leakageChartInstance = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors,
+        borderWidth: 2,
+        borderColor: '#FFFFFF'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11, weight: '600' } } },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => {
+              const tot = values.reduce((a, b) => a + b, 0);
+              const p = tot > 0 ? Math.round((ctx.raw / tot) * 100) : 0;
+              return ` ${ctx.label}: ${ctx.raw} (${p}%)`;
+            }
+          }
+        }
+      },
+      cutout: '62%'
+    }
+  });
+}
+
+function renderClinicalDeltaChart() {
+  const astats = (dashboardData && dashboardData.analysis_stats) ? dashboardData.analysis_stats : {};
+  const anemia = (astats.clinical_trajectories && astats.clinical_trajectories.anemia) ? astats.clinical_trajectories.anemia : null;
+  const canvas = document.getElementById('ca-clinical-delta-chart');
+  if (!canvas || !anemia) return;
+  
+  if (window.clinicalDeltaChartInstance) {
+    try { window.clinicalDeltaChartInstance.destroy(); } catch(e) {}
+  }
+  
+  const modalities = Object.keys(anemia);
+  const initHbs = modalities.map(m => anemia[m].avg_init_hb);
+  const finalHbs = modalities.map(m => anemia[m].avg_final_hb);
+  const gains = modalities.map(m => anemia[m].avg_gain_hb);
+  
+  const ctx = canvas.getContext('2d');
+  window.clinicalDeltaChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: modalities,
+      datasets: [
+        {
+          label: 'Baseline Hb (g/dL)',
+          data: initHbs,
+          backgroundColor: '#90CAF9',
+          borderRadius: 4
+        },
+        {
+          label: 'Delivery Hb (g/dL)',
+          data: finalHbs,
+          backgroundColor: '#1E88E5',
+          borderRadius: 4
+        },
+        {
+          label: 'Net Gain (Δ Hb)',
+          data: gains,
+          backgroundColor: '#43A047',
+          borderRadius: 4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { font: { size: 10, weight: '600' } } },
+        tooltip: {
+          callbacks: {
+            afterBody: (ctx) => {
+              const m = modalities[ctx[0].dataIndex];
+              return `Resolution Rate: ${anemia[m].resolution_rate}%
+Total cases: ${anemia[m].total_cases}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          suggestedMax: 12,
+          ticks: { font: { size: 10 } },
+          grid: { color: '#F1F5F9' }
+        },
+        x: {
+          ticks: { font: { size: 10, weight: '600' } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+function renderMultiRiskChart() {
+  const astats = (dashboardData && dashboardData.analysis_stats) ? dashboardData.analysis_stats : {};
+  const mrisk = (astats.multi_risk_matrix && astats.multi_risk_matrix.top_pairs) ? astats.multi_risk_matrix.top_pairs : [];
+  const canvas = document.getElementById('ca-multirisk-chart');
+  if (!canvas || mrisk.length === 0) return;
+  
+  if (window.multiriskChartInstance) {
+    try { window.multiriskChartInstance.destroy(); } catch(e) {}
+  }
+  
+  const top6 = mrisk.slice(0, 6);
+  const labels = top6.map(p => p.pair);
+  const totals = top6.map(p => p.total_enrolled);
+  const lscs = top6.map(p => p.lscs_count);
+  const lbw = top6.map(p => p.lbw_count);
+  
+  const ctx = canvas.getContext('2d');
+  window.multiriskChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Total Enrolled Cohort',
+          data: totals,
+          backgroundColor: '#7C3AED',
+          borderRadius: 4
+        },
+        {
+          label: 'LSCS Delivery Count',
+          data: lscs,
+          backgroundColor: '#0284C7',
+          borderRadius: 4
+        },
+        {
+          label: 'Low Birth Weight (<2500g)',
+          data: lbw,
+          backgroundColor: '#E11D48',
+          borderRadius: 4
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { font: { size: 10, weight: '600' } } }
+      },
+      scales: {
+        x: {
+          beginAtZero: true,
+          ticks: { precision: 0, font: { size: 10 } },
+          grid: { color: '#F1F5F9' }
+        },
+        y: {
+          ticks: { font: { size: 9.5, weight: '600' } },
+          grid: { display: false }
+        }
+      }
+    }
   });
 }
 
