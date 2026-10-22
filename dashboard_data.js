@@ -1,6 +1,6 @@
 const dashboardData = {
-  "evaluation_date": "2026-10-21",
-  "generated_date": "21-10-2026",
+  "evaluation_date": "2026-10-23",
+  "generated_date": "23-10-2026",
   "stats": {
     "total_enrolled": 249,
     "total_follow_ups": 112,
@@ -22135,6 +22135,408 @@ const dashboardData = {
             "status": "Improved"
           }
         ]
+      }
+    },
+    "clinical_trajectories": {
+      "anemia": {
+        "Blood Transfusion": {
+          "total_cases": 1,
+          "paired_cases": 0,
+          "avg_init_hb": 0,
+          "avg_final_hb": 0,
+          "avg_gain_hb": 0,
+          "resolution_rate": 0
+        },
+        "IV Iron (Sucrose)": {
+          "total_cases": 2,
+          "paired_cases": 2,
+          "avg_init_hb": 6.7,
+          "avg_final_hb": 6.3,
+          "avg_gain_hb": -0.4,
+          "resolution_rate": 50.0
+        },
+        "Oral IFA / Routine": {
+          "total_cases": 23,
+          "paired_cases": 21,
+          "avg_init_hb": 7.37,
+          "avg_final_hb": 9.27,
+          "avg_gain_hb": 1.9,
+          "resolution_rate": 81.0
+        }
+      },
+      "pih": {
+        "total_pih_deliveries": 19,
+        "bp_recorded_at_delivery": 13,
+        "controlled_under_140_90": 7,
+        "mild_140_159_90_109": 5,
+        "severe_160_110_plus": 1,
+        "control_rate": 53.8,
+        "paired_cases": 6,
+        "avg_init_bp": "141/92",
+        "avg_del_bp": "136/89"
+      }
+    },
+    "multi_risk_matrix": {
+      "total_multi_risk_cases": 44,
+      "categories": [
+        "Severe Anemia",
+        "PIH / Hypertension",
+        "Sickle Cell Disease (SCD)",
+        "Previous LSCS",
+        "Prev Stillbirth / NND",
+        "Teenage Pregnancy",
+        "GDM"
+      ],
+      "co_occurrence_matrix": {
+        "Severe Anemia": {
+          "Severe Anemia": 64,
+          "PIH / Hypertension": 9,
+          "Sickle Cell Disease (SCD)": 13,
+          "Previous LSCS": 3,
+          "Prev Stillbirth / NND": 3,
+          "Teenage Pregnancy": 2,
+          "GDM": 7
+        },
+        "PIH / Hypertension": {
+          "Severe Anemia": 9,
+          "PIH / Hypertension": 43,
+          "Sickle Cell Disease (SCD)": 9,
+          "Previous LSCS": 2,
+          "Prev Stillbirth / NND": 4,
+          "Teenage Pregnancy": 0,
+          "GDM": 8
+        },
+        "Sickle Cell Disease (SCD)": {
+          "Severe Anemia": 13,
+          "PIH / Hypertension": 9,
+          "Sickle Cell Disease (SCD)": 64,
+          "Previous LSCS": 0,
+          "Prev Stillbirth / NND": 6,
+          "Teenage Pregnancy": 1,
+          "GDM": 7
+        },
+        "Previous LSCS": {
+          "Severe Anemia": 3,
+          "PIH / Hypertension": 2,
+          "Sickle Cell Disease (SCD)": 0,
+          "Previous LSCS": 51,
+          "Prev Stillbirth / NND": 9,
+          "Teenage Pregnancy": 0,
+          "GDM": 4
+        },
+        "Prev Stillbirth / NND": {
+          "Severe Anemia": 3,
+          "PIH / Hypertension": 4,
+          "Sickle Cell Disease (SCD)": 6,
+          "Previous LSCS": 9,
+          "Prev Stillbirth / NND": 42,
+          "Teenage Pregnancy": 0,
+          "GDM": 0
+        },
+        "Teenage Pregnancy": {
+          "Severe Anemia": 2,
+          "PIH / Hypertension": 0,
+          "Sickle Cell Disease (SCD)": 1,
+          "Previous LSCS": 0,
+          "Prev Stillbirth / NND": 0,
+          "Teenage Pregnancy": 29,
+          "GDM": 0
+        },
+        "GDM": {
+          "Severe Anemia": 7,
+          "PIH / Hypertension": 8,
+          "Sickle Cell Disease (SCD)": 7,
+          "Previous LSCS": 4,
+          "Prev Stillbirth / NND": 0,
+          "Teenage Pregnancy": 0,
+          "GDM": 18
+        }
+      },
+      "top_pairs": [
+        {
+          "pair": "Severe Anemia + Sickle Cell Disease (SCD)",
+          "c1": "Severe Anemia",
+          "c2": "Sickle Cell Disease (SCD)",
+          "total_enrolled": 13,
+          "delivered_count": 11,
+          "lscs_count": 4,
+          "lbw_count": 8,
+          "sncu_count": 4
+        },
+        {
+          "pair": "Severe Anemia + PIH / Hypertension",
+          "c1": "Severe Anemia",
+          "c2": "PIH / Hypertension",
+          "total_enrolled": 9,
+          "delivered_count": 9,
+          "lscs_count": 3,
+          "lbw_count": 6,
+          "sncu_count": 2
+        },
+        {
+          "pair": "PIH / Hypertension + Sickle Cell Disease (SCD)",
+          "c1": "PIH / Hypertension",
+          "c2": "Sickle Cell Disease (SCD)",
+          "total_enrolled": 9,
+          "delivered_count": 9,
+          "lscs_count": 3,
+          "lbw_count": 6,
+          "sncu_count": 2
+        },
+        {
+          "pair": "Previous LSCS + Prev Stillbirth / NND",
+          "c1": "Previous LSCS",
+          "c2": "Prev Stillbirth / NND",
+          "total_enrolled": 9,
+          "delivered_count": 3,
+          "lscs_count": 3,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "PIH / Hypertension + GDM",
+          "c1": "PIH / Hypertension",
+          "c2": "GDM",
+          "total_enrolled": 8,
+          "delivered_count": 7,
+          "lscs_count": 2,
+          "lbw_count": 5,
+          "sncu_count": 2
+        },
+        {
+          "pair": "Severe Anemia + GDM",
+          "c1": "Severe Anemia",
+          "c2": "GDM",
+          "total_enrolled": 7,
+          "delivered_count": 7,
+          "lscs_count": 2,
+          "lbw_count": 5,
+          "sncu_count": 2
+        },
+        {
+          "pair": "Sickle Cell Disease (SCD) + GDM",
+          "c1": "Sickle Cell Disease (SCD)",
+          "c2": "GDM",
+          "total_enrolled": 7,
+          "delivered_count": 7,
+          "lscs_count": 2,
+          "lbw_count": 5,
+          "sncu_count": 2
+        },
+        {
+          "pair": "Sickle Cell Disease (SCD) + Prev Stillbirth / NND",
+          "c1": "Sickle Cell Disease (SCD)",
+          "c2": "Prev Stillbirth / NND",
+          "total_enrolled": 6,
+          "delivered_count": 5,
+          "lscs_count": 2,
+          "lbw_count": 1,
+          "sncu_count": 1
+        },
+        {
+          "pair": "PIH / Hypertension + Prev Stillbirth / NND",
+          "c1": "PIH / Hypertension",
+          "c2": "Prev Stillbirth / NND",
+          "total_enrolled": 4,
+          "delivered_count": 3,
+          "lscs_count": 1,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "Previous LSCS + GDM",
+          "c1": "Previous LSCS",
+          "c2": "GDM",
+          "total_enrolled": 4,
+          "delivered_count": 2,
+          "lscs_count": 2,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "Severe Anemia + Previous LSCS",
+          "c1": "Severe Anemia",
+          "c2": "Previous LSCS",
+          "total_enrolled": 3,
+          "delivered_count": 2,
+          "lscs_count": 2,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "Severe Anemia + Prev Stillbirth / NND",
+          "c1": "Severe Anemia",
+          "c2": "Prev Stillbirth / NND",
+          "total_enrolled": 3,
+          "delivered_count": 2,
+          "lscs_count": 1,
+          "lbw_count": 2,
+          "sncu_count": 2
+        },
+        {
+          "pair": "Severe Anemia + Teenage Pregnancy",
+          "c1": "Severe Anemia",
+          "c2": "Teenage Pregnancy",
+          "total_enrolled": 2,
+          "delivered_count": 0,
+          "lscs_count": 0,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "PIH / Hypertension + Previous LSCS",
+          "c1": "PIH / Hypertension",
+          "c2": "Previous LSCS",
+          "total_enrolled": 2,
+          "delivered_count": 0,
+          "lscs_count": 0,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "Sickle Cell Disease (SCD) + Teenage Pregnancy",
+          "c1": "Sickle Cell Disease (SCD)",
+          "c2": "Teenage Pregnancy",
+          "total_enrolled": 1,
+          "delivered_count": 1,
+          "lscs_count": 0,
+          "lbw_count": 0,
+          "sncu_count": 0
+        }
+      ]
+    },
+    "facility_leakage": {
+      "adherence_summary": {
+        "Planned Facility Met": 60,
+        "Diverted to Other Facility": 5,
+        "Out of District": 9,
+        "Home Delivery": 3
+      },
+      "delivery_tiers": {
+        "DH": 40,
+        "CHC": 12,
+        "SDH": 0,
+        "PHC": 7,
+        "Private": 6,
+        "Home": 3,
+        "Out of District": 9
+      },
+      "diversion_reasons": {
+        "परिवार वालों के बोलने पर 108 से सीएससी सीएससी ऊंन  डिलीवरी करवाने के लिए ले जाया गया": 1,
+        "Dh khgrone": 3,
+        "Yes planned": 1,
+        "Icu not available in ch Sanawad": 1,
+        "Family decision": 6,
+        "Nirdharit sthan par hi hai": 1,
+        "Labour come on suddenly": 1,
+        "Planned facility": 7,
+        "Obesity": 1,
+        "Pariwarik nirnary": 2,
+        "Ha": 1,
+        "Mayke me jane ke karan vaha Delevery krwai": 1,
+        "Labur came on Suddenly": 1,
+        "GDM के कारण हितग्राही ने LSCS डिलेवरी कराने का फैसला लिया": 1,
+        "Achanak Dard aaya tha": 1,
+        "Parsw pida shuru hui or ambulance let aayi": 1,
+        "दो केसर हो चुके थे तीसरा सीजन नहीं होगा इंदौर के लिए बोला गया था इस कारण से साइन समर्थन हॉस्पिटल में डिलीवरी": 1,
+        "Unhone kha tha dh jane ka but ek bar gye lekin koi dhyan nhi Diya hua esliye private me hi delivery karwayi unhone": 1,
+        "Family decision and husband death": 1,
+        "Pariwarik ninry": 1,
+        "Ambulance issue": 1,
+        "No fetal movement": 1,
+        "यह भगवानपुर के पास में किसी गांव में रिश्तेदार की आ गई हुई थी वहां पर अचानक इसका पेट दर्द होने लगा तो हितग्राही ने भगवानपुर सीएससी पर डिलीवरी करवाली है": 1,
+        "Ambulance na Aane Ke Karan ghar per delivery Ho Gaye": 1,
+        "Dh": 1
+      }
+    },
+    "who_qoc_metrics": {
+      "DH": {
+        "total": 36,
+        "oxytocin_pct": 89,
+        "partograph_pct": 72,
+        "companion_pct": 64,
+        "respectful_pct": 97,
+        "sts_pct": 56,
+        "bf_pct": 64,
+        "vit_k_pct": 86,
+        "composite_score": 75.4
+      },
+      "PHC": {
+        "total": 7,
+        "oxytocin_pct": 57,
+        "partograph_pct": 100,
+        "companion_pct": 100,
+        "respectful_pct": 100,
+        "sts_pct": 100,
+        "bf_pct": 100,
+        "vit_k_pct": 57,
+        "composite_score": 87.7
+      },
+      "CHC": {
+        "total": 12,
+        "oxytocin_pct": 83,
+        "partograph_pct": 100,
+        "companion_pct": 100,
+        "respectful_pct": 100,
+        "sts_pct": 100,
+        "bf_pct": 92,
+        "vit_k_pct": 100,
+        "composite_score": 96.4
+      },
+      "Out of District": {
+        "total": 9,
+        "oxytocin_pct": 33,
+        "partograph_pct": 22,
+        "companion_pct": 22,
+        "respectful_pct": 67,
+        "sts_pct": 33,
+        "bf_pct": 44,
+        "vit_k_pct": 33,
+        "composite_score": 36.3
+      },
+      "Private facility": {
+        "total": 6,
+        "oxytocin_pct": 33,
+        "partograph_pct": 50,
+        "companion_pct": 67,
+        "respectful_pct": 83,
+        "sts_pct": 83,
+        "bf_pct": 67,
+        "vit_k_pct": 83,
+        "composite_score": 66.6
+      },
+      "SDH": {
+        "total": 4,
+        "oxytocin_pct": 25,
+        "partograph_pct": 0,
+        "companion_pct": 25,
+        "respectful_pct": 100,
+        "sts_pct": 100,
+        "bf_pct": 100,
+        "vit_k_pct": 100,
+        "composite_score": 64.3
+      },
+      "Home": {
+        "total": 3,
+        "oxytocin_pct": 33,
+        "partograph_pct": 0,
+        "companion_pct": 33,
+        "respectful_pct": 67,
+        "sts_pct": 33,
+        "bf_pct": 67,
+        "vit_k_pct": 33,
+        "composite_score": 38.0
+      },
+      "OVERALL": {
+        "total": 77,
+        "oxytocin_pct": 69,
+        "partograph_pct": 65,
+        "companion_pct": 65,
+        "respectful_pct": 92,
+        "sts_pct": 68,
+        "bf_pct": 71,
+        "vit_k_pct": 78,
+        "composite_score": 72.6
       }
     }
   },
