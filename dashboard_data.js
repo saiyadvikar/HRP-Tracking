@@ -1,42 +1,42 @@
 const dashboardData = {
-  "evaluation_date": "2026-10-26",
-  "generated_date": "26-10-2026",
+  "evaluation_date": "2026-11-13",
+  "generated_date": "13-11-2026",
   "stats": {
-    "total_enrolled": 253,
-    "total_follow_ups": 121,
-    "total_deliveries": 80,
-    "matched_follow_ups": 106,
-    "matched_deliveries": 68,
+    "total_enrolled": 261,
+    "total_follow_ups": 145,
+    "total_deliveries": 96,
+    "matched_follow_ups": 128,
+    "matched_deliveries": 82,
     "block_distribution": {
       "Jhirniya": 48,
+      "Bhagwanpura": 39,
       "Barwah": 39,
-      "Bhagwanpura": 35,
       "Bhikangaon": 34,
-      "Gogawa": 30,
-      "Kasrawad": 19,
+      "Gogawa": 31,
+      "Kasrawad": 18,
       "Segaon": 16,
-      "Oon": 11,
-      "Maheshwar": 9
+      "Oon": 12,
+      "Maheshwar": 10
     },
     "hrp_distribution": {
       "Severe Anemia (Hb < 7 g/dL)": 53,
-      "Previous Stillbirth or Neonatal Death": 40,
+      "Previous Stillbirth or Neonatal Death": 41,
       "HB 5.": 1,
       "Previous LSCS": 53,
-      "No": 37,
-      "Sickle Cell Disease (SCD)": 55,
-      "Sickle cell": 2,
+      "No": 38,
+      "Sickle Cell Disease (SCD)": 58,
+      "Sickle cell": 3,
       "प्रीवियस सिकल सेल डिजीज पहले गर्भ के टाइम पर भी सिकल सेल डिजीज था": 1,
       "sickle cell Stil birth": 1,
-      "Pregnancy-Induced Hypertension (PIH)": 34,
+      "Pregnancy-Induced Hypertension (PIH)": 37,
       "PIH 2 lope cord araund the neck": 1,
       "Modret aneamia": 1,
       "Teenage Pregnancy (age < 17 years)": 28,
-      "Gestational Diabetes Mellitus (GDM)": 11,
+      "Gestational Diabetes Mellitus (GDM)": 10,
       "R h negative": 1,
       "Modrate anemia": 1,
       "BOH history": 1,
-      "SCD": 2,
+      "SCD": 3,
       "PIH": 6,
       "Teenage Pregnancy (age < 19 years)": 1,
       "2 stilbirth 1 death 42 din me": 1,
@@ -64,7 +64,7 @@ const dashboardData = {
       "ICT POSITIVE BOH HISTORY": 1,
       "Low Weight": 1,
       "Skill sel": 1,
-      "GDM": 8,
+      "GDM": 9,
       "Chronic Hyper tention": 1,
       "GDm": 1,
       "9.2": 1,
@@ -75,31 +75,33 @@ const dashboardData = {
       "Teenage": 1,
       "Sickle cell Anc": 1,
       "NO": 3,
+      "ANC ka 8 manth chal raha he unka or vajan 28 kilo he": 1,
       "Severe Anemia": 11,
-      "PIH / Gestational Hypertension": 9,
-      "Sickle Cell Disease": 11
+      "PIH / Gestational Hypertension": 10,
+      "Sickle Cell Disease": 13
     },
     "delivery_places": {
-      "DH": 36,
-      "CHC": 13,
+      "DH": 40,
+      "CHC": 14,
+      "PHC": 11,
       "Out of District": 9,
-      "Private facility": 7,
-      "PHC": 7,
+      "Private facility": 9,
+      "Home": 6,
       "SDH": 5,
-      "Home": 3
+      "HWC / SHC": 2
     },
     "delivery_types": {
-      "Normal vaginal delivery- (सामान्य योनि प्रसव)": 46,
-      "Elective LSCS (planned)- (ऐच्छिक एलएससीएस (योजनाबद्ध))": 21,
-      "Emergency LSCS- (आपातकालीन एलएससीएस)": 13
+      "Normal vaginal delivery- (सामान्य योनि प्रसव)": 59,
+      "Elective LSCS (planned)- (ऐच्छिक एलएससीएस (योजनाबद्ध))": 22,
+      "Emergency LSCS- (आपातकालीन एलएससीएस)": 15
     },
     "baby_outcomes": {
-      "Yes – live birth- (हाँ - जीवित जन्म)": 74,
-      "No – antepartum stillbirth (died before labour)- (नहीं – प्रसवपूर्व मृत जन्म (प्रसव से पहले मृत्यु)": 4
+      "Yes – live birth- (हाँ - जीवित जन्म)": 89,
+      "No – antepartum stillbirth (died before labour)- (नहीं – प्रसवपूर्व मृत जन्म (प्रसव से पहले मृत्यु)": 5
     },
     "birth_weight_categories": {
-      "Normal birth weight: ≥ 2500 g- (सामान्य जन्म वजन: ≥ 2500 ग्राम)": 49,
-      "Low birth weight (LBW): 1500–2499 g- (कम जन्म भार (एलबीडब्ल्यू): 1500–2499 ग्राम)": 22,
+      "Normal birth weight: ≥ 2500 g- (सामान्य जन्म वजन: ≥ 2500 ग्राम)": 61,
+      "Low birth weight (LBW): 1500–2499 g- (कम जन्म भार (एलबीडब्ल्यू): 1500–2499 ग्राम)": 26,
       "Very low birth weight (VLBW): < 1500 g- (अत्यंत कम जन्म भार (VLBW): < 1500 ग्राम)": 5
     }
   },
@@ -3885,7 +3887,7 @@ const dashboardData = {
       ],
       "visits": [],
       "delivery": {
-        "id_c": 79,
+        "id_c": 95,
         "mp_id": "20237092107",
         "delivery_date": "2026-09-19",
         "timestamp": "2026-09-22 12:21:26",
@@ -7383,9 +7385,105 @@ const dashboardData = {
       "blood_group": "A Positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "visits": [
+        {
+          "id_b": 126,
+          "date": "2026-08-22",
+          "timestamp": "2026-10-27 14:58:16",
+          "visit_number": 2,
+          "gestational_age": 29,
+          "place": "DH",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 41.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 5.0,
+          "hb_trend": "Improved (higher than last visit) - (पिछली बार की तुलना में बेहतर स्थिति है।)",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "anemia_action": "No action needed – condition is controlled- (किसी कार्रवाई की आवश्यकता नहीं – स्थिति नियंत्रण में है)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "Yes – referred to DH / SDH- (हां – डीएच / एसडीएच को संदर्भित किया गया)",
+          "next_visit_date": "2026-08-02",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
+      "delivery": {
+        "id_c": 80,
+        "mp_id": "No",
+        "delivery_date": "2026-08-21",
+        "timestamp": "2026-10-27 15:02:38",
+        "gestational_age": 38,
+        "place": "PHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "PHC-BISTAN",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 3,
+        "hb": 5.0,
+        "hb_admission": 9.0,
+        "anemia_status": "Controlled: Hb ≥ 7 g/dL at delivery",
+        "bp": "88/122",
+        "bp_admission": "88/122",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "",
+        "overall_hrp_status": "",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2500.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "",
+        "remarks": "",
+        "completed_by": "Ajay Dudwe"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Anemia stable: Hb unchanged at 5.0 g/dL",
+        "Anemia Status: Controlled: Hb ≥ 7 g/dL at delivery",
+        "Severe Anemia Unresolved (Hb 5.0 < 7.0 g/dL)",
+        "High-risk BOH/Teen delivered at non-FRU / unplanned facility (PHC-BISTAN) (unfavourable outcome)"
+      ]
     },
     {
       "id_a": 51,
@@ -7978,8 +8076,58 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 83,
+        "mp_id": "20212465896",
+        "delivery_date": "2026-09-17",
+        "timestamp": "2026-10-27 20:47:58",
+        "gestational_age": 38,
+        "place": "Home",
+        "type": "Normal vaginal delivery",
+        "facility_name": "Home delivery Hui",
+        "was_planned": "Unknown",
+        "unplanned_reason": "Transport problem",
+        "total_anc": 6,
+        "hb": 9.1,
+        "hb_admission": null,
+        "anemia_status": "Improved but still below target: Hb < 7 g/dL but better than enrollment",
+        "bp": "126/63",
+        "bp_admission": "No",
+        "bp_measured_admission": "",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "Some conditions controlled, some not",
+        "partograph_plotted": "No",
+        "oxytocin_given": "No",
+        "birth_companion": "No",
+        "respectful_care": "Unknown",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2700.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "No",
+        "sts_initiated": "No",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "No",
+        "remarks": "No",
+        "completed_by": "Durga bhilala"
+      },
+      "matched_via": null,
+      "improvement_status": "Partially Improved",
+      "improvement_details": [
+        "Anemia improved: Hb increased by 3.0 g/dL (from 6.1 to 9.1)",
+        "Anemia Status: Improved but still below target: Hb < 7 g/dL but better than enrollment",
+        "Severe Anemia Resolved (Hb 9.1 > 7.0 g/dL)"
+      ]
     },
     {
       "id_a": 56,
@@ -9256,28 +9404,28 @@ const dashboardData = {
       "village": "Jaroli",
       "mobile": "7746905652",
       "asha": "Babita",
-      "anm": "Durga Prajapat",
+      "anm": "Durga",
       "sub_centre": "Bhoinda",
       "lmp": "2026-01-07",
       "edd": "2026-10-14",
       "enrollment_date": "2026-06-04",
-      "timestamp": "2026-06-04 10:44:11",
+      "timestamp": "2026-06-04 10:50:16",
       "gestational_age_enrollment": "20",
-      "gravida_para": "G2P2l1",
+      "gravida_para": "G2P2L1",
       "prev_complications": "Previous LSCS",
       "planned_facility": "DH-KHARGONE",
-      "distance": "Phc magarkhedi  10 km",
+      "distance": "10km",
       "hrp_categories": [
         "Previous LSCS"
       ],
       "enrollment_hb": null,
-      "enrollment_bp_sys": null,
-      "enrollment_bp_dia": null,
+      "enrollment_bp_sys": 110.0,
+      "enrollment_bp_dia": 90.0,
       "enrollment_fbs": null,
       "enrollment_urine_albumin": "",
       "scd_genotype": "",
-      "blood_group": "",
-      "other_history": "",
+      "blood_group": "B positive",
+      "other_history": "Koi any nhi",
       "anc_linelist_visits": [],
       "visits": [
         {
@@ -9379,43 +9527,6 @@ const dashboardData = {
     },
     {
       "id_a": 68,
-      "mp_id": "20204088966",
-      "name": "Sanjana",
-      "husband_name": "Raju",
-      "age": 34,
-      "block": "Kasrawad",
-      "village": "Jaroli",
-      "mobile": "7746905652",
-      "asha": "Babita",
-      "anm": "Durga",
-      "sub_centre": "Bhoinda",
-      "lmp": "2026-01-07",
-      "edd": "2026-10-14",
-      "enrollment_date": "2026-06-04",
-      "timestamp": "2026-06-04 10:50:16",
-      "gestational_age_enrollment": "20",
-      "gravida_para": "G2P2L1",
-      "prev_complications": "Previous LSCS",
-      "planned_facility": "DH-KHARGONE",
-      "distance": "10km",
-      "hrp_categories": [
-        "Previous LSCS"
-      ],
-      "enrollment_hb": null,
-      "enrollment_bp_sys": 110.0,
-      "enrollment_bp_dia": 90.0,
-      "enrollment_fbs": null,
-      "enrollment_urine_albumin": "",
-      "scd_genotype": "",
-      "blood_group": "B positive",
-      "other_history": "Koi any nhi",
-      "anc_linelist_visits": [],
-      "visits": [],
-      "delivery": null,
-      "matched_via": null
-    },
-    {
-      "id_a": 69,
       "mp_id": "20237929459",
       "name": "Asma Khatri",
       "husband_name": "Rijvan Khatri",
@@ -9452,7 +9563,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 70,
+      "id_a": 69,
       "mp_id": "20246070668",
       "name": "Ellu",
       "husband_name": "Ritesh",
@@ -9534,7 +9645,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 71,
+      "id_a": 70,
       "mp_id": "00000000000",
       "name": "Shila",
       "husband_name": "Sunil",
@@ -9571,7 +9682,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 72,
+      "id_a": 71,
       "mp_id": "00000000000",
       "name": "Binda",
       "husband_name": "Bhart",
@@ -9654,7 +9765,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 73,
+      "id_a": 72,
       "mp_id": "20235781618",
       "name": "Pooja",
       "husband_name": "Prayatan",
@@ -9787,7 +9898,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 74,
+      "id_a": 73,
       "mp_id": "20213061299",
       "name": "Manisha",
       "husband_name": "Rajesh",
@@ -9963,7 +10074,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 75,
+      "id_a": 74,
       "mp_id": "20213258963",
       "name": "Pinki",
       "husband_name": "Ishram",
@@ -10101,7 +10212,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 76,
+      "id_a": 75,
       "mp_id": "20213061299",
       "name": "Manisha",
       "husband_name": "Rajesh",
@@ -10139,7 +10250,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 77,
+      "id_a": 76,
       "mp_id": "20212430434",
       "name": "Deepika patil",
       "husband_name": "Ranjit patil",
@@ -10225,7 +10336,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 78,
+      "id_a": 77,
       "mp_id": "26166753836",
       "name": "Kali",
       "husband_name": "Madiya",
@@ -10308,7 +10419,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 79,
+      "id_a": 78,
       "mp_id": "20212465896",
       "name": "Soniya",
       "husband_name": "Ganesh",
@@ -10346,7 +10457,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 80,
+      "id_a": 79,
       "mp_id": "20221768998",
       "name": "Ambika",
       "husband_name": "Lovkush",
@@ -10522,7 +10633,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 81,
+      "id_a": 80,
       "mp_id": "26180510171",
       "name": "Kala",
       "husband_name": "Suneel",
@@ -10656,7 +10767,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 82,
+      "id_a": 81,
       "mp_id": "20213662403",
       "name": "Roshni",
       "husband_name": "Mahipal",
@@ -10788,7 +10899,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 83,
+      "id_a": 82,
       "mp_id": "No",
       "name": "Lalita",
       "husband_name": "Ashok",
@@ -10914,7 +11025,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 84,
+      "id_a": 83,
       "mp_id": "00000000000",
       "name": "Nandra",
       "husband_name": "Jaypal",
@@ -10998,7 +11109,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 85,
+      "id_a": 84,
       "mp_id": "00000000000",
       "name": "Kerma",
       "husband_name": "Kumar",
@@ -11036,7 +11147,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 86,
+      "id_a": 85,
       "mp_id": "00000000000",
       "name": "Rekha",
       "husband_name": "Suresh",
@@ -11070,11 +11181,60 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 84,
+        "mp_id": "26322582741",
+        "delivery_date": "2026-09-07",
+        "timestamp": "2026-10-27 20:54:47",
+        "gestational_age": 38,
+        "place": "HWC / SHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "SHC gorkhpur",
+        "was_planned": "Unknown",
+        "unplanned_reason": "Labour came on suddenly",
+        "total_anc": 6,
+        "hb": 10.0,
+        "hb_admission": 10.0,
+        "anemia_status": "NA – Severe Anemia was not enrolled for this woman",
+        "bp": "110/80",
+        "bp_admission": "110/80",
+        "bp_measured_admission": "Yes",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "No",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2765.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "No",
+        "sts_initiated": "",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Na",
+        "remarks": "Na",
+        "completed_by": "Durga bhilala"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Safe Institutional Delivery (SHC gorkhpur) - Facility Delivery",
+        "High-risk BOH/Teen delivered at non-FRU / unplanned facility (SHC gorkhpur) (unfavourable outcome)"
+      ]
     },
     {
-      "id_a": 87,
+      "id_a": 86,
       "mp_id": "0000000000",
       "name": "Pooja",
       "husband_name": "Mangal",
@@ -11111,7 +11271,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 88,
+      "id_a": 87,
       "mp_id": "26119226339",
       "name": "Suvicha",
       "husband_name": "Raju",
@@ -11243,7 +11403,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 89,
+      "id_a": 88,
       "mp_id": "26154849547",
       "name": "Rinku",
       "husband_name": "Sandip",
@@ -11325,7 +11485,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 90,
+      "id_a": 89,
       "mp_id": "26322124548",
       "name": "Rinku",
       "husband_name": "Jayram",
@@ -11421,7 +11581,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 91,
+      "id_a": 90,
       "mp_id": "2618083765",
       "name": "Anjli",
       "husband_name": "Kaml",
@@ -11553,7 +11713,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 92,
+      "id_a": 91,
       "mp_id": "20245677526",
       "name": "Vanshika",
       "husband_name": "Ritesh",
@@ -11675,11 +11835,60 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 93,
+        "mp_id": "26055978",
+        "delivery_date": "2026-10-19",
+        "timestamp": "2026-11-11 12:10:14",
+        "gestational_age": 39,
+        "place": "DH",
+        "type": "Normal vaginal delivery",
+        "facility_name": "Dh",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 5,
+        "hb": 10.3,
+        "hb_admission": 10.3,
+        "anemia_status": "Controlled: Hb ≥ 7 g/dL at delivery",
+        "bp": "120/80",
+        "bp_admission": "120/80",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": 70.0,
+        "rbs_admission": 70.0,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2760.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "No",
+        "gaps_concerns": "Healthy beby",
+        "remarks": "",
+        "completed_by": "Lalita khede"
+      },
+      "matched_via": null,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "SCD worsened: Hb decreased by 0.5 g/dL (from 10.8 to 10.3)",
+        "SCD Status: Stable: Hb ≥ 7 g/dL and no crisis at delivery"
+      ]
     },
     {
-      "id_a": 93,
+      "id_a": 92,
       "mp_id": "20213745626",
       "name": "Ranjana",
       "husband_name": "Jitendra",
@@ -11749,7 +11958,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 94,
+      "id_a": 93,
       "mp_id": "26114668481",
       "name": "Priti",
       "husband_name": "Jitendra",
@@ -11786,7 +11995,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 95,
+      "id_a": 94,
       "mp_id": "23192247667",
       "name": "Shita",
       "husband_name": "Ajit",
@@ -11823,7 +12032,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 96,
+      "id_a": 95,
       "mp_id": "26324450793",
       "name": "Kalyani",
       "husband_name": "Shayamlal",
@@ -11905,7 +12114,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 97,
+      "id_a": 96,
       "mp_id": "20224387160",
       "name": "leela",
       "husband_name": "Kashiram",
@@ -11988,7 +12197,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 98,
+      "id_a": 97,
       "mp_id": "26322507175",
       "name": "Aarti",
       "husband_name": "Mukesh",
@@ -12021,12 +12230,57 @@ const dashboardData = {
       "blood_group": "B positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 136,
+          "date": "2026-10-19",
+          "timestamp": "2026-10-29 15:04:13",
+          "visit_number": 2,
+          "gestational_age": 37,
+          "place": "HWC / SHC",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 4510.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-11",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 99,
+      "id_a": 98,
       "mp_id": "2612995851",
       "name": "Aysha",
       "husband_name": "Fajal",
@@ -12108,7 +12362,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 100,
+      "id_a": 99,
       "mp_id": "20221369070",
       "name": "Nagma",
       "husband_name": "Moin",
@@ -12190,7 +12444,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 101,
+      "id_a": 100,
       "mp_id": "26146416828",
       "name": "Tulsi",
       "husband_name": "Ghanshya",
@@ -12285,7 +12539,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 102,
+      "id_a": 101,
       "mp_id": "20221189215",
       "name": "Pramila",
       "husband_name": "Govrdhan",
@@ -12367,7 +12621,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 103,
+      "id_a": 102,
       "mp_id": "20223171740",
       "name": "Anjali yadaw",
       "husband_name": "Ganesh Yadaw",
@@ -12489,11 +12743,61 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 87,
+        "mp_id": "20223171740",
+        "delivery_date": "2026-10-18",
+        "timestamp": "2026-10-29 11:51:10",
+        "gestational_age": 36,
+        "place": "CHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "CHC-GOGAWA",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "DH-KHARGONE le jane se mana kar diye HB 11.7 ho  gya tha",
+        "total_anc": 4,
+        "hb": 7.0,
+        "hb_admission": 11.9,
+        "anemia_status": "Controlled: Hb ≥ 7 g/dL at delivery",
+        "bp": "128/74",
+        "bp_admission": "128/74",
+        "bp_measured_admission": "Yes",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "",
+        "overall_hrp_status": "",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 3000.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "Yes",
+        "gaps_concerns": "",
+        "remarks": "",
+        "completed_by": "Ajay Dudwe"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Anemia stable: Hb increased by 0.5 g/dL (from 6.5 to 7.0)",
+        "Anemia Status: Controlled: Hb ≥ 7 g/dL at delivery",
+        "Severe Anemia Unresolved (Hb 7.0 < 7.0 g/dL)"
+      ]
     },
     {
-      "id_a": 104,
+      "id_a": 103,
       "mp_id": "26100762779",
       "name": "Sonu",
       "husband_name": "Anil",
@@ -12530,7 +12834,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 105,
+      "id_a": 104,
       "mp_id": "26315373955",
       "name": "Sayra",
       "husband_name": "Ajay",
@@ -12563,11 +12867,61 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 94,
+        "mp_id": "26315373955",
+        "delivery_date": "2026-11-01",
+        "timestamp": "2026-11-12 14:57:25",
+        "gestational_age": 34,
+        "place": "Home",
+        "type": "Normal vaginal delivery",
+        "facility_name": "Home",
+        "was_planned": "",
+        "unplanned_reason": "",
+        "total_anc": 4,
+        "hb": 9.8,
+        "hb_admission": null,
+        "anemia_status": "Controlled: Hb ≥ 7 g/dL at delivery",
+        "bp": "",
+        "bp_admission": "",
+        "bp_measured_admission": "",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "",
+        "overall_hrp_status": "",
+        "partograph_plotted": "",
+        "oxytocin_given": "",
+        "birth_companion": "",
+        "respectful_care": "",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2275.0,
+        "birth_weight_category": "Low birth weight (LBW): 1500–2499 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "",
+        "gaps_concerns": "",
+        "remarks": "",
+        "completed_by": "Nilesh Tirole"
+      },
+      "matched_via": null,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "Anemia improved: Hb increased by 4.2 g/dL (from 5.6 to 9.8)",
+        "Anemia Status: Controlled: Hb ≥ 7 g/dL at delivery",
+        "Severe Anemia Resolved (Hb 9.8 > 7.0 g/dL)"
+      ]
     },
     {
-      "id_a": 106,
+      "id_a": 105,
       "mp_id": "20241361940",
       "name": "Ranjana",
       "husband_name": "Ajay",
@@ -12649,7 +13003,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 107,
+      "id_a": 106,
       "mp_id": "20164128719",
       "name": "Bharti",
       "husband_name": "Sudar lal",
@@ -12732,7 +13086,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 108,
+      "id_a": 107,
       "mp_id": "",
       "name": "Salita",
       "husband_name": "Bahadur",
@@ -12770,7 +13124,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 109,
+      "id_a": 108,
       "mp_id": "20219681929",
       "name": "Sapna",
       "husband_name": "Jitendra",
@@ -12804,12 +13158,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 141,
+          "date": "2026-10-07",
+          "timestamp": "2026-10-30 11:59:40",
+          "visit_number": 4,
+          "gestational_age": 34,
+          "place": "Home visit",
+          "conducted_by": "Abhay Dixit",
+          "bp_measured": "Yes",
+          "weight": 72.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "On track: supplements ongoing, scar OK, birth plan at higher facility confirmed- (सब ठीक चल रहा है: सप्लीमेंट्स जारी हैं, निशान ठीक है, उच्चतर अस्पताल में प्रसव योजना की पुष्टि हो गई है।)",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-10-21",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 110,
+      "id_a": 109,
       "mp_id": "26172858453",
       "name": "Twinkle",
       "husband_name": "Vishal",
@@ -12888,11 +13287,60 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 89,
+        "mp_id": "26172858453",
+        "delivery_date": "2026-10-31",
+        "timestamp": "2026-11-03 11:05:55",
+        "gestational_age": 39,
+        "place": "Private facility",
+        "type": "Elective LSCS (planned)",
+        "facility_name": "H.M hospital Barwah",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "Family decision",
+        "total_anc": 6,
+        "hb": 11.5,
+        "hb_admission": 11.5,
+        "anemia_status": "NA – Severe Anemia was not enrolled for this woman",
+        "bp": "110/80",
+        "bp_admission": "110/80",
+        "bp_measured_admission": "Yes",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "NA – LSCS delivery",
+        "oxytocin_given": "",
+        "birth_companion": "NA – LSCS delivery",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2500.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "No",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "No",
+        "remarks": "No",
+        "completed_by": "Manoj bhatnagar"
+      },
+      "matched_via": null,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "Safe Institutional Delivery (H.M hospital Barwah) - Planned Adherent",
+        "Elective LSCS completed safely at FRU (favourable outcome)"
+      ]
     },
     {
-      "id_a": 111,
+      "id_a": 110,
       "mp_id": "20208664333",
       "name": "Roshini",
       "husband_name": "Ramkaran",
@@ -13024,7 +13472,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 112,
+      "id_a": 111,
       "mp_id": "26127653065",
       "name": "Reshma",
       "husband_name": "Akram",
@@ -13061,7 +13509,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 113,
+      "id_a": 112,
       "mp_id": "20229542068",
       "name": "Lalita",
       "husband_name": "Bahadur",
@@ -13140,11 +13588,59 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 82,
+        "mp_id": "20229542065",
+        "delivery_date": "2026-10-26",
+        "timestamp": "2026-10-27 17:08:21",
+        "gestational_age": 38,
+        "place": "Private facility",
+        "type": "Emergency LSCS",
+        "facility_name": "Pahle se hi Raksha Hos me ilaj chl rha tha",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "Nirdharit sthan",
+        "total_anc": 4,
+        "hb": 11.6,
+        "hb_admission": 11.6,
+        "anemia_status": "",
+        "bp": "",
+        "bp_admission": "",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "Not controlled: above target at delivery",
+        "scd_hb": null,
+        "scd_status": "",
+        "overall_hrp_status": "Some conditions controlled, some not",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": null,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "Bachhe ka wajan 3200, Hai",
+        "sts_initiated": "No",
+        "breastfeeding_initiated": "No",
+        "vit_k_given": "",
+        "baby_glucose_checked": "Yes",
+        "gaps_concerns": "No",
+        "remarks": "Anc lgatar sampark me rhi",
+        "completed_by": "Preeti bala"
+      },
+      "matched_via": null,
+      "improvement_status": "Partially Improved",
+      "improvement_details": [
+        "GDM Status: Not controlled: above target at delivery"
+      ]
     },
     {
-      "id_a": 114,
+      "id_a": 113,
       "mp_id": "20222749722",
       "name": "Krishna",
       "husband_name": "Kist rama",
@@ -13177,11 +13673,60 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 86,
+        "mp_id": "20222749722",
+        "delivery_date": "2026-08-29",
+        "timestamp": "2026-10-29 11:40:17",
+        "gestational_age": 38,
+        "place": "HWC / SHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "SHC Gorakhpur",
+        "was_planned": "Unknown",
+        "unplanned_reason": "Family decision",
+        "total_anc": 5,
+        "hb": 9.6,
+        "hb_admission": 9.6,
+        "anemia_status": "NA – Severe Anemia was not enrolled for this woman",
+        "bp": "107/80",
+        "bp_admission": "107/80",
+        "bp_measured_admission": "Yes",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2800.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "No",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Na",
+        "remarks": "Na",
+        "completed_by": "Durga bhilala"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Safe Institutional Delivery (SHC Gorakhpur) - Facility Delivery",
+        "High-risk BOH/Teen delivered at non-FRU / unplanned facility (SHC Gorakhpur) (unfavourable outcome)"
+      ]
     },
     {
-      "id_a": 115,
+      "id_a": 114,
       "mp_id": "0000000000",
       "name": "Karishma",
       "husband_name": "Kistram",
@@ -13219,7 +13764,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 116,
+      "id_a": 115,
       "mp_id": "20222749722",
       "name": "Karishma",
       "husband_name": "Kashiram",
@@ -13257,7 +13802,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 117,
+      "id_a": 116,
       "mp_id": "26140235534",
       "name": "Aarti",
       "husband_name": "Sukesh",
@@ -13290,12 +13835,57 @@ const dashboardData = {
       "blood_group": "B positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 134,
+          "date": "2026-10-22",
+          "timestamp": "2026-10-29 11:09:17",
+          "visit_number": 2,
+          "gestational_age": 37,
+          "place": "Home visit",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 4760.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "Concern: reduced fetal movements reported- (चिंताजनक: भ्रूण की हलचल में कमी देखी गई)",
+          "prev_stillbirth_remarks": "Mere 2 baby still birth huye the",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-03",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 118,
+      "id_a": 117,
       "mp_id": "",
       "name": "Mamta",
       "husband_name": "Dhnnalal",
@@ -13427,7 +14017,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 119,
+      "id_a": 118,
       "mp_id": "26303919365",
       "name": "Sanjana",
       "husband_name": "Ashok",
@@ -13465,7 +14055,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 120,
+      "id_a": 119,
       "mp_id": "No",
       "name": "Guddi",
       "husband_name": "Bablu",
@@ -13503,7 +14093,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 121,
+      "id_a": 120,
       "mp_id": "No",
       "name": "Fugibai",
       "husband_name": "Sandeep",
@@ -13542,7 +14132,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 122,
+      "id_a": 121,
       "mp_id": "26195622733",
       "name": "Fuggi bai",
       "husband_name": "Sandip",
@@ -13579,7 +14169,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 123,
+      "id_a": 122,
       "mp_id": "",
       "name": "Manisha",
       "husband_name": "Sunil",
@@ -13661,7 +14251,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 124,
+      "id_a": 123,
       "mp_id": "26319662727",
       "name": "Pinki",
       "husband_name": "Rakesh",
@@ -13743,12 +14333,57 @@ const dashboardData = {
           "hb": 10.9
         }
       ],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 137,
+          "date": "2026-10-23",
+          "timestamp": "2026-10-29 15:10:54",
+          "visit_number": 2,
+          "gestational_age": null,
+          "place": "Home visit",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 4120.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "No",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-01",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 125,
+      "id_a": 124,
       "mp_id": "23191428013",
       "name": "Rihana",
       "husband_name": "Navaj",
@@ -13826,7 +14461,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 126,
+      "id_a": 125,
       "mp_id": "26167098815",
       "name": "Jyoti",
       "husband_name": "Jitendra",
@@ -13909,7 +14544,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 127,
+      "id_a": 126,
       "mp_id": "00000000000",
       "name": "Anita",
       "husband_name": "Basant",
@@ -13943,11 +14578,60 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 88,
+        "mp_id": "00000000000",
+        "delivery_date": "2026-08-15",
+        "timestamp": "2026-10-29 13:38:32",
+        "gestational_age": 31,
+        "place": "Home",
+        "type": "Normal vaginal delivery",
+        "facility_name": "Home delivery",
+        "was_planned": "Unknown",
+        "unplanned_reason": "Family decision",
+        "total_anc": 3,
+        "hb": 10.2,
+        "hb_admission": null,
+        "anemia_status": "NA – Severe Anemia was not enrolled for this woman",
+        "bp": "Na",
+        "bp_admission": "Na",
+        "bp_measured_admission": "No",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "No",
+        "oxytocin_given": "No",
+        "birth_companion": "No",
+        "respectful_care": "Yes – verbal abuse",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2500.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "Na",
+        "sts_initiated": "No",
+        "breastfeeding_initiated": "No",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Ghar wale mana hospital delivery karwane se",
+        "remarks": "Na",
+        "completed_by": "Durga bhilala"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Home Delivery (Unsafe)",
+        "High-risk BOH/Teen delivered at non-FRU / unplanned facility (Home delivery) (unfavourable outcome)"
+      ]
     },
     {
-      "id_a": 128,
+      "id_a": 127,
       "mp_id": "20231278804",
       "name": "Radha",
       "husband_name": "Deepak",
@@ -13980,12 +14664,57 @@ const dashboardData = {
       "blood_group": "O positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 139,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-29 15:31:47",
+          "visit_number": 2,
+          "gestational_age": 36,
+          "place": "CHC",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 5110.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-10",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 129,
+      "id_a": 128,
       "mp_id": "20209921806",
       "name": "Jyoti",
       "husband_name": "Deepak",
@@ -14068,7 +14797,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 130,
+      "id_a": 129,
       "mp_id": "20192803397",
       "name": "Krashna",
       "husband_name": "Bhaiyalal",
@@ -14150,7 +14879,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 131,
+      "id_a": 130,
       "mp_id": "26323155564",
       "name": "Nisha",
       "husband_name": "Raja",
@@ -14233,7 +14962,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 132,
+      "id_a": 131,
       "mp_id": "26153849833",
       "name": "Samita",
       "husband_name": "Sanjay",
@@ -14315,7 +15044,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 133,
+      "id_a": 132,
       "mp_id": "26118180681",
       "name": "Bhawna",
       "husband_name": "Pawan",
@@ -14398,7 +15127,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 134,
+      "id_a": 133,
       "mp_id": "20204346625",
       "name": "Tarannum",
       "husband_name": "Shahrukh",
@@ -14531,7 +15260,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 135,
+      "id_a": 134,
       "mp_id": "26174609326",
       "name": "PINKY",
       "husband_name": "Delip",
@@ -14614,7 +15343,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 136,
+      "id_a": 135,
       "mp_id": "20218482253",
       "name": "Ranu",
       "husband_name": "Indar",
@@ -14697,7 +15426,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 137,
+      "id_a": 136,
       "mp_id": "26191238592",
       "name": "HARLI",
       "husband_name": "RITIK",
@@ -14830,7 +15559,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 138,
+      "id_a": 137,
       "mp_id": "20206274986",
       "name": "Chhaya",
       "husband_name": "SANKAR",
@@ -14862,12 +15591,57 @@ const dashboardData = {
       "blood_group": "O positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 142,
+          "date": "2026-10-28",
+          "timestamp": "2026-11-02 14:12:45",
+          "visit_number": 3,
+          "gestational_age": 34,
+          "place": "HWC / SHC",
+          "conducted_by": "Nilesh Tirole",
+          "bp_measured": "Yes",
+          "weight": 50.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": 102.0,
+          "gdm_rbs": null,
+          "gdm_status": "Controlled: FBS < 95 mg/dL AND RBS < 140 mg/dL- (नियंत्रित: एफबीएस < 95 मिलीग्राम/डीएल और आरबीएस < 140 मिलीग्राम/डीएल)",
+          "gdm_action": "No action needed – condition is controlled- (किसी कार्रवाई की आवश्यकता नहीं – स्थिति नियंत्रण में है)",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-02",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "Not on oral medication – diet management only - (मौखिक दवा नहीं ले रहे हैं - केवल आहार प्रबंधन)",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 139,
+      "id_a": 138,
       "mp_id": "26121804570",
       "name": "Aarati",
       "husband_name": "Avinash",
@@ -14900,12 +15674,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 132,
+          "date": "2026-10-26",
+          "timestamp": "2026-10-28 11:38:03",
+          "visit_number": 2,
+          "gestational_age": 30,
+          "place": "HWC / SHC",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 48.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-26",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 140,
+      "id_a": 139,
       "mp_id": "0000000000",
       "name": "Govri",
       "husband_name": "Sachin",
@@ -14938,12 +15757,57 @@ const dashboardData = {
       "blood_group": "B positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 138,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-29 15:16:37",
+          "visit_number": 2,
+          "gestational_age": 36,
+          "place": "Home visit",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 4210.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-02",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 141,
+      "id_a": 140,
       "mp_id": "35316083653",
       "name": "Ganga",
       "husband_name": "Dipak",
@@ -14981,7 +15845,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 142,
+      "id_a": 141,
       "mp_id": "",
       "name": "Sima",
       "husband_name": "Jitendra",
@@ -15051,7 +15915,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 143,
+      "id_a": 142,
       "mp_id": "20226796301",
       "name": "Shital",
       "husband_name": "Sonu",
@@ -15133,7 +15997,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 144,
+      "id_a": 143,
       "mp_id": "",
       "name": "Payal",
       "husband_name": "Suresh",
@@ -15165,12 +16029,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 131,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-28 11:27:20",
+          "visit_number": 4,
+          "gestational_age": 31,
+          "place": "Home visit",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 46.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-22",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 145,
+      "id_a": 144,
       "mp_id": "26119121367",
       "name": "Kajal",
       "husband_name": "Anil",
@@ -15252,7 +16161,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 146,
+      "id_a": 145,
       "mp_id": "20243661207",
       "name": "Pramila",
       "husband_name": "Virendra",
@@ -15284,12 +16193,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 130,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-28 11:19:35",
+          "visit_number": 5,
+          "gestational_age": 31,
+          "place": "DH",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 42.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": 10.0,
+          "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis since last visit- (स्थिर: Hb ≥ 7 g/dL और पिछली मुलाकात के बाद से कोई संकट नहीं।)",
+          "scd_action": "Referral to CHC / DH arranged- (सीएचसी/डीएच में रेफरल की व्यवस्था की गई",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "Yes – referred to DH / SDH- (हां – डीएच / एसडीएच को संदर्भित किया गया)",
+          "next_visit_date": "2026-11-28",
+          "med_adherence_general": "> 20 days (good)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 147,
+      "id_a": 146,
       "mp_id": "20219222603",
       "name": "Muskan",
       "husband_name": "Samir",
@@ -15322,12 +16276,57 @@ const dashboardData = {
       "blood_group": "A positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 143,
+          "date": "2026-10-30",
+          "timestamp": "2026-11-02 16:16:38",
+          "visit_number": 3,
+          "gestational_age": 32,
+          "place": "HWC / SHC",
+          "conducted_by": "Nilesh Tirole",
+          "bp_measured": "Yes",
+          "weight": 37.3,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "On track: supplements ongoing, fetal movements good, birth plan at higher facility confirmed- (सब ठीक चल रहा है: पूरक आहार जारी है, भ्रूण की हलचल अच्छी है, उच्च स्तरीय अस्पताल में प्रसव योजना की पुष्टि हो गई है।)",
+          "prev_stillbirth_remarks": "Previous Stillbirth",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-02",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 148,
+      "id_a": 147,
       "mp_id": "",
       "name": "shital",
       "husband_name": "Tarachand",
@@ -15364,7 +16363,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 149,
+      "id_a": 148,
       "mp_id": "23171018831",
       "name": "Pinky",
       "husband_name": "Barkhya",
@@ -15401,7 +16400,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 150,
+      "id_a": 149,
       "mp_id": "20223873134",
       "name": "Muskaan",
       "husband_name": "Chetan",
@@ -15485,7 +16484,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 151,
+      "id_a": 150,
       "mp_id": "00000000000",
       "name": "Mangla",
       "husband_name": "Vijay",
@@ -15564,11 +16563,62 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 91,
+        "mp_id": "20233968890",
+        "delivery_date": "2026-08-20",
+        "timestamp": "2026-11-11 11:41:38",
+        "gestational_age": 36,
+        "place": "DH",
+        "type": "Normal vaginal delivery",
+        "facility_name": "Dh",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 4,
+        "hb": 9.2,
+        "hb_admission": 9.2,
+        "anemia_status": "",
+        "bp": "120/82",
+        "bp_admission": "120/82",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": 70.0,
+        "rbs_admission": 70.0,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "No – antepartum stillbirth (died before labour)",
+        "birth_weight": 2110.0,
+        "birth_weight_category": "Low birth weight (LBW): 1500–2499 g",
+        "baby_cried": "No",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "",
+        "baby_transfer_reason": "No",
+        "sts_initiated": "No",
+        "breastfeeding_initiated": "No",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "",
+        "remarks": "",
+        "completed_by": "Lalita khede"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "SCD improved: Hb increased by 1.0 g/dL (from 8.2 to 9.2)",
+        "SCD Status: Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "Planned FRU Delivery (Dh) (favourable outcome)",
+        "Severe Complication: Stillbirth / Neonatal Death (unfavourable outcome)"
+      ]
     },
     {
-      "id_a": 152,
+      "id_a": 151,
       "mp_id": "26167788846",
       "name": "Shivani",
       "husband_name": "Manoj",
@@ -15651,7 +16701,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 153,
+      "id_a": 152,
       "mp_id": "26316552240",
       "name": "Benu",
       "husband_name": "Shivam",
@@ -15688,7 +16738,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 154,
+      "id_a": 153,
       "mp_id": "20227242004",
       "name": "Rekha",
       "husband_name": "Dinesh",
@@ -15720,12 +16770,57 @@ const dashboardData = {
       "blood_group": "A Positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 124,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-27 12:02:08",
+          "visit_number": 4,
+          "gestational_age": 32,
+          "place": "HWC / SHC",
+          "conducted_by": "Nilesh",
+          "bp_measured": "Yes",
+          "weight": 39.85,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "No",
+          "agreed_designated_facility": "Yes",
+          "hb": 10.5,
+          "hb_trend": "Improved (higher than last visit) - (पिछली बार की तुलना में बेहतर स्थिति है।)",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "anemia_action": "No action needed – condition is controlled- (किसी कार्रवाई की आवश्यकता नहीं – स्थिति नियंत्रण में है)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-03",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 155,
+      "id_a": 154,
       "mp_id": "20221805335",
       "name": "Sarika",
       "husband_name": "Rahul",
@@ -15790,12 +16885,57 @@ const dashboardData = {
           "hb": 10.2
         }
       ],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 122,
+          "date": "2026-10-26",
+          "timestamp": "2026-10-26 14:57:54",
+          "visit_number": 2,
+          "gestational_age": 33,
+          "place": "Home visit",
+          "conducted_by": "Rinu Prajapat/pooja rathod",
+          "bp_measured": "Yes",
+          "weight": null,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": 9.2,
+          "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis since last visit- (स्थिर: Hb ≥ 7 g/dL और पिछली मुलाकात के बाद से कोई संकट नहीं।)",
+          "scd_action": "Blood transfusion arranged- (रक्त आधान की व्यवस्था की गई)",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-12",
+          "med_adherence_general": "> 20 days (good)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 156,
+      "id_a": 155,
       "mp_id": "26109379819",
       "name": "Sima",
       "husband_name": "Ramesh",
@@ -15832,7 +16972,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 157,
+      "id_a": 156,
       "mp_id": "20232115259",
       "name": "Payal",
       "husband_name": "Dharmendra",
@@ -15864,12 +17004,57 @@ const dashboardData = {
       "blood_group": "O+ve",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 121,
+          "date": "2026-10-26",
+          "timestamp": "2026-10-26 14:48:03",
+          "visit_number": 2,
+          "gestational_age": 33,
+          "place": "Home visit",
+          "conducted_by": "Rinu Prajapat",
+          "bp_measured": "Yes",
+          "weight": 58.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "On track: supplements ongoing, scar OK, birth plan at higher facility confirmed- (सब ठीक चल रहा है: सप्लीमेंट्स जारी हैं, निशान ठीक है, उच्चतर अस्पताल में प्रसव योजना की पुष्टि हो गई है।)",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-12",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 158,
+      "id_a": 157,
       "mp_id": "26137701330",
       "name": "Anjana",
       "husband_name": "Preetam",
@@ -15907,7 +17092,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 159,
+      "id_a": 158,
       "mp_id": "20207089205",
       "name": "Simran",
       "husband_name": "Sahrukh",
@@ -15928,7 +17113,6 @@ const dashboardData = {
       "planned_facility": "DH-KHARGONE",
       "distance": "CHC kasrwad  10",
       "hrp_categories": [
-        "Gestational Diabetes Mellitus (GDM)",
         "Previous LSCS"
       ],
       "enrollment_hb": 10.6,
@@ -15945,7 +17129,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 160,
+      "id_a": 159,
       "mp_id": "26153849833",
       "name": "Samita",
       "husband_name": "Sanjay",
@@ -15982,7 +17166,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 161,
+      "id_a": 160,
       "mp_id": "00000000000",
       "name": "Molu",
       "husband_name": "Ganesh",
@@ -16019,7 +17203,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 162,
+      "id_a": 161,
       "mp_id": "20234651875",
       "name": "Ranjana",
       "husband_name": "Sandeep",
@@ -16146,7 +17330,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 163,
+      "id_a": 162,
       "mp_id": "26145166299",
       "name": "Kavita",
       "husband_name": "Kailash",
@@ -16184,7 +17368,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 164,
+      "id_a": 163,
       "mp_id": "25323228473",
       "name": "Salita",
       "husband_name": "Lalu",
@@ -16268,7 +17452,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 165,
+      "id_a": 164,
       "mp_id": "20232512781",
       "name": "Sanju",
       "husband_name": "Ram",
@@ -16351,7 +17535,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 166,
+      "id_a": 165,
       "mp_id": "",
       "name": "Anita",
       "husband_name": "Abhay",
@@ -16388,7 +17572,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 167,
+      "id_a": 166,
       "mp_id": "20203687307",
       "name": "Varsha",
       "husband_name": "Deepak",
@@ -16471,7 +17655,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 168,
+      "id_a": 167,
       "mp_id": "20249377783",
       "name": "Sonu",
       "husband_name": "Thawar singh",
@@ -16554,7 +17738,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 169,
+      "id_a": 168,
       "mp_id": "20225284976",
       "name": "Priti",
       "husband_name": "Rahul",
@@ -16649,7 +17833,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 170,
+      "id_a": 169,
       "mp_id": "00000000000",
       "name": "Rajni",
       "husband_name": "Bhurelal",
@@ -16687,7 +17871,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 171,
+      "id_a": 170,
       "mp_id": "20229938280",
       "name": "Jyoti",
       "husband_name": "Jaimal",
@@ -16724,7 +17908,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 172,
+      "id_a": 171,
       "mp_id": "20208601703",
       "name": "Sunita",
       "husband_name": "Nitesh",
@@ -16794,7 +17978,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 173,
+      "id_a": 172,
       "mp_id": "25122288467",
       "name": "Ranu",
       "husband_name": "Sandeep",
@@ -16831,7 +18015,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 174,
+      "id_a": 173,
       "mp_id": "26186634009",
       "name": "Sunita",
       "husband_name": "Ranjit",
@@ -16868,7 +18052,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 175,
+      "id_a": 174,
       "mp_id": "20233062585",
       "name": "Mamta",
       "husband_name": "Anil",
@@ -16939,7 +18123,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 176,
+      "id_a": 175,
       "mp_id": "20212661002",
       "name": "Roshni",
       "husband_name": "Vijay",
@@ -17023,7 +18207,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 177,
+      "id_a": 176,
       "mp_id": "26178234975",
       "name": "SADHNA",
       "husband_name": "Lokendra",
@@ -17106,7 +18290,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 178,
+      "id_a": 177,
       "mp_id": "26134475977",
       "name": "Vandana",
       "husband_name": "Shishupal",
@@ -17143,7 +18327,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 179,
+      "id_a": 178,
       "mp_id": "20212781073",
       "name": "Teena",
       "husband_name": "Rahul",
@@ -17227,7 +18411,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 180,
+      "id_a": 179,
       "mp_id": "20225935859",
       "name": "Rina",
       "husband_name": "Rajesh",
@@ -17264,7 +18448,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 181,
+      "id_a": 180,
       "mp_id": "00000000000",
       "name": "Bharti",
       "husband_name": "Vishal",
@@ -17301,7 +18485,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 182,
+      "id_a": 181,
       "mp_id": "26128248583",
       "name": "Aayushi",
       "husband_name": "Ganesh",
@@ -17339,7 +18523,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 183,
+      "id_a": 182,
       "mp_id": "26110072683",
       "name": "Asha",
       "husband_name": "Dharmendra",
@@ -17422,7 +18606,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 184,
+      "id_a": 183,
       "mp_id": "26156805166",
       "name": "Rangu",
       "husband_name": "Kashiram",
@@ -17460,7 +18644,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 185,
+      "id_a": 184,
       "mp_id": "20214000667",
       "name": "Santosh",
       "husband_name": "Olkesh",
@@ -17498,7 +18682,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 186,
+      "id_a": 185,
       "mp_id": "20244904854",
       "name": "Kiran",
       "husband_name": "Rahul",
@@ -17535,7 +18719,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 187,
+      "id_a": 186,
       "mp_id": "20202797448",
       "name": "Pooja",
       "husband_name": "Ram",
@@ -17572,7 +18756,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 188,
+      "id_a": 187,
       "mp_id": "20237174097",
       "name": "Nima",
       "husband_name": "Naval",
@@ -17609,7 +18793,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 189,
+      "id_a": 188,
       "mp_id": "26141512792",
       "name": "Munni",
       "husband_name": "Rohit",
@@ -17646,7 +18830,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 190,
+      "id_a": 189,
       "mp_id": "20207009492",
       "name": "Aachal",
       "husband_name": "Subham",
@@ -17683,7 +18867,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 191,
+      "id_a": 190,
       "mp_id": "20216519514",
       "name": "Rakhi",
       "husband_name": "Sanjay",
@@ -17720,7 +18904,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 192,
+      "id_a": 191,
       "mp_id": "20192736287",
       "name": "Sevnti",
       "husband_name": "Kalu",
@@ -17758,7 +18942,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 193,
+      "id_a": 192,
       "mp_id": "20242135902",
       "name": "Roshani",
       "husband_name": "Rakesh",
@@ -17795,7 +18979,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 194,
+      "id_a": 193,
       "mp_id": "25123758392",
       "name": "Krishna",
       "husband_name": "Jitendra",
@@ -17878,7 +19062,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 195,
+      "id_a": 194,
       "mp_id": "00000000000",
       "name": "Rajani",
       "husband_name": "Vikram gawad",
@@ -17916,7 +19100,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 196,
+      "id_a": 195,
       "mp_id": "20204453921",
       "name": "Sarita",
       "husband_name": "Nanuram",
@@ -17955,7 +19139,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 197,
+      "id_a": 196,
       "mp_id": "26325186528",
       "name": "Pooja",
       "husband_name": "Subham",
@@ -17992,7 +19176,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 198,
+      "id_a": 197,
       "mp_id": "20225897224",
       "name": "Shiv Kanya",
       "husband_name": "Ramdas",
@@ -18170,7 +19354,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 199,
+      "id_a": 198,
       "mp_id": "20228004963",
       "name": "Chhaya",
       "husband_name": "Sohan",
@@ -18254,7 +19438,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 200,
+      "id_a": 199,
       "mp_id": "26157421133",
       "name": "Cheka",
       "husband_name": "Ragul",
@@ -18293,7 +19477,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 201,
+      "id_a": 200,
       "mp_id": "26312941331",
       "name": "Narmada",
       "husband_name": "Rakesh",
@@ -18331,7 +19515,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 202,
+      "id_a": 201,
       "mp_id": "20231154334",
       "name": "Reshma",
       "husband_name": "Madia",
@@ -18363,12 +19547,57 @@ const dashboardData = {
       "blood_group": "A positive",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 127,
+          "date": "2026-10-24",
+          "timestamp": "2026-10-27 21:16:15",
+          "visit_number": 4,
+          "gestational_age": 34,
+          "place": "CHC",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 50.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 10.1,
+          "hb_trend": "Improved (higher than last visit) - (पिछली बार की तुलना में बेहतर स्थिति है।)",
+          "anemia_status": "Improving: Hb increased by ≥ 1 g/dL since last visit but still < 7- (सुधार हो रहा है: पिछली जांच के बाद से Hb में ≥ 1 g/dL की वृद्धि हुई है, लेकिन अभी भी < 7 है।)",
+          "anemia_action": "Referral to CHC / DH made- (सीएचसी/डीएच को रेफरल किया गया)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "Yes – referred to DH / SDH- (हां – डीएच / एसडीएच को संदर्भित किया गया)",
+          "next_visit_date": "2026-11-03",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 203,
+      "id_a": 202,
       "mp_id": "20241384006",
       "name": "Jyoti",
       "husband_name": "Barkya",
@@ -18402,11 +19631,62 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 85,
+        "mp_id": "20241384006",
+        "delivery_date": "2026-10-09",
+        "timestamp": "2026-10-29 10:55:51",
+        "gestational_age": 31,
+        "place": "PHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "PHC-helapadwa",
+        "was_planned": "Unknown",
+        "unplanned_reason": "Family decision",
+        "total_anc": 5,
+        "hb": 6.8,
+        "hb_admission": 6.8,
+        "anemia_status": "Controlled: Hb ≥ 7 g/dL at delivery",
+        "bp": "121/77",
+        "bp_admission": "121/77",
+        "bp_measured_admission": "Yes",
+        "pih_status": "NA – PIH was not identified for this woman.",
+        "mgso4_given": "Yes",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "No",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2100.0,
+        "birth_weight_category": "Low birth weight (LBW): 1500–2499 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "Na",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "No",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Maa ko refar kiya tha CHC-Jhirniya uska HP 6.8 tha",
+        "remarks": "Na",
+        "completed_by": "Durga bhilala"
+      },
+      "matched_via": null,
+      "improvement_status": "Worsened / Uncontrolled",
+      "improvement_details": [
+        "Anemia improved: Hb increased by 3.6 g/dL (from 3.2 to 6.8)",
+        "Anemia Status: Controlled: Hb ≥ 7 g/dL at delivery",
+        "Severe Anemia Unresolved (Hb 6.8 < 7.0 g/dL)",
+        "High-risk BOH/Teen delivered at non-FRU / unplanned facility (PHC-helapadwa) (unfavourable outcome)"
+      ]
     },
     {
-      "id_a": 204,
+      "id_a": 203,
       "mp_id": "26156805166",
       "name": "Rangu",
       "husband_name": "Kashiram",
@@ -18444,7 +19724,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 205,
+      "id_a": 204,
       "mp_id": "20235835719",
       "name": "Aparna",
       "husband_name": "Prakash",
@@ -18526,7 +19806,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 206,
+      "id_a": 205,
       "mp_id": "20241831059",
       "name": "Sheetal",
       "husband_name": "Ajay",
@@ -18563,7 +19843,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 207,
+      "id_a": 206,
       "mp_id": "20206784056",
       "name": "Nandani",
       "husband_name": "Mithun",
@@ -18689,7 +19969,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 208,
+      "id_a": 207,
       "mp_id": "23192231039",
       "name": "Najmin",
       "husband_name": "Rajjav",
@@ -18727,7 +20007,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 209,
+      "id_a": 208,
       "mp_id": "20217852479",
       "name": "Pinki",
       "husband_name": "Seeta Ram",
@@ -18765,7 +20045,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 210,
+      "id_a": 209,
       "mp_id": "20228812479",
       "name": "Urmila",
       "husband_name": "kundan",
@@ -18802,7 +20082,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 211,
+      "id_a": 210,
       "mp_id": "26191238592",
       "name": "Harli",
       "husband_name": "Ritik",
@@ -18839,7 +20119,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 212,
+      "id_a": 211,
       "mp_id": "20242425317",
       "name": "Sapna",
       "husband_name": "Mukesh",
@@ -18871,12 +20151,57 @@ const dashboardData = {
       "blood_group": "B Positive",
       "other_history": "Mind Disturbe",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 133,
+          "date": "2026-10-28",
+          "timestamp": "2026-10-28 16:52:09",
+          "visit_number": 3,
+          "gestational_age": 32,
+          "place": "CHC",
+          "conducted_by": "Nilesh Tirole",
+          "bp_measured": "Yes",
+          "weight": 47.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": 8.8,
+          "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis since last visit- (स्थिर: Hb ≥ 7 g/dL और पिछली मुलाकात के बाद से कोई संकट नहीं।)",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-09",
+          "med_adherence_general": "10–20 days (moderate)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 213,
+      "id_a": 212,
       "mp_id": "20226900146",
       "name": "Anti",
       "husband_name": "Sunil",
@@ -18914,7 +20239,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 214,
+      "id_a": 213,
       "mp_id": "00000000000",
       "name": "Anguri",
       "husband_name": "Laxman",
@@ -18952,7 +20277,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 215,
+      "id_a": 214,
       "mp_id": "00000000000",
       "name": "Seema",
       "husband_name": "Mukesh",
@@ -18990,7 +20315,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 216,
+      "id_a": 215,
       "mp_id": "23192247667",
       "name": "Sheetal",
       "husband_name": "Ankita",
@@ -19027,7 +20352,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 217,
+      "id_a": 216,
       "mp_id": "26305856942",
       "name": "Madhuri",
       "husband_name": "Mahendra",
@@ -19110,7 +20435,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 218,
+      "id_a": 217,
       "mp_id": "26323656094",
       "name": "Anjali",
       "husband_name": "Bablu",
@@ -19148,7 +20473,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 219,
+      "id_a": 218,
       "mp_id": "26192792728",
       "name": "Manisha",
       "husband_name": "Pintu",
@@ -19186,7 +20511,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 220,
+      "id_a": 219,
       "mp_id": "00000000000",
       "name": "Sangeeta",
       "husband_name": "Ajay",
@@ -19219,12 +20544,57 @@ const dashboardData = {
       "blood_group": "B positive",
       "other_history": "Hath per dard hona chakkar aana",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 140,
+          "date": "2026-10-28",
+          "timestamp": "2026-10-29 15:42:57",
+          "visit_number": 3,
+          "gestational_age": 35,
+          "place": "Home visit",
+          "conducted_by": "Durga bhilala",
+          "bp_measured": "Yes",
+          "weight": 4530.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 6.8,
+          "hb_trend": "Same as last visit - (पिछली यात्रा के समान)",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "anemia_action": "Blood transfusion arranged- (रक्त आधान की व्यवस्था की गई)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": 9.2,
+          "scd_status": "Crisis: Active sickle cell complication- (संकट: सिकल सेल की सक्रिय जटिलता)",
+          "scd_action": "Referral to CHC / DH arranged- (सीएचसी/डीएच में रेफरल की व्यवस्था की गई",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-17",
+          "med_adherence_general": "> 20 days (good)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 221,
+      "id_a": 220,
       "mp_id": "20212078656",
       "name": "Nikita",
       "husband_name": "Raju",
@@ -19261,7 +20631,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 222,
+      "id_a": 221,
       "mp_id": "2053297450",
       "name": "Prabha",
       "husband_name": "Bharat",
@@ -19299,7 +20669,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 223,
+      "id_a": 222,
       "mp_id": "00000000000",
       "name": "Jaya",
       "husband_name": "Punam",
@@ -19378,11 +20748,59 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 81,
+        "mp_id": "00000000",
+        "delivery_date": "2026-10-17",
+        "timestamp": "2026-10-27 17:02:00",
+        "gestational_age": 38,
+        "place": "PHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "Achank prasw shru",
+        "total_anc": 5,
+        "hb": 9.8,
+        "hb_admission": null,
+        "anemia_status": "Improved but still below target: Hb < 7 g/dL but better than enrollment",
+        "bp": "137-90",
+        "bp_admission": "140-90",
+        "bp_measured_admission": "Yes",
+        "pih_status": "Borderline: BP 140–159 / 90–109 mmHg at delivery",
+        "mgso4_given": "No – BP was ≥ 160/110 but MgSO4 not given",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "NA – SCD was not identified for this woman",
+        "overall_hrp_status": "No conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 3800.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "No",
+        "remarks": "PNc ki BP badne ke karan Dh reffer kiya gya",
+        "completed_by": "Preeti bala"
+      },
+      "matched_via": null,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "PIH Status: Borderline: BP 140–159 / 90–109 mmHg at delivery"
+      ]
     },
     {
-      "id_a": 224,
+      "id_a": 223,
       "mp_id": "No",
       "name": "Chingu",
       "husband_name": "Rakesh",
@@ -19414,12 +20832,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 129,
+          "date": "2026-10-28",
+          "timestamp": "2026-10-28 11:07:26",
+          "visit_number": 3,
+          "gestational_age": 32,
+          "place": "DH",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 38.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "On track: nutrition adequate, psychosocial support in place, birth plan confirmed.- (सही राह पर: पोषण पर्याप्त है, मनोवैज्ञानिक सहायता उपलब्ध है, जन्म योजना की पुष्टि हो चुकी है।)",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-30",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 225,
+      "id_a": 224,
       "mp_id": "",
       "name": "Sheetal",
       "husband_name": "Tarachand",
@@ -19451,12 +20914,57 @@ const dashboardData = {
       "blood_group": "",
       "other_history": "",
       "anc_linelist_visits": [],
-      "visits": [],
+      "visits": [
+        {
+          "id_b": 128,
+          "date": "2026-10-27",
+          "timestamp": "2026-10-28 10:58:14",
+          "visit_number": 2,
+          "gestational_age": 33,
+          "place": "DH",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 55.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "Improved (higher than last visit) - (पिछली बार की तुलना में बेहतर स्थिति है।)",
+          "anemia_status": "Controlled: Hb ≥ 7 g/dL- (नियंत्रित: Hb ≥ 7 g/dL)",
+          "anemia_action": "No action needed – condition is controlled- (किसी कार्रवाई की आवश्यकता नहीं – स्थिति नियंत्रण में है)",
+          "bp_systolic": 220.0,
+          "bp_diastolic": null,
+          "bp_trend": "Improving (lower than last visit) - (स्थिति में सुधार हो रहा है (पिछली बार की तुलना में कम)",
+          "pih_status": "Not controlled: BP ≥ 140/90 despite treatment- (नियंत्रण में नहीं: उपचार के बावजूद रक्तचाप ≥ 140/90)",
+          "pih_action": "No action needed – condition is controlled- (किसी कार्रवाई की आवश्यकता नहीं – स्थिति नियंत्रण में है)",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "All conditions controlled- (सभी स्थितियाँ नियंत्रित)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-25",
+          "med_adherence_general": "",
+          "med_adherence_pih": "> 20 days (good)- (> 20 दिन (अच्छा))",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
     {
-      "id_a": 226,
+      "id_a": 225,
       "mp_id": "20224800497",
       "name": "Sonu",
       "husband_name": "Ganesh",
@@ -19493,7 +21001,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 227,
+      "id_a": 226,
       "mp_id": "20239755947",
       "name": "Sharda",
       "husband_name": "Ritesh",
@@ -19530,7 +21038,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 228,
+      "id_a": 227,
       "mp_id": "20201133170",
       "name": "Anita",
       "husband_name": "Shyam",
@@ -19567,7 +21075,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 229,
+      "id_a": 228,
       "mp_id": "20225119709",
       "name": "Gouri",
       "husband_name": "Kamal",
@@ -19700,7 +21208,7 @@ const dashboardData = {
       ]
     },
     {
-      "id_a": 230,
+      "id_a": 229,
       "mp_id": "00000000000",
       "name": "Salita",
       "husband_name": "Mithun",
@@ -19737,7 +21245,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 231,
+      "id_a": 230,
       "mp_id": "0000000000",
       "name": "Nirma",
       "husband_name": "Suresh",
@@ -19774,7 +21282,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 232,
+      "id_a": 231,
       "mp_id": "00000000000",
       "name": "Vashnti",
       "husband_name": "Dharsing",
@@ -19812,7 +21320,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 233,
+      "id_a": 232,
       "mp_id": "26146245124",
       "name": "Ranu",
       "husband_name": "Lokendra",
@@ -19849,7 +21357,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 234,
+      "id_a": 233,
       "mp_id": "",
       "name": "SANGEETA",
       "husband_name": "SANJAY TAWANR",
@@ -19887,7 +21395,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 235,
+      "id_a": 234,
       "mp_id": "26123918098",
       "name": "ROSHANI",
       "husband_name": "SANJAY MUJALDE",
@@ -19925,7 +21433,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 236,
+      "id_a": 235,
       "mp_id": "20235294416",
       "name": "Ritika",
       "husband_name": "Ankit Patidar",
@@ -19963,7 +21471,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 237,
+      "id_a": 236,
       "mp_id": "20213758674",
       "name": "Shital",
       "husband_name": "Gangaram",
@@ -20000,7 +21508,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 238,
+      "id_a": 237,
       "mp_id": "20232586751",
       "name": "Devaki",
       "husband_name": "Dinesh",
@@ -20037,7 +21545,7 @@ const dashboardData = {
       "matched_via": null
     },
     {
-      "id_a": 239,
+      "id_a": 238,
       "mp_id": "26116529100",
       "name": "Usha Chouhan",
       "husband_name": "Umesh Chouhan",
@@ -20070,6 +21578,50 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [
+        {
+          "id_b": 123,
+          "date": "2026-10-02",
+          "timestamp": "2026-10-26 15:46:52",
+          "visit_number": 4,
+          "gestational_age": 34,
+          "place": "DH",
+          "conducted_by": "Ajay Dudwe",
+          "bp_measured": "Yes",
+          "weight": 61.5,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": 98.0,
+          "bp_diastolic": null,
+          "bp_trend": "Worsening (higher than last visit)- (स्थिति बिगड़ रही है (पिछली बार की तुलना में अधिक))",
+          "pih_status": "Not controlled: BP ≥ 140/90 despite treatment- (नियंत्रण में नहीं: उपचार के बावजूद रक्तचाप ≥ 140/90)",
+          "pih_action": "Dose increased or medication changed- (खुराक बढ़ाई गई या दवा बदली गई)",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "Yes – referred to DH / SDH- (हां – डीएच / एसडीएच को संदर्भित किया गया)",
+          "next_visit_date": "2026-10-20",
+          "med_adherence_general": "",
+          "med_adherence_pih": "> 20 days (good)- (> 20 दिन (अच्छा))",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        },
         {
           "id_b": 116,
           "date": "2026-10-09",
@@ -20115,11 +21667,59 @@ const dashboardData = {
           "blood_transfusion": ""
         }
       ],
-      "delivery": null,
-      "matched_via": null
+      "delivery": {
+        "id_c": 79,
+        "mp_id": "26116529100",
+        "delivery_date": "2026-10-23",
+        "timestamp": "2026-10-26 16:01:37",
+        "gestational_age": 35,
+        "place": "DH",
+        "type": "Emergency LSCS",
+        "facility_name": "DH-Khargone",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 4,
+        "hb": 12.5,
+        "hb_admission": 12.5,
+        "anemia_status": "",
+        "bp": "88/156",
+        "bp_admission": "88/156",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "",
+        "scd_hb": null,
+        "scd_status": "",
+        "overall_hrp_status": "",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 3200.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "",
+        "remarks": "",
+        "completed_by": "Ajay Dudwe"
+      },
+      "matched_via": null,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "PIH High: BP remained high at 88/156 (from 88.0/None)"
+      ]
     },
     {
-      "id_a": 240,
+      "id_a": 239,
       "mp_id": "20202972659",
       "name": "Roshni",
       "husband_name": "Golkar",
@@ -20152,6 +21752,393 @@ const dashboardData = {
       "other_history": "",
       "anc_linelist_visits": [],
       "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 240,
+      "mp_id": "2613519178380",
+      "name": "Pinku",
+      "husband_name": "Subhash",
+      "age": 24,
+      "block": "Bhagwanpura",
+      "village": "Gopalpura",
+      "mobile": "7067678875",
+      "asha": "Sushila",
+      "anm": "Sharda dudwe",
+      "sub_centre": "Pipripala",
+      "lmp": "2026-01-24",
+      "edd": "2026-10-31",
+      "enrollment_date": "2026-10-27",
+      "timestamp": "2026-10-27 12:38:43",
+      "gestational_age_enrollment": "36",
+      "gravida_para": "G1p0l0",
+      "prev_complications": "",
+      "planned_facility": "Dh khgrone",
+      "distance": "09",
+      "hrp_categories": [
+        "Sickle Cell Disease (SCD)",
+        "No"
+      ],
+      "enrollment_hb": 6.7,
+      "enrollment_bp_sys": null,
+      "enrollment_bp_dia": null,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "NA – PIH not Identified",
+      "scd_genotype": "HbSC disease",
+      "blood_group": "",
+      "other_history": "No",
+      "anc_linelist_visits": [],
+      "visits": [
+        {
+          "id_b": 125,
+          "date": "2026-10-24",
+          "timestamp": "2026-10-27 12:52:35",
+          "visit_number": 3,
+          "gestational_age": 36,
+          "place": "PHC",
+          "conducted_by": "Preeti bala",
+          "bp_measured": "Yes",
+          "weight": 46.0,
+          "counselling": "Yes",
+          "birth_plan": "Yes",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": 6.7,
+          "hb_trend": "Same as last visit - (पिछली यात्रा के समान)",
+          "anemia_status": "Not controlled: Hb < 7 g/dL with no improvement- (नियंत्रण में नहीं: Hb < 7 g/dL और कोई सुधार नहीं।)",
+          "anemia_action": "Referral to PHC made- (प्राथमिक स्वास्थ्य केंद्र में रेफरल किया गया)",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": 6.7,
+          "scd_status": "Crisis: Active sickle cell complication- (संकट: सिकल सेल की सक्रिय जटिलता)",
+          "scd_action": "Hydroxyurea dose review by MO- (एमओ द्वारा हाइड्रोक्सीयूरिया की खुराक की समीक्षा)",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "No conditions controlled- (कोई भी स्थिति नियंत्रित नहीं है)",
+          "referral": "Yes – referred to PHC- (हां – प्राथमिक स्वास्थ्य केंद्र को भेजा गया)",
+          "next_visit_date": "2026-10-26",
+          "med_adherence_general": "< 10 days (poor)",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 241,
+      "mp_id": "0000000000",
+      "name": "Muli",
+      "husband_name": "Mast ram",
+      "age": 26,
+      "block": "Bhagwanpura",
+      "village": "Pipaljhopa",
+      "mobile": "7999109645",
+      "asha": "Pramila",
+      "anm": "Sangita",
+      "sub_centre": "Pipaljhopa",
+      "lmp": "",
+      "edd": "2026-06-17",
+      "enrollment_date": "2026-10-27",
+      "timestamp": "2026-10-27 13:23:24",
+      "gestational_age_enrollment": "18",
+      "gravida_para": "G4p1l1",
+      "prev_complications": "",
+      "planned_facility": "Dh khargone",
+      "distance": "1km",
+      "hrp_categories": [
+        "Sickle Cell Disease (SCD)",
+        "Sickle cell"
+      ],
+      "enrollment_hb": 7.9,
+      "enrollment_bp_sys": null,
+      "enrollment_bp_dia": null,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "NA – PIH not Identified",
+      "scd_genotype": "",
+      "blood_group": "",
+      "other_history": "No",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 242,
+      "mp_id": "000000000",
+      "name": "Bashnti",
+      "husband_name": "Dharasing",
+      "age": 24,
+      "block": "Bhagwanpura",
+      "village": "Gujarwadi",
+      "mobile": "6260722385",
+      "asha": "Bundi nigole",
+      "anm": "Bhawna kumarwat",
+      "sub_centre": "Gujarwadi",
+      "lmp": "2026-04-25",
+      "edd": "2027-02-02",
+      "enrollment_date": "2026-10-28",
+      "timestamp": "2026-10-28 15:33:01",
+      "gestational_age_enrollment": "24",
+      "gravida_para": "G2p1l1",
+      "prev_complications": "",
+      "planned_facility": "Dh khgrone",
+      "distance": "09",
+      "hrp_categories": [
+        "Sickle Cell Disease (SCD)",
+        "SCD"
+      ],
+      "enrollment_hb": 9.8,
+      "enrollment_bp_sys": null,
+      "enrollment_bp_dia": null,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "NA – PIH not Identified",
+      "scd_genotype": "",
+      "blood_group": "",
+      "other_history": "No",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 243,
+      "mp_id": "20236390122",
+      "name": "Radha",
+      "husband_name": "Sunil",
+      "age": 26,
+      "block": "Gogawa",
+      "village": "Mahumandli",
+      "mobile": "8839152855",
+      "asha": "Lakhi Sisodiya",
+      "anm": "Seema Chouhan",
+      "sub_centre": "SHC-Mahumandali",
+      "lmp": "2026-03-20",
+      "edd": "2026-12-27",
+      "enrollment_date": "2026-10-31",
+      "timestamp": "2026-10-31 20:27:14",
+      "gestational_age_enrollment": "24",
+      "gravida_para": "G2",
+      "prev_complications": "",
+      "planned_facility": "DH-KHARGONE",
+      "distance": "10",
+      "hrp_categories": [
+        "Previous Stillbirth or Neonatal Death",
+        "ANC ka 8 manth chal raha he unka or vajan 28 kilo he"
+      ],
+      "enrollment_hb": null,
+      "enrollment_bp_sys": 100.0,
+      "enrollment_bp_dia": 100.0,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "Not tested",
+      "scd_genotype": "NA – SCD not Identified",
+      "blood_group": "",
+      "other_history": "",
+      "anc_linelist_visits": [
+        {
+          "anc_num": 1,
+          "date": "2025-09-18",
+          "facility": "PHC Rodiya",
+          "weight": 38.0,
+          "bp": "107/62",
+          "hb": 10.0
+        },
+        {
+          "anc_num": 2,
+          "date": "2025-10-17",
+          "facility": "PHC Rodiya",
+          "weight": 40.0,
+          "bp": "118/78",
+          "hb": 10.1
+        },
+        {
+          "anc_num": 3,
+          "date": "2026-01-16",
+          "facility": "PHC Rodiya",
+          "weight": 41.0,
+          "bp": "110/80",
+          "hb": 10.5
+        },
+        {
+          "anc_num": 4,
+          "date": "2026-02-24",
+          "facility": "PHC Rodiya",
+          "weight": 42.0,
+          "bp": "113/64",
+          "hb": 10.5
+        }
+      ],
+      "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 244,
+      "mp_id": "20277663797",
+      "name": "Jagrati",
+      "husband_name": "Gopal",
+      "age": 20,
+      "block": "Oon",
+      "village": "Nandgaon Road",
+      "mobile": "8435806845",
+      "asha": "Ekavanti Sagore",
+      "anm": "Anita Dawar",
+      "sub_centre": "Nandgaon Road",
+      "lmp": "2026-02-27",
+      "edd": "2026-12-04",
+      "enrollment_date": "2026-11-03",
+      "timestamp": "2026-11-03 11:56:42",
+      "gestational_age_enrollment": "30",
+      "gravida_para": "G2,P2,L1",
+      "prev_complications": "",
+      "planned_facility": "DH KHARGONE",
+      "distance": "10",
+      "hrp_categories": [
+        "Pregnancy-Induced Hypertension (PIH)"
+      ],
+      "enrollment_hb": 8.8,
+      "enrollment_bp_sys": 76.0,
+      "enrollment_bp_dia": 35.0,
+      "enrollment_fbs": 88.0,
+      "enrollment_urine_albumin": "Negative",
+      "scd_genotype": "NA – SCD not Identified",
+      "blood_group": "",
+      "other_history": "",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 245,
+      "mp_id": "23200257226",
+      "name": "HIRAMANI",
+      "husband_name": "Rampal",
+      "age": 32,
+      "block": "Maheshwar",
+      "village": "Kharadi",
+      "mobile": "9827881766",
+      "asha": "Yashoda sahani",
+      "anm": "Gayatri namdoi",
+      "sub_centre": "KHARADI",
+      "lmp": "2026-03-07",
+      "edd": "2026-12-12",
+      "enrollment_date": "2026-11-03",
+      "timestamp": "2026-11-03 12:32:02",
+      "gestational_age_enrollment": "34",
+      "gravida_para": "G2 P1 L1",
+      "prev_complications": "Previous LSCS",
+      "planned_facility": "CHC MAHESHWAR",
+      "distance": "3km",
+      "hrp_categories": [
+        "Pregnancy-Induced Hypertension (PIH)",
+        "Previous LSCS"
+      ],
+      "enrollment_hb": 10.5,
+      "enrollment_bp_sys": 130.0,
+      "enrollment_bp_dia": 86.0,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "Negative",
+      "scd_genotype": "NA – SCD not Identified",
+      "blood_group": "",
+      "other_history": "No",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": null,
+      "matched_via": null
+    },
+    {
+      "id_a": 246,
+      "mp_id": "20212598874",
+      "name": "Anju",
+      "husband_name": "Bipul",
+      "age": 21,
+      "block": "Bhagwanpura",
+      "village": "BHAGWANPURA",
+      "mobile": "9171339856",
+      "asha": "Sujata",
+      "anm": "Usha Balke",
+      "sub_centre": "BHAGWANPURA",
+      "lmp": "2026-03-16",
+      "edd": "2026-12-21",
+      "enrollment_date": "2026-11-05",
+      "timestamp": "2026-11-05 16:39:38",
+      "gestational_age_enrollment": "35",
+      "gravida_para": "G3P2l2",
+      "prev_complications": "",
+      "planned_facility": "Dh khgrone",
+      "distance": "1 km",
+      "hrp_categories": [
+        "Pregnancy-Induced Hypertension (PIH)"
+      ],
+      "enrollment_hb": 9.2,
+      "enrollment_bp_sys": 132.0,
+      "enrollment_bp_dia": 76.0,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "Trace",
+      "scd_genotype": "NA – SCD not Identified",
+      "blood_group": "",
+      "other_history": "No",
+      "anc_linelist_visits": [],
+      "visits": [
+        {
+          "id_b": 144,
+          "date": "2026-11-04",
+          "timestamp": "2026-11-05 16:46:43",
+          "visit_number": 2,
+          "gestational_age": 35,
+          "place": "Other",
+          "conducted_by": "Preeti bala",
+          "bp_measured": "Yes",
+          "weight": 49.0,
+          "counselling": "No",
+          "birth_plan": "No",
+          "bpcr_calendar": "Yes",
+          "agreed_designated_facility": "Yes",
+          "hb": null,
+          "hb_trend": "",
+          "anemia_status": "",
+          "anemia_action": "",
+          "bp_systolic": null,
+          "bp_diastolic": null,
+          "bp_trend": "",
+          "pih_status": "",
+          "pih_action": "",
+          "gdm_fbs": null,
+          "gdm_rbs": null,
+          "gdm_status": "",
+          "gdm_action": "",
+          "scd_hb": null,
+          "scd_status": "",
+          "scd_action": "",
+          "prev_lscs_status": "",
+          "prev_lscs_remarks": "",
+          "prev_stillbirth_status": "",
+          "prev_stillbirth_remarks": "",
+          "teenage_status": "",
+          "teenage_remarks": "",
+          "overall_hrp_status": "Some conditions controlled, some not- (कुछ स्थितियाँ नियंत्रित हैं, कुछ नहीं।)",
+          "referral": "No referral needed- (किसी रेफरल की आवश्यकता नहीं)",
+          "next_visit_date": "2026-11-25",
+          "med_adherence_general": "",
+          "med_adherence_pih": "",
+          "med_adherence_gdm": "",
+          "blood_transfusion": ""
+        }
+      ],
       "delivery": null,
       "matched_via": null
     },
@@ -21274,6 +23261,184 @@ const dashboardData = {
         "SCD improved: Hb increased by 2.9 g/dL (from 5.6 to 8.5)",
         "SCD Status: Stable: Hb ≥ 7 g/dL and no crisis at delivery"
       ]
+    },
+    {
+      "id_a": 1090,
+      "mp_id": "20228879584",
+      "name": "Nakti",
+      "husband_name": "Shobharam",
+      "age": 39,
+      "block": "Unknown",
+      "village": "Unknown",
+      "mobile": "",
+      "asha": "",
+      "anm": "",
+      "sub_centre": "",
+      "lmp": "",
+      "edd": "",
+      "enrollment_date": "2026-10-29",
+      "timestamp": "2026-11-04 16:25:33",
+      "gestational_age_enrollment": 39,
+      "gravida_para": "",
+      "prev_complications": "",
+      "planned_facility": "PHC bhagiyapura",
+      "distance": "",
+      "hrp_categories": [
+        "PIH / Gestational Hypertension",
+        "GDM",
+        "Sickle Cell Disease"
+      ],
+      "enrollment_hb": 8.2,
+      "enrollment_bp_sys": null,
+      "enrollment_bp_dia": null,
+      "enrollment_fbs": null,
+      "enrollment_urine_albumin": "",
+      "scd_genotype": "",
+      "blood_group": "",
+      "other_history": "",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": {
+        "id_c": 90,
+        "mp_id": "20228879584",
+        "delivery_date": "2026-10-29",
+        "timestamp": "2026-11-04 16:25:33",
+        "gestational_age": 39,
+        "place": "PHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "PHC bhagiyapura",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "Ghr par koi nhi tha parsw peeda hone ke karan PHC lana pda",
+        "total_anc": 3,
+        "hb": 8.2,
+        "hb_admission": 8.2,
+        "anemia_status": "",
+        "bp": "93-55",
+        "bp_admission": "93-55",
+        "bp_measured_admission": "Yes",
+        "pih_status": "Controlled: BP < 140/90 mmHg at delivery",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "No conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 3000.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "No",
+        "remarks": "PNC ko Dh refferal kiya gya karan Bp km tha or anc Hepatitis B tha",
+        "completed_by": "Preeti bala"
+      },
+      "matched_via": "Unlinked / Direct Delivery Record",
+      "is_unlinked_delivery": true,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "PIH Status: Controlled: BP < 140/90 mmHg at delivery",
+        "SCD stable: Hb unchanged at 8.2 g/dL",
+        "SCD Status: Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "GDM Status: NA – GDM was not identified for this woman"
+      ]
+    },
+    {
+      "id_a": 1092,
+      "mp_id": "260050618",
+      "name": "Riyali",
+      "husband_name": "Rameshwar",
+      "age": 37,
+      "block": "Unknown",
+      "village": "Unknown",
+      "mobile": "",
+      "asha": "",
+      "anm": "",
+      "sub_centre": "",
+      "lmp": "",
+      "edd": "",
+      "enrollment_date": "2026-09-22",
+      "timestamp": "2026-11-11 11:59:22",
+      "gestational_age_enrollment": 37,
+      "gravida_para": "",
+      "prev_complications": "",
+      "planned_facility": "On tha way dh",
+      "distance": "",
+      "hrp_categories": [
+        "Sickle Cell Disease"
+      ],
+      "enrollment_hb": 10.0,
+      "enrollment_bp_sys": null,
+      "enrollment_bp_dia": null,
+      "enrollment_fbs": 70.0,
+      "enrollment_urine_albumin": "",
+      "scd_genotype": "",
+      "blood_group": "",
+      "other_history": "",
+      "anc_linelist_visits": [],
+      "visits": [],
+      "delivery": {
+        "id_c": 92,
+        "mp_id": "260050618",
+        "delivery_date": "2026-09-22",
+        "timestamp": "2026-11-11 11:59:22",
+        "gestational_age": 37,
+        "place": "DH",
+        "type": "Normal vaginal delivery",
+        "facility_name": "On tha way dh",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 4,
+        "hb": 10.0,
+        "hb_admission": 10.0,
+        "anemia_status": "",
+        "bp": "120/84",
+        "bp_admission": "120/84",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": 70.0,
+        "rbs_admission": 70.0,
+        "gdm_status": "",
+        "scd_hb": 10.0,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2140.0,
+        "birth_weight_category": "Low birth weight (LBW): 1500–2499 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Low wait baby",
+        "remarks": "",
+        "completed_by": "Lalita khede"
+      },
+      "matched_via": "Unlinked / Direct Delivery Record",
+      "is_unlinked_delivery": true,
+      "improvement_status": "Controlled / Resolved",
+      "improvement_details": [
+        "SCD stable: Hb unchanged at 10.0 g/dL",
+        "SCD Status: Stable: Hb ≥ 7 g/dL and no crisis at delivery"
+      ]
     }
   ],
   "unlinked_deliveries": [
@@ -21888,12 +24053,114 @@ const dashboardData = {
         "remarks": "",
         "completed_by": "Lalita khede"
       }
+    },
+    {
+      "id_c": 90,
+      "mp_id": "20228879584",
+      "name": "Nakti",
+      "husband_name": "Shobharam",
+      "data": {
+        "id_c": 90,
+        "mp_id": "20228879584",
+        "delivery_date": "2026-10-29",
+        "timestamp": "2026-11-04 16:25:33",
+        "gestational_age": 39,
+        "place": "PHC",
+        "type": "Normal vaginal delivery",
+        "facility_name": "PHC bhagiyapura",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "Ghr par koi nhi tha parsw peeda hone ke karan PHC lana pda",
+        "total_anc": 3,
+        "hb": 8.2,
+        "hb_admission": 8.2,
+        "anemia_status": "",
+        "bp": "93-55",
+        "bp_admission": "93-55",
+        "bp_measured_admission": "Yes",
+        "pih_status": "Controlled: BP < 140/90 mmHg at delivery",
+        "mgso4_given": "",
+        "blood_sugar": null,
+        "rbs_admission": null,
+        "gdm_status": "NA – GDM was not identified for this woman",
+        "scd_hb": null,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "No conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 3000.0,
+        "birth_weight_category": "Normal birth weight: ≥ 2500 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "No",
+        "remarks": "PNC ko Dh refferal kiya gya karan Bp km tha or anc Hepatitis B tha",
+        "completed_by": "Preeti bala"
+      }
+    },
+    {
+      "id_c": 92,
+      "mp_id": "260050618",
+      "name": "Riyali",
+      "husband_name": "Rameshwar",
+      "data": {
+        "id_c": 92,
+        "mp_id": "260050618",
+        "delivery_date": "2026-09-22",
+        "timestamp": "2026-11-11 11:59:22",
+        "gestational_age": 37,
+        "place": "DH",
+        "type": "Normal vaginal delivery",
+        "facility_name": "On tha way dh",
+        "was_planned": "Yes – delivered at planned facility",
+        "unplanned_reason": "",
+        "total_anc": 4,
+        "hb": 10.0,
+        "hb_admission": 10.0,
+        "anemia_status": "",
+        "bp": "120/84",
+        "bp_admission": "120/84",
+        "bp_measured_admission": "Yes",
+        "pih_status": "",
+        "mgso4_given": "",
+        "blood_sugar": 70.0,
+        "rbs_admission": 70.0,
+        "gdm_status": "",
+        "scd_hb": 10.0,
+        "scd_status": "Stable: Hb ≥ 7 g/dL and no crisis at delivery",
+        "overall_hrp_status": "All conditions controlled at delivery",
+        "partograph_plotted": "Yes",
+        "oxytocin_given": "Yes",
+        "birth_companion": "Yes",
+        "respectful_care": "No – respectful care throughout",
+        "baby_alive": "Yes – live birth",
+        "birth_weight": 2140.0,
+        "birth_weight_category": "Low birth weight (LBW): 1500–2499 g",
+        "baby_cried": "Yes",
+        "resuscitation_required": "No – baby cried immediately",
+        "baby_transferred": "No – rooming-in with mother.",
+        "baby_transfer_reason": "",
+        "sts_initiated": "Yes",
+        "breastfeeding_initiated": "Yes",
+        "vit_k_given": "Yes",
+        "baby_glucose_checked": "NA – mother does not have GDM",
+        "gaps_concerns": "Low wait baby",
+        "remarks": "",
+        "completed_by": "Lalita khede"
+      }
     }
   ],
   "analysis_stats": {
     "age_distribution": {
-      "20-24": 82,
-      "25-29": 82,
+      "20-24": 86,
+      "25-29": 84,
       "Under 20 (Teenage)": 42,
       "30-34": 27,
       "35+": 7
@@ -21901,31 +24168,31 @@ const dashboardData = {
     "gestational_age_identification": {
       "12": 36,
       "32": 16,
-      "20": 16,
       "28": 16,
+      "20": 15,
+      "24": 15,
       "16": 14,
-      "24": 13,
       "21": 12,
+      "34": 10,
       "25": 10,
-      "34": 9,
+      "30": 9,
       "23": 9,
       "22": 9,
       "26": 8,
-      "30": 8,
       "29": 8,
+      "36": 6,
       "19": 6,
       "13": 6,
-      "36": 5,
+      "35": 5,
       "27": 5,
-      "35": 4,
       "14": 4,
       "31": 3,
       "17": 3,
+      "18": 3,
       "37": 2,
       "33": 2,
       "10": 2,
       "9": 2,
-      "18": 2,
       "38": 1,
       "39": 1,
       "29 saptah 3 din": 1,
@@ -21939,7 +24206,7 @@ const dashboardData = {
       "08": 1
     },
     "distance_distribution": {
-      "1km": 9,
+      "1km": 10,
       "5km": 9,
       "8": 9,
       "10km": 8,
@@ -21952,21 +24219,23 @@ const dashboardData = {
       "55km": 6,
       "12": 6,
       "2km": 5,
+      "3km": 5,
       "52km": 5,
-      "3km": 4,
       "3": 4,
       "9": 4,
       "05": 4,
       "20km": 3,
+      "1 km": 3,
       "15km": 3,
       "45km": 3,
       "57km": 3,
       "17": 3,
       "15": 3,
       "2": 3,
+      "10": 3,
       "65km": 3,
+      "09": 3,
       "6 km": 2,
-      "1 km": 2,
       "5 km": 2,
       "47km": 2,
       "12km": 2,
@@ -22002,7 +24271,6 @@ const dashboardData = {
       "10 km ": 1,
       "62km": 1,
       "1km CHC ": 1,
-      "Phc magarkhedi  10 km": 1,
       "48 km": 1,
       "App 4 km": 1,
       "07 km": 1,
@@ -22023,7 +24291,6 @@ const dashboardData = {
       "12 km": 1,
       "55": 1,
       "16 K.M.": 1,
-      "10": 1,
       "22": 1,
       "25thikri ": 1,
       "CHC kasrwad 2": 1,
@@ -22047,29 +24314,28 @@ const dashboardData = {
       "56km": 1,
       "1 km Bistan": 1,
       "08km": 1,
-      "09": 1,
       "3KM": 1,
       "5KM": 1
     },
     "baseline_hb_distribution": {
-      "Moderate Anemia (7.0-9.9)": 74,
-      "Severe Anemia (<7.0)": 54,
-      "Mild Anemia (10.0-10.9)": 44,
+      "Moderate Anemia (7.0-9.9)": 78,
+      "Severe Anemia (<7.0)": 55,
+      "Mild Anemia (10.0-10.9)": 45,
       "Normal (>=11.0)": 33
     },
     "baseline_bp_distribution": {
-      "Normal (<120/80)": 115,
-      "Stage 1 Hypertension (130-139/80-89)": 27,
+      "Normal (<120/80)": 116,
+      "Stage 1 Hypertension (130-139/80-89)": 30,
       "Elevated (120-129/<80)": 14,
       "Stage 2 Hypertension (140-159/90-109)": 14,
       "Severe Hypertensive Crisis (>=160/110)": 2
     },
     "linkage_improvements": {
       "enr_to_fup": {
-        "improved": 19,
-        "stable": 11,
+        "improved": 22,
+        "stable": 13,
         "worsened": 2,
-        "total": 32,
+        "total": 37,
         "details": [
           {
             "name": "Sima",
@@ -22161,6 +24427,13 @@ const dashboardData = {
             "fup_hb": 7.0,
             "diff": 1.5,
             "status": "Improved"
+          },
+          {
+            "name": "Aarti",
+            "base_hb": 5.0,
+            "fup_hb": 5.0,
+            "diff": 0.0,
+            "status": "Stable"
           },
           {
             "name": "Ralu",
@@ -22282,6 +24555,13 @@ const dashboardData = {
             "status": "Improved"
           },
           {
+            "name": "Rekha",
+            "base_hb": 6.1,
+            "fup_hb": 10.5,
+            "diff": 4.4,
+            "status": "Improved"
+          },
+          {
             "name": "Sanju",
             "base_hb": 6.5,
             "fup_hb": 6.5,
@@ -22289,19 +24569,40 @@ const dashboardData = {
             "status": "Stable"
           },
           {
+            "name": "Reshma",
+            "base_hb": 5.5,
+            "fup_hb": 10.1,
+            "diff": 4.6,
+            "status": "Improved"
+          },
+          {
             "name": "Nandani",
             "base_hb": 7.4,
             "fup_hb": 7.8,
             "diff": 0.4,
+            "status": "Stable"
+          },
+          {
+            "name": "Sangeeta",
+            "base_hb": 5.1,
+            "fup_hb": 6.8,
+            "diff": 1.7,
+            "status": "Improved"
+          },
+          {
+            "name": "Pinku",
+            "base_hb": 6.7,
+            "fup_hb": 6.7,
+            "diff": 0.0,
             "status": "Stable"
           }
         ]
       },
       "fup_to_del": {
         "improved": 9,
-        "stable": 5,
-        "worsened": 4,
-        "total": 18,
+        "stable": 6,
+        "worsened": 5,
+        "total": 20,
         "details": [
           {
             "name": "Sima",
@@ -22388,6 +24689,13 @@ const dashboardData = {
             "status": "Worsened"
           },
           {
+            "name": "Aarti",
+            "fup_hb": 5.0,
+            "del_hb": 5.0,
+            "diff": 0.0,
+            "status": "Stable"
+          },
+          {
             "name": "Asma",
             "fup_hb": 9.0,
             "del_hb": 7.0,
@@ -22428,14 +24736,21 @@ const dashboardData = {
             "del_hb": 10.2,
             "diff": 0.6,
             "status": "Stable"
+          },
+          {
+            "name": "Anjali yadaw",
+            "fup_hb": 9.0,
+            "del_hb": 7.0,
+            "diff": -2.0,
+            "status": "Worsened"
           }
         ]
       },
       "enr_to_del": {
-        "improved": 26,
-        "stable": 30,
+        "improved": 31,
+        "stable": 41,
         "worsened": 8,
-        "total": 64,
+        "total": 80,
         "details": [
           {
             "name": "Sapna",
@@ -22662,6 +24977,13 @@ const dashboardData = {
             "status": "Improved"
           },
           {
+            "name": "Aarti",
+            "base_hb": 5.0,
+            "del_hb": 5.0,
+            "diff": 0.0,
+            "status": "Stable"
+          },
+          {
             "name": "Ritu chouhan",
             "base_hb": 8.2,
             "del_hb": 7.5,
@@ -22688,6 +25010,13 @@ const dashboardData = {
             "del_hb": 8.2,
             "diff": -1.4,
             "status": "Worsened"
+          },
+          {
+            "name": "Nitu",
+            "base_hb": 6.1,
+            "del_hb": 9.1,
+            "diff": 3.0,
+            "status": "Improved"
           },
           {
             "name": "Teju",
@@ -22753,6 +25082,13 @@ const dashboardData = {
             "status": "Worsened"
           },
           {
+            "name": "Rekha",
+            "base_hb": 10.2,
+            "del_hb": 10.0,
+            "diff": -0.2,
+            "status": "Stable"
+          },
+          {
             "name": "Suvicha",
             "base_hb": 5.8,
             "del_hb": 11.0,
@@ -22774,9 +25110,58 @@ const dashboardData = {
             "status": "Improved"
           },
           {
+            "name": "Vanshika",
+            "base_hb": 10.8,
+            "del_hb": 10.3,
+            "diff": -0.5,
+            "status": "Stable"
+          },
+          {
+            "name": "Anjali yadaw",
+            "base_hb": 6.5,
+            "del_hb": 7.0,
+            "diff": 0.5,
+            "status": "Stable"
+          },
+          {
+            "name": "Sayra",
+            "base_hb": 5.6,
+            "del_hb": 9.8,
+            "diff": 4.2,
+            "status": "Improved"
+          },
+          {
+            "name": "Twinkle",
+            "base_hb": 10.2,
+            "del_hb": 11.5,
+            "diff": 1.3,
+            "status": "Improved"
+          },
+          {
+            "name": "Lalita",
+            "base_hb": 11.6,
+            "del_hb": 11.6,
+            "diff": 0.0,
+            "status": "Stable"
+          },
+          {
+            "name": "Krishna",
+            "base_hb": 9.3,
+            "del_hb": 9.6,
+            "diff": 0.3,
+            "status": "Stable"
+          },
+          {
             "name": "Mamta",
             "base_hb": 8.2,
             "del_hb": 8.6,
+            "diff": 0.4,
+            "status": "Stable"
+          },
+          {
+            "name": "Anita",
+            "base_hb": 9.8,
+            "del_hb": 10.2,
             "diff": 0.4,
             "status": "Stable"
           },
@@ -22795,10 +25180,31 @@ const dashboardData = {
             "status": "Worsened"
           },
           {
+            "name": "Mangla",
+            "base_hb": 8.2,
+            "del_hb": 9.2,
+            "diff": 1.0,
+            "status": "Improved"
+          },
+          {
             "name": "Shiv Kanya",
             "base_hb": 10.0,
             "del_hb": 10.3,
             "diff": 0.3,
+            "status": "Stable"
+          },
+          {
+            "name": "Jyoti",
+            "base_hb": 3.2,
+            "del_hb": 6.8,
+            "diff": 3.6,
+            "status": "Improved"
+          },
+          {
+            "name": "Jaya",
+            "base_hb": 9.2,
+            "del_hb": 9.8,
+            "diff": 0.6,
             "status": "Stable"
           },
           {
@@ -22807,6 +25213,13 @@ const dashboardData = {
             "del_hb": 10.2,
             "diff": 2.2,
             "status": "Improved"
+          },
+          {
+            "name": "Usha Chouhan",
+            "base_hb": 12.5,
+            "del_hb": 12.5,
+            "diff": 0.0,
+            "status": "Stable"
           },
           {
             "name": "Delivery Record #1",
@@ -22884,6 +25297,20 @@ const dashboardData = {
             "del_hb": 8.5,
             "diff": 2.9,
             "status": "Improved"
+          },
+          {
+            "name": "Nakti",
+            "base_hb": 8.2,
+            "del_hb": 8.2,
+            "diff": 0.0,
+            "status": "Stable"
+          },
+          {
+            "name": "Riyali",
+            "base_hb": 10.0,
+            "del_hb": 10.0,
+            "diff": 0.0,
+            "status": "Stable"
           }
         ]
       }
@@ -22907,28 +25334,28 @@ const dashboardData = {
           "resolution_rate": 50.0
         },
         "Oral IFA / Routine": {
-          "total_cases": 24,
-          "paired_cases": 22,
-          "avg_init_hb": 7.34,
-          "avg_final_hb": 9.31,
-          "avg_gain_hb": 1.97,
-          "resolution_rate": 81.8
+          "total_cases": 29,
+          "paired_cases": 27,
+          "avg_init_hb": 6.96,
+          "avg_final_hb": 8.98,
+          "avg_gain_hb": 2.02,
+          "resolution_rate": 77.8
         }
       },
       "pih": {
-        "total_pih_deliveries": 19,
-        "bp_recorded_at_delivery": 13,
+        "total_pih_deliveries": 22,
+        "bp_recorded_at_delivery": 14,
         "controlled_under_140_90": 7,
         "mild_140_159_90_109": 5,
-        "severe_160_110_plus": 1,
-        "control_rate": 53.8,
+        "severe_160_110_plus": 2,
+        "control_rate": 50.0,
         "paired_cases": 6,
         "avg_init_bp": "141/92",
         "avg_del_bp": "136/89"
       }
     },
     "multi_risk_matrix": {
-      "total_multi_risk_cases": 44,
+      "total_multi_risk_cases": 45,
       "categories": [
         "Severe Anemia",
         "PIH / Hypertension",
@@ -22950,37 +25377,37 @@ const dashboardData = {
         },
         "PIH / Hypertension": {
           "Severe Anemia": 9,
-          "PIH / Hypertension": 44,
-          "Sickle Cell Disease (SCD)": 9,
-          "Previous LSCS": 2,
+          "PIH / Hypertension": 48,
+          "Sickle Cell Disease (SCD)": 10,
+          "Previous LSCS": 3,
           "Prev Stillbirth / NND": 4,
           "Teenage Pregnancy": 0,
-          "GDM": 8
+          "GDM": 9
         },
         "Sickle Cell Disease (SCD)": {
           "Severe Anemia": 13,
-          "PIH / Hypertension": 9,
-          "Sickle Cell Disease (SCD)": 66,
+          "PIH / Hypertension": 10,
+          "Sickle Cell Disease (SCD)": 71,
           "Previous LSCS": 0,
           "Prev Stillbirth / NND": 6,
           "Teenage Pregnancy": 1,
-          "GDM": 7
+          "GDM": 8
         },
         "Previous LSCS": {
           "Severe Anemia": 3,
-          "PIH / Hypertension": 2,
+          "PIH / Hypertension": 3,
           "Sickle Cell Disease (SCD)": 0,
           "Previous LSCS": 51,
           "Prev Stillbirth / NND": 9,
           "Teenage Pregnancy": 0,
-          "GDM": 4
+          "GDM": 3
         },
         "Prev Stillbirth / NND": {
           "Severe Anemia": 3,
           "PIH / Hypertension": 4,
           "Sickle Cell Disease (SCD)": 6,
           "Previous LSCS": 9,
-          "Prev Stillbirth / NND": 42,
+          "Prev Stillbirth / NND": 43,
           "Teenage Pregnancy": 0,
           "GDM": 0
         },
@@ -22995,9 +25422,9 @@ const dashboardData = {
         },
         "GDM": {
           "Severe Anemia": 7,
-          "PIH / Hypertension": 8,
-          "Sickle Cell Disease (SCD)": 7,
-          "Previous LSCS": 4,
+          "PIH / Hypertension": 9,
+          "Sickle Cell Disease (SCD)": 8,
+          "Previous LSCS": 3,
           "Prev Stillbirth / NND": 0,
           "Teenage Pregnancy": 0,
           "GDM": 18
@@ -23015,6 +25442,16 @@ const dashboardData = {
           "sncu_count": 4
         },
         {
+          "pair": "PIH / Hypertension + Sickle Cell Disease (SCD)",
+          "c1": "PIH / Hypertension",
+          "c2": "Sickle Cell Disease (SCD)",
+          "total_enrolled": 10,
+          "delivered_count": 10,
+          "lscs_count": 3,
+          "lbw_count": 6,
+          "sncu_count": 2
+        },
+        {
           "pair": "Severe Anemia + PIH / Hypertension",
           "c1": "Severe Anemia",
           "c2": "PIH / Hypertension",
@@ -23025,13 +25462,13 @@ const dashboardData = {
           "sncu_count": 2
         },
         {
-          "pair": "PIH / Hypertension + Sickle Cell Disease (SCD)",
+          "pair": "PIH / Hypertension + GDM",
           "c1": "PIH / Hypertension",
-          "c2": "Sickle Cell Disease (SCD)",
+          "c2": "GDM",
           "total_enrolled": 9,
-          "delivered_count": 9,
-          "lscs_count": 3,
-          "lbw_count": 6,
+          "delivered_count": 8,
+          "lscs_count": 2,
+          "lbw_count": 5,
           "sncu_count": 2
         },
         {
@@ -23045,11 +25482,11 @@ const dashboardData = {
           "sncu_count": 0
         },
         {
-          "pair": "PIH / Hypertension + GDM",
-          "c1": "PIH / Hypertension",
+          "pair": "Sickle Cell Disease (SCD) + GDM",
+          "c1": "Sickle Cell Disease (SCD)",
           "c2": "GDM",
           "total_enrolled": 8,
-          "delivered_count": 7,
+          "delivered_count": 8,
           "lscs_count": 2,
           "lbw_count": 5,
           "sncu_count": 2
@@ -23057,16 +25494,6 @@ const dashboardData = {
         {
           "pair": "Severe Anemia + GDM",
           "c1": "Severe Anemia",
-          "c2": "GDM",
-          "total_enrolled": 7,
-          "delivered_count": 7,
-          "lscs_count": 2,
-          "lbw_count": 5,
-          "sncu_count": 2
-        },
-        {
-          "pair": "Sickle Cell Disease (SCD) + GDM",
-          "c1": "Sickle Cell Disease (SCD)",
           "c2": "GDM",
           "total_enrolled": 7,
           "delivered_count": 7,
@@ -23095,16 +25522,6 @@ const dashboardData = {
           "sncu_count": 0
         },
         {
-          "pair": "Previous LSCS + GDM",
-          "c1": "Previous LSCS",
-          "c2": "GDM",
-          "total_enrolled": 4,
-          "delivered_count": 2,
-          "lscs_count": 2,
-          "lbw_count": 0,
-          "sncu_count": 0
-        },
-        {
           "pair": "Severe Anemia + Previous LSCS",
           "c1": "Severe Anemia",
           "c2": "Previous LSCS",
@@ -23125,19 +25542,29 @@ const dashboardData = {
           "sncu_count": 2
         },
         {
-          "pair": "Severe Anemia + Teenage Pregnancy",
-          "c1": "Severe Anemia",
-          "c2": "Teenage Pregnancy",
-          "total_enrolled": 2,
+          "pair": "PIH / Hypertension + Previous LSCS",
+          "c1": "PIH / Hypertension",
+          "c2": "Previous LSCS",
+          "total_enrolled": 3,
           "delivered_count": 0,
           "lscs_count": 0,
           "lbw_count": 0,
           "sncu_count": 0
         },
         {
-          "pair": "PIH / Hypertension + Previous LSCS",
-          "c1": "PIH / Hypertension",
-          "c2": "Previous LSCS",
+          "pair": "Previous LSCS + GDM",
+          "c1": "Previous LSCS",
+          "c2": "GDM",
+          "total_enrolled": 3,
+          "delivered_count": 2,
+          "lscs_count": 2,
+          "lbw_count": 0,
+          "sncu_count": 0
+        },
+        {
+          "pair": "Severe Anemia + Teenage Pregnancy",
+          "c1": "Severe Anemia",
+          "c2": "Teenage Pregnancy",
           "total_enrolled": 2,
           "delivered_count": 0,
           "lscs_count": 0,
@@ -23158,18 +25585,18 @@ const dashboardData = {
     },
     "facility_leakage": {
       "adherence_summary": {
-        "Planned Facility Met": 62,
-        "Diverted to Other Facility": 6,
+        "Planned Facility Met": 72,
+        "Diverted to Other Facility": 9,
         "Out of District": 9,
-        "Home Delivery": 3
+        "Home Delivery": 6
       },
       "delivery_tiers": {
-        "DH": 41,
-        "CHC": 13,
+        "DH": 45,
+        "CHC": 14,
         "SDH": 0,
-        "PHC": 7,
-        "Private": 7,
-        "Home": 3,
+        "PHC": 11,
+        "Private": 9,
+        "Home": 6,
         "Out of District": 9
       },
       "diversion_reasons": {
@@ -23177,7 +25604,7 @@ const dashboardData = {
         "Dh khgrone": 3,
         "Yes planned": 1,
         "Icu not available in ch Sanawad": 1,
-        "Family decision": 7,
+        "Family decision": 11,
         "Nirdharit sthan par hi hai": 1,
         "Labour come on suddenly": 1,
         "Planned facility": 8,
@@ -23189,51 +25616,57 @@ const dashboardData = {
         "GDM के कारण हितग्राही ने LSCS डिलेवरी कराने का फैसला लिया": 1,
         "Achanak Dard aaya tha": 1,
         "Parsw pida shuru hui or ambulance let aayi": 1,
+        "Transport problem": 1,
         "दो केसर हो चुके थे तीसरा सीजन नहीं होगा इंदौर के लिए बोला गया था इस कारण से साइन समर्थन हॉस्पिटल में डिलीवरी": 1,
         "Nirdharit tha": 1,
         "Unhone kha tha dh jane ka but ek bar gye lekin koi dhyan nhi Diya hua esliye private me hi delivery karwayi unhone": 1,
         "Family decision and husband death": 1,
+        "Labour came on suddenly": 1,
         "Pariwarik ninry": 1,
+        "DH-KHARGONE le jane se mana kar diye HB 11.7 ho  gya tha": 1,
         "Ambulance issue": 1,
+        "Nirdharit sthan": 1,
         "No fetal movement": 1,
         "यह भगवानपुर के पास में किसी गांव में रिश्तेदार की आ गई हुई थी वहां पर अचानक इसका पेट दर्द होने लगा तो हितग्राही ने भगवानपुर सीएससी पर डिलीवरी करवाली है": 1,
+        "Achank prasw shru": 1,
         "Ambulance na Aane Ke Karan ghar per delivery Ho Gaye": 1,
-        "Dh": 1
+        "Dh": 1,
+        "Ghr par koi nhi tha parsw peeda hone ke karan PHC lana pda": 1
       }
     },
     "who_qoc_metrics": {
       "DH": {
-        "total": 36,
-        "oxytocin_pct": 89,
-        "partograph_pct": 72,
-        "companion_pct": 64,
-        "respectful_pct": 97,
-        "sts_pct": 56,
-        "bf_pct": 64,
-        "vit_k_pct": 86,
-        "composite_score": 75.4
+        "total": 40,
+        "oxytocin_pct": 90,
+        "partograph_pct": 75,
+        "companion_pct": 68,
+        "respectful_pct": 98,
+        "sts_pct": 55,
+        "bf_pct": 65,
+        "vit_k_pct": 85,
+        "composite_score": 76.6
       },
       "PHC": {
-        "total": 7,
-        "oxytocin_pct": 57,
+        "total": 11,
+        "oxytocin_pct": 55,
         "partograph_pct": 100,
         "companion_pct": 100,
         "respectful_pct": 100,
         "sts_pct": 100,
         "bf_pct": 100,
-        "vit_k_pct": 57,
-        "composite_score": 87.7
+        "vit_k_pct": 55,
+        "composite_score": 87.1
       },
       "CHC": {
-        "total": 13,
-        "oxytocin_pct": 85,
+        "total": 14,
+        "oxytocin_pct": 86,
         "partograph_pct": 100,
         "companion_pct": 100,
         "respectful_pct": 100,
         "sts_pct": 100,
-        "bf_pct": 92,
+        "bf_pct": 93,
         "vit_k_pct": 100,
-        "composite_score": 96.7
+        "composite_score": 97.0
       },
       "Out of District": {
         "total": 9,
@@ -23247,15 +25680,15 @@ const dashboardData = {
         "composite_score": 36.3
       },
       "Private facility": {
-        "total": 7,
-        "oxytocin_pct": 29,
-        "partograph_pct": 57,
-        "companion_pct": 57,
-        "respectful_pct": 71,
-        "sts_pct": 71,
-        "bf_pct": 57,
-        "vit_k_pct": 71,
-        "composite_score": 59.0
+        "total": 9,
+        "oxytocin_pct": 22,
+        "partograph_pct": 56,
+        "companion_pct": 56,
+        "respectful_pct": 78,
+        "sts_pct": 67,
+        "bf_pct": 56,
+        "vit_k_pct": 67,
+        "composite_score": 57.4
       },
       "SDH": {
         "total": 5,
@@ -23269,26 +25702,37 @@ const dashboardData = {
         "composite_score": 62.9
       },
       "Home": {
-        "total": 3,
-        "oxytocin_pct": 33,
+        "total": 6,
+        "oxytocin_pct": 17,
         "partograph_pct": 0,
-        "companion_pct": 33,
-        "respectful_pct": 67,
+        "companion_pct": 17,
+        "respectful_pct": 50,
         "sts_pct": 33,
         "bf_pct": 67,
         "vit_k_pct": 33,
-        "composite_score": 38.0
+        "composite_score": 31.0
+      },
+      "HWC / SHC": {
+        "total": 2,
+        "oxytocin_pct": 50,
+        "partograph_pct": 100,
+        "companion_pct": 100,
+        "respectful_pct": 100,
+        "sts_pct": 0,
+        "bf_pct": 100,
+        "vit_k_pct": 0,
+        "composite_score": 64.3
       },
       "OVERALL": {
-        "total": 80,
-        "oxytocin_pct": 68,
-        "partograph_pct": 65,
-        "companion_pct": 64,
+        "total": 96,
+        "oxytocin_pct": 65,
+        "partograph_pct": 67,
+        "companion_pct": 66,
         "respectful_pct": 91,
-        "sts_pct": 68,
-        "bf_pct": 71,
-        "vit_k_pct": 78,
-        "composite_score": 72.1
+        "sts_pct": 66,
+        "bf_pct": 73,
+        "vit_k_pct": 73,
+        "composite_score": 71.6
       }
     }
   },
@@ -23311,6 +25755,7 @@ const dashboardData = {
         "tradition"
       ],
       "quotes": [
+        "Mahila parivar wale dar rhi thi",
         "Family decision",
         "Family decision and husband death",
         "Family decision husband death",
@@ -23341,7 +25786,11 @@ const dashboardData = {
       "quotes": [
         "Previous stil birth hai sishu ka bajan km tha",
         "Gaww me dur rhne ke karan fallowp km ho pa rha hai",
-        "Low wait"
+        "Transport problem",
+        "Low wait",
+        "Maa ko refar kiya tha CHC-Jhirniya uska HP 6.8 tha",
+        "Low wait baby",
+        "PNC ko Dh refferal kiya gya karan Bp km tha or anc Hepatitis B tha"
       ]
     },
     "supply_gaps": {
@@ -23451,6 +25900,7 @@ const dashboardData = {
         "Sickle cell Disease",
         "Teenage",
         "Sickle cell Anc",
+        "ANC ka 8 manth chal raha he unka or vajan 28 kilo he",
         "टीवी की बीमारी है",
         "Nill",
         "Obesity",
@@ -23500,6 +25950,8 @@ const dashboardData = {
         "Sb",
         "Boh history ict positive",
         "01",
+        "Mere 2 baby still birth huye the",
+        "Previous Stillbirth",
         "Mansik rup se apripkkw",
         "Anc ko lgatar followup ki jurt hai",
         "टीकाकरण कार्ड पूरा भरा हुआ नहीं था",
@@ -23529,6 +25981,8 @@ const dashboardData = {
         "No fetal movement",
         "Mahila palayan par chali gayi Sirwel Bhagwanpura",
         "Mahila ka HB 9.8 he jo ki control me nhi he",
+        "Anc Dh khargone nhi ja rhi hai",
+        "Anc Block Barud me majduri karti hai",
         "Labour come on suddenly",
         "Planned facility",
         "Yes planned",
@@ -23550,6 +26004,11 @@ const dashboardData = {
         "यह भगवानपुर के पास में किसी गांव में रिश्तेदार की आ गई हुई थी वहां पर अचानक इसका पेट दर्द होने लगा तो हितग्राही ने भगवानपुर सीएससी पर डिलीवरी करवाली है",
         "Parsw pida shuru hui or ambulance let aayi",
         "Nirdharit tha",
+        "Achank prasw shru",
+        "Nirdharit sthan",
+        "Labour came on suddenly",
+        "DH-KHARGONE le jane se mana kar diye HB 11.7 ho  gya tha",
+        "Ghr par koi nhi tha parsw peeda hone ke karan PHC lana pda",
         "Ambulance na Aane Ke Karan Ghar per delivery ho gai",
         "बच्चे की धड़कन कम होने की बजह से प्रायवेट में ऑपरेशन कराया गया",
         "तीसरा सीजर होने के कारण द में डिलीवरी नहीं हो पाई इंदौर के लिए रेफर",
@@ -23560,6 +26019,8 @@ const dashboardData = {
         "Mahila palayan par chali gayi thi is karan se phc par Delivery Huyi",
         "महिला कहीं मेहमानी में गई थी वहां पर अचानक उसका पेट दर्द होने लगा और भगवानपुरा अस्पताल में जाने पर उसकी डिलीवरी हो गई",
         "Anc nirdharit sthan par gyi thi kintu sahi treatment n milne ke karan Private Hospital gye",
+        "Prasw peeda achank shru hui",
+        "Pahile se hi Raksha Hos me ilaj chl rha tha",
         "Thick msl mild respiratory distress",
         "RD",
         "LBW",
@@ -23569,6 +26030,7 @@ const dashboardData = {
         "Stillbirth",
         "Baby  weight Kam tha (LBW) Es Karan se SNCU me baby raha tha",
         "Baby weight ka kam tha baby ko SNCU me bharti kiya tha",
+        "Bachhe ka wajan 3200, Hai",
         "Baby shift to sncu for half hour for observation than return to parents",
         "Lscs done for malpresentation breech delivered",
         "Nahi",
@@ -23578,13 +26040,16 @@ const dashboardData = {
         "Beby healthy",
         "Healthy beby",
         "Health baby",
+        "Ghar wale mana hospital delivery karwane se",
         "Dh me delivery krwana surkshit hai",
         "एम्बुलेंस ना आने के कारण घर पर डिलीवरी हो गई",
         "Parwar balo ko bhi bar bar samjna jijse nishit stahan par delivery ho",
         "Lagatar fallowp se priwar bale Dh jane ke liye taiyar hue",
         "Anc ka lgatar fallowp",
         "Anc ne sbhi salah ko mana",
-        "Dh me sa hi dekh rekh nhi hui"
+        "Dh me sa hi dekh rekh nhi hui",
+        "PNc ki BP badne ke karan Dh reffer kiya gya",
+        "Anc lgatar sampark me rhi"
       ]
     }
   }
