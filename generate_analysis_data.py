@@ -923,7 +923,8 @@ for case in cases:
 # Demographic details
 age_bins = [0, 19, 24, 29, 34, 100]
 age_labels = ["Under 20 (Teenage)", "20-24", "25-29", "30-34", "35+"]
-df_a['age_group'] = pd.cut(df_a['Age (years)'], bins=age_bins, labels=age_labels)
+df_a['age_num'] = df_a['Age (years)'].apply(clean_numeric)
+df_a['age_group'] = pd.cut(df_a['age_num'], bins=age_bins, labels=age_labels)
 age_dist = df_a['age_group'].value_counts().to_dict()
 
 # Gestational age at identification
